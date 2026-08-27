@@ -1,101 +1,82 @@
 # Agents Pack
-Job: keep one small, git-backed home for global agent instructions, the external skill registry, and tiny distribution scripts.
 
-`~/.agents` should symlink to this repo's `.agents` payload.
+My Git-backed home for global Codex and Claude instructions, external skill install records, and the scripts that link them into each agent. Published as a reference, not a drop-in configuration.
 
-> AGENTS tells the agent where to look.
->
-> Skills teach uncommon procedures just in time.
->
-> Scripts and tools expose actions.
->
-> Tests, browser truth and runtime checks prove reality.
->
-> Repetition—not aspiration—earns new machinery.
+## Purpose
 
-## Prerequisites
-- `bash`
-- `node`
-- `mise`
+- `.agents/AGENTS.md` owns global instructions for Codex and Claude
+- `.agents/.skill-lock.json` records external skill installs
+- `scripts/` owns bootstrap, reinstall, validation, and link repair
 
-`AGENTS_HOME` can override the default `~/.agents` link target.
+This repo is an install home. My authored skills live in [callumflack/skills](https://github.com/callumflack/skills).
 
-Run bootstrap and mise tasks from this repo root. Install skills from `$HOME`, not from this repo.
+## Bootstrap
 
-## Global Agents
+Bootstrap requires Bash, Node.js with `npx`, and [mise](https://mise.jdx.dev/).
 
-Source: `.agents/AGENTS.md` (global, linked into Codex/Claude). Pack-local workflow: this repo's root `AGENTS.md`.
-
-`AGENTS.md` is always-loaded orientation, not a workflow manual. When an agent is guessing, put the smallest constraint at the authoritative owner and prove it with the nearest oracle. Repeated friction earns a guardrail; ordinary iteration does not.
-
-- **Owner:** the surface with authority over the decision or behavior.
-- **Oracle:** the closest check that can prove the claim touched reality.
-
-`mise run bootstrap` creates one canonical home and thin runtime adapters:
-
-- `~/.agents` → this repo's `.agents`
-- `~/.codex/AGENTS.md` → `~/.agents/AGENTS.md`
-- `~/.claude/CLAUDE.md` → `~/.agents/AGENTS.md`
-
-Existing regular instruction files are moved to timestamped backups before linking. No instruction copies or publish state are maintained.
-
-## Commands
-
-- Bootstrap canonical home:
-  - `mise run bootstrap`
-- Emergency repair for missing or stale agent-specific skill links:
-  - `mise run repair:cursor`
-  - `mise run repair:claude`
-
-Direct script calls still work:
-- `bash scripts/link-home.sh`
-- `node scripts/sync-skills.js --target="$HOME/.cursor/skills"`
-- `node scripts/sync-skills.js --target="$HOME/.claude/skills"`
-
-Normal installs and the authored-skills linker create the required links. Do not run these repair commands as routine setup.
-
-Use `sync-skills.js` when an agent-specific skills directory has lost or stale links to the canonical `.agents/skills` registry.
-
-It links everything under `.agents/skills` without removing existing links. The `repair:*:prune` tasks also remove stale links previously managed from that registry; they leave unrelated files and links alone.
-
-## Skills
-
-`npx skills add` is scoped by cwd, not by the `~/.agents` symlink. Always from `$HOME`. Never from this repo.
+Setup:
 
 ```sh
-z ~
-npx skills add <owner/repo>
+git clone https://github.com/callumflack/agents.git
+cd agents
+mise run bootstrap
 ```
 
-Already in this repo? `npx skills add <owner/repo> -g`
+To adapt the configuration, fork the repo and clone the fork instead. Replace `.agents/AGENTS.md` before running bootstrap.
 
-From `~` it writes:
+Bootstrap creates these links:
 
-- skill bodies: `.agents/skills/<skill>/`
-- install record: `.agents/.skill-lock.json`
+- `~/.agents` to this checkout's `.agents` directory
+- `~/.codex/AGENTS.md` to `~/.agents/AGENTS.md`
+- `~/.claude/CLAUDE.md` to `~/.agents/AGENTS.md`
 
-From this repo it still writes bodies here (same files, accidentally) and a stray root `skills-lock.json`. Do not commit that. Merge it into `.agents/.skill-lock.json` and delete it.
+The script renames existing regular files or directories with a timestamped `.backup` suffix before linking. Set `AGENTS_HOME`, `CODEX_AGENTS_FILE`, or `CLAUDE_AGENTS_FILE` to override the default targets.
 
-This repo is the global install home, not a skill source. External installed skill bodies are not git-tracked; `.agents/.skill-lock.json` records those external installs. Do not commit root `skills-lock.json` or `skills.json`.
+## External skills
 
-Authored skills live in [callumflack/skills](https://github.com/callumflack/skills). On Callum's authoring machine they are linked from the local checkout, not installed or refreshed with `npx skills`:
+Do not install the Skills CLI globally. Invoke it through `npx` from `$HOME`:
+
+```sh
+cd "$HOME"
+npx skills add owner/repo
+```
+
+From this repo, run `npx skills add owner/repo -g`. A global install writes skill bodies to `~/.agents/skills/` and records them in `~/.agents/.skill-lock.json`.
+
+Running the command here without `-g` can create a stray root `skills-lock.json`. Do not commit it. Rerun the install with `-g`, check the canonical lock, then delete the stray file.
+
+Use the manifest tasks from this repo root:
+
+```sh
+mise run skills:check
+mise run skills:print
+mise run skills:install
+```
+
+Inspect `skills:print` before running `skills:install`. The install task executes every printed command and writes all locked external skills into the global registry.
+
+## Authored skills
+
+On my authoring machine, the skills repo links authored skills into the shared registry:
 
 ```sh
 cd "$HOME/Repos/callumflack/skills"
 scripts/link-skills.sh
 ```
 
-The global manifest records external skills only. Public consumers and other machines can still use the install commands published by the skills repository.
+Do not manage authored skills with `npx skills` or add them to `.agents/.skill-lock.json`. Other machines should follow the install instructions in [callumflack/skills](https://github.com/callumflack/skills).
 
-Check manifest discipline:
+## Repair links
 
-```sh
-mise run skills:check
-```
-
-Reinstall from the canonical manifest:
+Normal installs and the authored-skills linker create the required links. Repair them only when Cursor or Claude has missing or stale entries:
 
 ```sh
-mise run skills:print
-mise run skills:install
+mise run repair:cursor
+mise run repair:claude
 ```
+
+These commands leave unrelated entries alone. The `repair:*:prune` variants also remove stale links previously managed from `~/.agents/skills`.
+
+## Design rule
+
+`AGENTS.md` carries orientation. Skills carry uncommon procedures. Scripts encode repeated actions. Checks prove the result. The full rules live in [`.agents/AGENTS.md`](.agents/AGENTS.md).
