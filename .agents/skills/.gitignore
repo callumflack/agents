@@ -1,0 +1,8 @@
+# Skill bodies are ignored by default.
+# Account for installed skills in .agents/.skill-lock.json instead.
+*
+!.gitignore
+!README.md
+
+.DS_Store
+**/.DS_Store

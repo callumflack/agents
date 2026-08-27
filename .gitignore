@@ -1,0 +1,11 @@
+# Local dots
+.opencode/
+.cursor/
+.claude/
+
+# OS junk
+.DS_Store
+
+# Local secrets
+.env
+.env.*

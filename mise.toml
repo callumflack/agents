@@ -1,0 +1,31 @@
+[tasks.bootstrap]
+description = "Link the canonical .agents payload and runtime instruction adapters"
+run = "bash scripts/link-home.sh"
+
+[tasks."repair:cursor"]
+description = "Repair ~/.cursor/skills links from ~/.agents/skills"
+run = 'node scripts/sync-skills.js --target="$HOME/.cursor/skills"'
+
+[tasks."repair:claude"]
+description = "Repair ~/.claude/skills links from ~/.agents/skills"
+run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills"'
+
+[tasks."repair:cursor:prune"]
+description = "Repair Cursor skill links and remove stale managed links"
+run = 'node scripts/sync-skills.js --target="$HOME/.cursor/skills" --prune'
+
+[tasks."repair:claude:prune"]
+description = "Repair Claude skill links and remove stale managed links"
+run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills" --prune'
+
+[tasks."skills:check"]
+description = "Check this repo has one canonical skill manifest"
+run = "node scripts/check-skill-manifest.js"
+
+[tasks."skills:print"]
+description = "Print install commands from .agents/.skill-lock.json"
+run = "node scripts/install-skills-from-lock.js"
+
+[tasks."skills:install"]
+description = "Install skills from .agents/.skill-lock.json"
+run = "node scripts/install-skills-from-lock.js --apply"
