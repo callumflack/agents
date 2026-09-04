@@ -3,7 +3,7 @@
 Keep responses short, idiomatic, and direct. Disagree when the premise is wrong.
 Don’t explain reasoning unless asked or the decision depends on it.
 
-**Owner and oracle.** Before nontrivial action, name the owner surface, allowed writes, forbidden surfaces, done gate, and first real check. Skip for trivial chat or one-line commands.
+**Owner and oracle.** Before nontrivial action, name the owner surface, allowed writes, forbidden surfaces, done gate, and first real check. For significant writable work, include the owning worklog in allowed writes and make reading then updating it the first real check, before any other material write. An explicit read-only or no-write boundary forbids that side write. Skip for trivial chat or one-line commands.
 
 **Epistemics.** Don’t ask agents to know what they cannot sense, measure, or verify.
 Do not turn analogy into architecture: translate into repo-local checks before claiming they apply.
@@ -22,6 +22,12 @@ If a task is ambiguous, make one concrete assumption and state it briefly. Ask o
 - Visible UI claims require the exact changed surface rendered in its real app. Tests and typechecks do not prove appearance.
 
 **Writing.** Preserve the source's pressure. Do not smooth language until the claim, burden, and live distinction are clear.
+
+**Worklog.** For significant writable work, maintain one concise `LOG.md` at the owning root unless that owner already names another log; never create one per chat. Read it and write or refresh the current dated entry before the first material write. Record only chat-fragile state: the objective, material steers and personal preferences, on-the-fly todos, decisions and tradeoffs, surprises, unresolved questions, and next action. Update it before continuing whenever that state changes, not merely at completion. Keep steers additive; mark items resolved, corrected, or handed off explicitly; never delete or replace an unanswered question with a completion summary. Work is not done until the log matches reality. Newest date goes at the top; within a date, newest entry goes first. Do not duplicate detail recoverable from code, Git, issues, documentation, or test output. An explicit read-only or no-write boundary forbids log mutation. This is a pilot: do not invent log types, archives, hooks, or extra routing rules.
+
+**Playbooks.** Callum-only shelf on this Mac, not in team clones. Catalogue: `/Users/callumflack/Workspaces/Playbooks`. Git home: `/Users/callumflack/Repos/callumflack/playbooks`. When adopting, repairing, or reconciling an owner worklog, read `/Users/callumflack/Workspaces/Playbooks/playbooks/maintain-owner-worklog.md`. When writing a repo format/lint/diagnostics done-gate, read `/Users/callumflack/Workspaces/Playbooks/playbooks/author-repo-verify-gate.md`. When aligning `.vscode` or formatter editor config across repos, read `/Users/callumflack/Workspaces/Playbooks/playbooks/copy-editor-settings-by-role.md`. When installing, reinstalling, or debugging Ultracite, Oxlint, Oxfmt, or the Oxc editor extension, read `/Users/callumflack/Workspaces/Playbooks/references/ultracite-oxc-cursor.md`. Do not commit these paths into a team repo.
+
+**Cursor copy.** Codex and Claude symlink this file. Cursor does not: `mise run bootstrap` (agents repo) writes `~/.cursor/rules/callum-agents.mdc` from it. After any edit to this file, run that again or Cursor keeps the old body.
 
 ## Friction Promotion Rubric (when a miss repeats or costs too much)
 

@@ -1,10 +1,10 @@
 # Agents Pack
 
-My Git-backed home for global Codex and Claude instructions, external skill install records, and the scripts that link them into each agent. Published as a reference, not a drop-in configuration.
+My Git-backed home for global Codex, Claude, and Cursor instructions, external skill install records, and the scripts that link them into each agent. Published as a reference, not a drop-in configuration.
 
 ## Purpose
 
-- `.agents/AGENTS.md` owns global instructions for Codex and Claude
+- `.agents/AGENTS.md` owns global instructions for Codex, Claude, and Cursor
 - `.agents/.skill-lock.json` records external skill installs
 - `scripts/` owns bootstrap, reinstall, validation, and link repair
 
@@ -29,8 +29,9 @@ Bootstrap creates these links:
 - `~/.agents` to this checkout's `.agents` directory
 - `~/.codex/AGENTS.md` to `~/.agents/AGENTS.md`
 - `~/.claude/CLAUDE.md` to `~/.agents/AGENTS.md`
+- `~/.cursor/rules/callum-agents.mdc` generated from `~/.agents/AGENTS.md` (`alwaysApply: true`; Cursor does not follow a symlink the way Codex/Claude do)
 
-The script renames existing regular files or directories with a timestamped `.backup` suffix before linking. Set `AGENTS_HOME`, `CODEX_AGENTS_FILE`, or `CLAUDE_AGENTS_FILE` to override the default targets.
+The script renames existing regular files or directories with a timestamped `.backup` suffix before linking. Set `AGENTS_HOME`, `CODEX_AGENTS_FILE`, `CLAUDE_AGENTS_FILE`, or `CURSOR_AGENTS_RULE` to override the default targets.
 
 ## External skills
 

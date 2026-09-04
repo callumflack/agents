@@ -8,6 +8,7 @@ agents_home="${AGENTS_HOME:-$HOME/.agents}"
 payload_dir="$repo_root/.agents"
 codex_agents_file="${CODEX_AGENTS_FILE:-$HOME/.codex/AGENTS.md}"
 claude_agents_file="${CLAUDE_AGENTS_FILE:-$HOME/.claude/CLAUDE.md}"
+cursor_agents_rule="${CURSOR_AGENTS_RULE:-$HOME/.cursor/rules/callum-agents.mdc}"
 
 if [ ! -d "$payload_dir" ]; then
   echo "error: expected agents payload at: $payload_dir" >&2
@@ -48,3 +49,17 @@ link_instruction_adapter() {
 
 link_instruction_adapter "$codex_agents_file"
 link_instruction_adapter "$claude_agents_file"
+
+# Cursor does not load ~/.agents/AGENTS.md. It injects ~/.cursor/rules/*.mdc
+# with alwaysApply: true. Keep this generated; edit .agents/AGENTS.md then re-run.
+cursor_rule_dir="$(dirname "$cursor_agents_rule")"
+mkdir -p "$cursor_rule_dir"
+{
+  printf '%s\n' '---'
+  printf '%s\n' 'description: Callum global agent instructions (from ~/.agents/AGENTS.md)'
+  printf '%s\n' 'alwaysApply: true'
+  printf '%s\n' '---'
+  printf '\n'
+  cat "$agents_home/AGENTS.md"
+} >"$cursor_agents_rule"
+echo "wrote: $cursor_agents_rule <- $agents_home/AGENTS.md"

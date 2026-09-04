@@ -2,6 +2,8 @@
 
 This repo is the global install home (`~/.agents` → `.agents`). It is not a skill source.
 
+The globally loaded instruction body is [`.agents/AGENTS.md`](.agents/AGENTS.md). This file is its canonical Workspace entry point at `Personal/repos/agents/AGENTS.md`. After editing `.agents/AGENTS.md`, run `mise run bootstrap` so Cursor’s generated `~/.cursor/rules/callum-agents.mdc` matches.
+
 ## Skill installs
 
 `npx skills add` is scoped by cwd, not by the `~/.agents` symlink.
