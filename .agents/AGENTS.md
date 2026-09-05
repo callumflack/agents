@@ -27,6 +27,8 @@ If a task is ambiguous, make one concrete assumption and state it briefly. Ask o
 
 **Playbooks.** Callum-only shelf on this Mac, not in team clones. Catalogue: `/Users/callumflack/Workspaces/Playbooks`. Git home: `/Users/callumflack/Repos/callumflack/playbooks`. When adopting, repairing, or reconciling an owner worklog, read `/Users/callumflack/Workspaces/Playbooks/playbooks/maintain-owner-worklog.md`. When writing a repo format/lint/diagnostics done-gate, read `/Users/callumflack/Workspaces/Playbooks/playbooks/author-repo-verify-gate.md`. When aligning `.vscode` or formatter editor config across repos, read `/Users/callumflack/Workspaces/Playbooks/playbooks/copy-editor-settings-by-role.md`. When installing, reinstalling, or debugging Ultracite, Oxlint, Oxfmt, or the Oxc editor extension, read `/Users/callumflack/Workspaces/Playbooks/references/ultracite-oxc-cursor.md`. Do not commit these paths into a team repo.
 
+**Global skills.** Pstack is plugin-owned: Cursor loads `/add-plugin pstack`, and Codex loads the personal `pstack` plugin. Never run `npx skills add cursor/plugins --global` or put `pstack/` entries in the flat global lock. Matt Pocock owns the global bare `tdd` and `teach`. In Cursor, pstack remains the native default; to force Pocock, explicitly read and follow `~/.agents/skills/teach/SKILL.md` or `~/.agents/skills/tdd/SKILL.md` and reject the pstack skill of the same name.
+
 **Cursor copy.** Codex and Claude symlink this file. Cursor does not: `mise run bootstrap` (agents repo) writes `~/.cursor/rules/callum-agents.mdc` from it. After any edit to this file, run that again or Cursor keeps the old body.
 
 ## Friction Promotion Rubric (when a miss repeats or costs too much)
