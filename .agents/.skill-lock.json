@@ -214,15 +214,6 @@
       "installedAt": "2026-06-19T22:51:57.559Z",
       "updatedAt": "2026-07-17T05:32:41.963Z"
     },
-    "obsidian-vault": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/personal/obsidian-vault/SKILL.md",
-      "skillFolderHash": "5fdd257588fefa400e8a0d505aac555a0b52311a",
-      "installedAt": "2026-06-19T22:51:57.559Z",
-      "updatedAt": "2026-07-17T05:32:41.964Z"
-    },
     "qa": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -348,16 +339,16 @@
       "skillPath": "cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
       "skillFolderHash": "d9c8935dd560b3b6f5941247d04a1843f8c7cc35",
       "installedAt": "2026-06-25T07:30:41.671Z",
-      "updatedAt": "2026-07-31T03:01:33.505Z"
+      "updatedAt": "2026-09-01T02:01:23.713Z"
     },
     "wizard": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/in-progress/wizard/SKILL.md",
-      "skillFolderHash": "e4dc85309aebecd9759f6c4cb3fdcb7c4f69544c",
+      "skillPath": "skills/engineering/wizard/SKILL.md",
+      "skillFolderHash": "0a163daf092c6f361158ca9627e81f2cb5230574",
       "installedAt": "2026-07-01T00:42:49.879Z",
-      "updatedAt": "2026-07-17T05:32:41.967Z"
+      "updatedAt": "2026-09-06T23:02:10.057Z"
     },
     "vercel-composition-patterns": {
       "source": "vercel-labs/agent-skills",
@@ -382,9 +373,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
       "skillPath": "skills/react-view-transitions/SKILL.md",
-      "skillFolderHash": "d5c0250898ec0dd3fe06cd46a396cd500ebf5bd5",
+      "skillFolderHash": "13063dbbfc1b085cbc11b9bd5d4324aa2f41bb3a",
       "installedAt": "2026-07-08T04:20:30.469Z",
-      "updatedAt": "2026-08-16T23:01:56.585Z"
+      "updatedAt": "2026-08-30T23:07:55.993Z"
     },
     "web-design-guidelines": {
       "source": "vercel-labs/agent-skills",
@@ -409,9 +400,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/openclaw/agent-skills.git",
       "skillPath": "skills/autoreview/SKILL.md",
-      "skillFolderHash": "9d75bd732b594e8b7722065e9275c4b46da80910",
+      "skillFolderHash": "7ac1cc1190442ecf902e9d2646dbba4432032ca5",
       "installedAt": "2026-07-09T06:02:29.538Z",
-      "updatedAt": "2026-08-24T23:20:44.127Z"
+      "updatedAt": "2026-09-06T23:02:18.396Z"
     },
     "code-review": {
       "source": "mattpocock/skills",
@@ -474,34 +465,34 @@
       "skillPath": "ralph-loop/skills/ralph-loop/SKILL.md",
       "skillFolderHash": "ea05496b6baed1e12f654227ecf6e14928f4b1bc",
       "installedAt": "2026-07-14T03:38:50.274Z",
-      "updatedAt": "2026-07-31T03:01:33.496Z"
+      "updatedAt": "2026-09-01T02:01:23.801Z"
     },
     "better-colors": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-colors/SKILL.md",
-      "skillFolderHash": "f17ebf5d60bc070557d162a04655c9b159c66060",
+      "skillFolderHash": "2bf09c8493b760bc4449fed26079244368eaaa16",
       "installedAt": "2026-07-17T00:09:07.680Z",
-      "updatedAt": "2026-08-24T23:21:16.600Z"
+      "updatedAt": "2026-08-30T23:08:02.878Z"
     },
     "better-typography": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-typography/SKILL.md",
-      "skillFolderHash": "bf3c544de7c0423ec6a2576387107dfdb8c2298f",
+      "skillFolderHash": "b0c51ed316e9cca63f5182bc569066985b25b9c0",
       "installedAt": "2026-07-17T00:09:07.683Z",
-      "updatedAt": "2026-08-24T23:21:19.165Z"
+      "updatedAt": "2026-08-30T23:08:05.836Z"
     },
     "better-ui": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-ui/SKILL.md",
-      "skillFolderHash": "2e191f3a9607e3d3168675f8a8209fa9ec53f3d5",
+      "skillFolderHash": "710b8e9a1b4086594d24050bbb6768dbc421e9dc",
       "installedAt": "2026-07-17T00:09:07.685Z",
-      "updatedAt": "2026-08-24T23:21:21.747Z"
+      "updatedAt": "2026-08-30T23:08:08.655Z"
     },
     "batch-grill-me": {
       "source": "mattpocock/skills",
@@ -525,10 +516,10 @@
       "source": "mattpocock/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/in-progress/to-questionnaire/SKILL.md",
-      "skillFolderHash": "7c4d04fb4d77824d7d98433ee7a8b17dde5efa13",
+      "skillPath": "skills/productivity/to-questionnaire/SKILL.md",
+      "skillFolderHash": "46dfbeeba12a9e52eef446676f42e7551023d9a9",
       "installedAt": "2026-07-17T05:32:41.966Z",
-      "updatedAt": "2026-07-17T05:32:41.966Z"
+      "updatedAt": "2026-09-06T23:02:14.214Z"
     },
     "i-have-adhd": {
       "source": "ayghri/i-have-adhd",
@@ -544,36 +535,36 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-accessibility/SKILL.md",
-      "skillFolderHash": "968f51a6cbe02220d4f6822f1aaab9f7f2f21d0d",
+      "skillFolderHash": "ebf9388ad7f6acc424584674ac97406e2118616f",
       "installedAt": "2026-07-27T00:40:50.184Z",
-      "updatedAt": "2026-08-24T23:21:24.369Z"
+      "updatedAt": "2026-08-30T23:08:11.973Z"
     },
     "better-interface": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-interface/SKILL.md",
-      "skillFolderHash": "c333b73a1c2fd156967f3d6a3801981f1519c066",
+      "skillFolderHash": "828b477582842f5890fe307b4f95cdf05bd88d92",
       "installedAt": "2026-07-27T00:40:50.189Z",
-      "updatedAt": "2026-08-24T23:21:27.653Z"
+      "updatedAt": "2026-08-30T23:08:14.898Z"
     },
     "better-layout": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-layout/SKILL.md",
-      "skillFolderHash": "ea251442f566866411d3ade307aee3bc72014d10",
+      "skillFolderHash": "8f1f1b163848cec18aea8143b9fe10cfb3226874",
       "installedAt": "2026-07-27T00:40:50.190Z",
-      "updatedAt": "2026-08-24T23:21:30.014Z"
+      "updatedAt": "2026-08-30T23:08:17.882Z"
     },
     "better-writing": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/jakubkrehel/skills.git",
       "skillPath": "skills/better-writing/SKILL.md",
-      "skillFolderHash": "2975531c7ff9d06e66fea216ff08e98857de0218",
+      "skillFolderHash": "f0637167d46253f6f5d2d09776552df4979ea562",
       "installedAt": "2026-07-27T00:40:50.193Z",
-      "updatedAt": "2026-08-24T23:21:32.116Z"
+      "updatedAt": "2026-08-30T23:08:20.889Z"
     },
     "orchestrate": {
       "source": "provencher/codex-skills",
@@ -582,7 +573,7 @@
       "skillPath": "orchestrate/SKILL.md",
       "skillFolderHash": "7f7a7f54030658d84c8b951d5c33f732e72e7931",
       "installedAt": "2026-07-28T06:18:18.729Z",
-      "updatedAt": "2026-07-31T04:28:31.068Z"
+      "updatedAt": "2026-09-01T02:02:22.509Z"
     },
     "cancel-ralph": {
       "source": "cursor/plugins",
@@ -591,7 +582,7 @@
       "skillPath": "ralph-loop/skills/cancel-ralph/SKILL.md",
       "skillFolderHash": "8027df5597628112aa5a13c76b2cedd63fe19980",
       "installedAt": "2026-07-31T03:01:33.464Z",
-      "updatedAt": "2026-07-31T03:01:33.464Z"
+      "updatedAt": "2026-09-01T02:01:23.799Z"
     },
     "check-compiler-errors": {
       "source": "cursor/plugins",
@@ -600,7 +591,7 @@
       "skillPath": "cursor-team-kit/skills/check-compiler-errors/SKILL.md",
       "skillFolderHash": "4d2f1458358fd0f69a830d0de7bf2111d45879df",
       "installedAt": "2026-07-31T03:01:33.465Z",
-      "updatedAt": "2026-07-31T03:01:33.465Z"
+      "updatedAt": "2026-09-01T02:01:23.684Z"
     },
     "cli-for-agents": {
       "source": "cursor/plugins",
@@ -609,7 +600,7 @@
       "skillPath": "cli-for-agent/skills/cli-for-agents/SKILL.md",
       "skillFolderHash": "732b15173f44c2dc3129cd010e2b2f6113d066e0",
       "installedAt": "2026-07-31T03:01:33.465Z",
-      "updatedAt": "2026-07-31T03:01:33.465Z"
+      "updatedAt": "2026-09-01T02:01:23.664Z"
     },
     "continual-learning": {
       "source": "cursor/plugins",
@@ -618,7 +609,7 @@
       "skillPath": "continual-learning/skills/continual-learning/SKILL.md",
       "skillFolderHash": "ca8838b5cb190bcf29560f34f0a33d235fefe2b8",
       "installedAt": "2026-07-31T03:01:33.465Z",
-      "updatedAt": "2026-07-31T03:01:33.465Z"
+      "updatedAt": "2026-09-01T02:01:23.669Z"
     },
     "control-cli": {
       "source": "cursor/plugins",
@@ -627,7 +618,7 @@
       "skillPath": "cursor-team-kit/skills/control-cli/SKILL.md",
       "skillFolderHash": "21f3eee2663ae7c78464bfc2a69f6a8cc6c4f7ed",
       "installedAt": "2026-07-31T03:01:33.466Z",
-      "updatedAt": "2026-07-31T03:01:33.466Z"
+      "updatedAt": "2026-09-01T02:01:23.686Z"
     },
     "control-ui": {
       "source": "cursor/plugins",
@@ -636,7 +627,7 @@
       "skillPath": "cursor-team-kit/skills/control-ui/SKILL.md",
       "skillFolderHash": "797e6d20a029b2ae757a97951278d308f3b53026",
       "installedAt": "2026-07-31T03:01:33.466Z",
-      "updatedAt": "2026-07-31T03:01:33.466Z"
+      "updatedAt": "2026-09-01T02:01:23.688Z"
     },
     "create-learning-path": {
       "source": "cursor/plugins",
@@ -645,7 +636,7 @@
       "skillPath": "teaching/skills/create-learning-path/SKILL.md",
       "skillFolderHash": "c5a7d2b76d736e4d32dc63f5b280640031d2483c",
       "installedAt": "2026-07-31T03:01:33.467Z",
-      "updatedAt": "2026-07-31T03:01:33.467Z"
+      "updatedAt": "2026-09-01T02:01:23.803Z"
     },
     "create-plugin-scaffold": {
       "source": "cursor/plugins",
@@ -654,7 +645,7 @@
       "skillPath": "create-plugin/skills/create-plugin-scaffold/SKILL.md",
       "skillFolderHash": "dfd82fe65946bdac3a3eae8ea2fa880031a6cc5e",
       "installedAt": "2026-07-31T03:01:33.467Z",
-      "updatedAt": "2026-07-31T03:01:33.467Z"
+      "updatedAt": "2026-09-01T02:01:23.670Z"
     },
     "cursor-sdk": {
       "source": "cursor/plugins",
@@ -663,7 +654,7 @@
       "skillPath": "cursor-sdk/skills/cursor-sdk/SKILL.md",
       "skillFolderHash": "892e58fc7053de2a33fdda7a36ef1bfcf7685f87",
       "installedAt": "2026-07-31T03:01:33.468Z",
-      "updatedAt": "2026-07-31T03:01:33.468Z"
+      "updatedAt": "2026-09-01T02:01:23.681Z"
     },
     "deslop": {
       "source": "cursor/plugins",
@@ -672,7 +663,7 @@
       "skillPath": "cursor-team-kit/skills/deslop/SKILL.md",
       "skillFolderHash": "ac9ba043f9dd3b3a8850de6624ec5bc12e375599",
       "installedAt": "2026-07-31T03:01:33.469Z",
-      "updatedAt": "2026-07-31T03:01:33.469Z"
+      "updatedAt": "2026-09-01T02:01:23.691Z"
     },
     "docs-canvas": {
       "source": "cursor/plugins",
@@ -681,7 +672,7 @@
       "skillPath": "docs-canvas/skills/docs-canvas/SKILL.md",
       "skillFolderHash": "3c299809023507ea74c5dbe75a2e2f542573a416",
       "installedAt": "2026-07-31T03:01:33.470Z",
-      "updatedAt": "2026-07-31T03:01:33.470Z"
+      "updatedAt": "2026-09-01T02:01:23.716Z"
     },
     "fix-ci": {
       "source": "cursor/plugins",
@@ -690,7 +681,7 @@
       "skillPath": "cursor-team-kit/skills/fix-ci/SKILL.md",
       "skillFolderHash": "22d79ed45a382df99b95e1135f13ad0170500511",
       "installedAt": "2026-07-31T03:01:33.476Z",
-      "updatedAt": "2026-07-31T03:01:33.476Z"
+      "updatedAt": "2026-09-01T02:01:23.694Z"
     },
     "fix-merge-conflicts": {
       "source": "cursor/plugins",
@@ -699,7 +690,7 @@
       "skillPath": "cursor-team-kit/skills/fix-merge-conflicts/SKILL.md",
       "skillFolderHash": "9a539a5c5359e25c9a57df5a741e42524f2fe3c8",
       "installedAt": "2026-07-31T03:01:33.477Z",
-      "updatedAt": "2026-07-31T03:01:33.477Z"
+      "updatedAt": "2026-09-01T02:01:23.695Z"
     },
     "get-pr-comments": {
       "source": "cursor/plugins",
@@ -708,7 +699,7 @@
       "skillPath": "cursor-team-kit/skills/get-pr-comments/SKILL.md",
       "skillFolderHash": "5664b99671eeabafef1159cdb663cb162ace770d",
       "installedAt": "2026-07-31T03:01:33.477Z",
-      "updatedAt": "2026-07-31T03:01:33.477Z"
+      "updatedAt": "2026-09-01T02:01:23.698Z"
     },
     "loop-on-ci": {
       "source": "cursor/plugins",
@@ -717,7 +708,7 @@
       "skillPath": "cursor-team-kit/skills/loop-on-ci/SKILL.md",
       "skillFolderHash": "2fc5e4bdb8c0924137377af7cf9d6b7585e092ec",
       "installedAt": "2026-07-31T03:01:33.479Z",
-      "updatedAt": "2026-07-31T03:01:33.479Z"
+      "updatedAt": "2026-09-01T02:01:23.701Z"
     },
     "make-pr-easy-to-review": {
       "source": "cursor/plugins",
@@ -726,7 +717,7 @@
       "skillPath": "cursor-team-kit/skills/make-pr-easy-to-review/SKILL.md",
       "skillFolderHash": "30493c1d9b061827149f0caafca027a9016f67c6",
       "installedAt": "2026-07-31T03:01:33.480Z",
-      "updatedAt": "2026-07-31T03:01:33.480Z"
+      "updatedAt": "2026-09-01T02:01:23.703Z"
     },
     "new-branch-and-pr": {
       "source": "cursor/plugins",
@@ -735,7 +726,7 @@
       "skillPath": "cursor-team-kit/skills/new-branch-and-pr/SKILL.md",
       "skillFolderHash": "509e25255c334b539c466d1fc7d8fd99e15745bf",
       "installedAt": "2026-07-31T03:01:33.480Z",
-      "updatedAt": "2026-07-31T03:01:33.480Z"
+      "updatedAt": "2026-09-01T02:01:23.704Z"
     },
     "pr-review-canvas": {
       "source": "cursor/plugins",
@@ -744,7 +735,7 @@
       "skillPath": "cursor-team-kit/skills/pr-review-canvas/SKILL.md",
       "skillFolderHash": "44daadad1fe53ccd3a2773e87879965c1640ab71",
       "installedAt": "2026-07-31T03:01:33.481Z",
-      "updatedAt": "2026-07-31T03:01:33.481Z"
+      "updatedAt": "2026-09-01T02:01:23.706Z"
     },
     "ralph-loop-help": {
       "source": "cursor/plugins",
@@ -753,7 +744,7 @@
       "skillPath": "ralph-loop/skills/ralph-loop-help/SKILL.md",
       "skillFolderHash": "9b928b6f517079d2de4889e59d53bcb33ba96120",
       "installedAt": "2026-07-31T03:01:33.496Z",
-      "updatedAt": "2026-07-31T03:01:33.496Z"
+      "updatedAt": "2026-09-01T02:01:23.802Z"
     },
     "review-and-ship": {
       "source": "cursor/plugins",
@@ -762,7 +753,7 @@
       "skillPath": "cursor-team-kit/skills/review-and-ship/SKILL.md",
       "skillFolderHash": "4c59edfc89811ff444ded5e4a3a07932852769a1",
       "installedAt": "2026-07-31T03:01:33.498Z",
-      "updatedAt": "2026-07-31T03:01:33.498Z"
+      "updatedAt": "2026-09-01T02:01:23.709Z"
     },
     "review-plugin-submission": {
       "source": "cursor/plugins",
@@ -771,7 +762,7 @@
       "skillPath": "create-plugin/skills/review-plugin-submission/SKILL.md",
       "skillFolderHash": "66757839ce8072c7b6bd1d6e9729544f145cd12f",
       "installedAt": "2026-07-31T03:01:33.499Z",
-      "updatedAt": "2026-07-31T03:01:33.499Z"
+      "updatedAt": "2026-09-01T02:01:23.676Z"
     },
     "run-learning-retrospective": {
       "source": "cursor/plugins",
@@ -780,7 +771,7 @@
       "skillPath": "teaching/skills/run-learning-retrospective/SKILL.md",
       "skillFolderHash": "e2b8efdb30a3acc2b99c7dfe128be3b70b39a2ea",
       "installedAt": "2026-07-31T03:01:33.499Z",
-      "updatedAt": "2026-07-31T03:01:33.499Z"
+      "updatedAt": "2026-09-01T02:01:23.804Z"
     },
     "run-smoke-tests": {
       "source": "cursor/plugins",
@@ -789,7 +780,7 @@
       "skillPath": "cursor-team-kit/skills/run-smoke-tests/SKILL.md",
       "skillFolderHash": "b02dfd55bc710b80585e1cc0dea76e94923e5dab",
       "installedAt": "2026-07-31T03:01:33.500Z",
-      "updatedAt": "2026-07-31T03:01:33.500Z"
+      "updatedAt": "2026-09-01T02:01:23.711Z"
     },
     "thermo-nuclear-review": {
       "source": "cursor/plugins",
@@ -798,7 +789,7 @@
       "skillPath": "thermos/skills/thermo-nuclear-review/SKILL.md",
       "skillFolderHash": "b222e50771b6bc6f7d2b926b86da2342f160bb79",
       "installedAt": "2026-07-31T03:01:33.505Z",
-      "updatedAt": "2026-07-31T03:01:33.505Z"
+      "updatedAt": "2026-09-01T02:01:23.805Z"
     },
     "thermos": {
       "source": "cursor/plugins",
@@ -807,7 +798,7 @@
       "skillPath": "thermos/skills/thermos/SKILL.md",
       "skillFolderHash": "56e7ab69f83a54852b54512b536c95ea45ecf1e1",
       "installedAt": "2026-07-31T03:01:33.506Z",
-      "updatedAt": "2026-07-31T03:01:33.506Z"
+      "updatedAt": "2026-09-01T02:01:23.808Z"
     },
     "verify-this": {
       "source": "cursor/plugins",
@@ -816,7 +807,7 @@
       "skillPath": "cursor-team-kit/skills/verify-this/SKILL.md",
       "skillFolderHash": "11c9aa1407bc647693437c510bcf5a508244c738",
       "installedAt": "2026-07-31T03:01:33.508Z",
-      "updatedAt": "2026-07-31T03:01:33.508Z"
+      "updatedAt": "2026-09-01T02:01:23.714Z"
     },
     "weekly-review": {
       "source": "cursor/plugins",
@@ -825,7 +816,7 @@
       "skillPath": "cursor-team-kit/skills/weekly-review/SKILL.md",
       "skillFolderHash": "41c12c115b622e2a70d726f176766192ccb2d912",
       "installedAt": "2026-07-31T03:01:33.509Z",
-      "updatedAt": "2026-07-31T03:01:33.509Z"
+      "updatedAt": "2026-09-01T02:01:23.714Z"
     },
     "what-did-i-get-done": {
       "source": "cursor/plugins",
@@ -834,7 +825,7 @@
       "skillPath": "cursor-team-kit/skills/what-did-i-get-done/SKILL.md",
       "skillFolderHash": "953a0fb2b6d763e4149da38a543778aed3091368",
       "installedAt": "2026-07-31T03:01:33.510Z",
-      "updatedAt": "2026-07-31T03:01:33.510Z"
+      "updatedAt": "2026-09-01T02:01:23.715Z"
     },
     "workflow-from-chats": {
       "source": "cursor/plugins",
@@ -843,7 +834,7 @@
       "skillPath": "cursor-team-kit/skills/workflow-from-chats/SKILL.md",
       "skillFolderHash": "c32988e8a39033397465591a2b5f7a58ea6ea337",
       "installedAt": "2026-07-31T03:01:33.511Z",
-      "updatedAt": "2026-07-31T03:01:33.511Z"
+      "updatedAt": "2026-09-01T02:01:23.715Z"
     },
     "animate": {
       "source": "emilkowalski/skills",
@@ -958,9 +949,54 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/shadcn-ui/ui.git",
       "skillPath": "skills/shadcn/SKILL.md",
-      "skillFolderHash": "0a31c3c2535a62b22bf23a1b10a142178a6b7dbf",
+      "skillFolderHash": "b5791523e07794a4deb201e78eab3f3adbd022c0",
       "installedAt": "2026-08-26T22:33:56.883Z",
-      "updatedAt": "2026-08-26T22:33:56.883Z"
+      "updatedAt": "2026-09-06T23:02:27.331Z"
+    },
+    "build-iterated-agentic-loop": {
+      "source": "humanlayer/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/humanlayer/skills.git",
+      "skillPath": "plugins/build-iterated-agentic-loop/skills/build-iterated-agentic-loop/SKILL.md",
+      "skillFolderHash": "fa04a5cc4842e561e7182b3a074b91c18ffbc1df",
+      "installedAt": "2026-09-04T03:49:29.409Z",
+      "updatedAt": "2026-09-04T03:49:29.409Z"
+    },
+    "design-control-loop": {
+      "source": "humanlayer/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/humanlayer/skills.git",
+      "skillPath": "plugins/design-control-loop/skills/design-control-loop/SKILL.md",
+      "skillFolderHash": "a8a023f8f62a384a76297b31d9f844c5ad3adf95",
+      "installedAt": "2026-09-04T03:49:29.413Z",
+      "updatedAt": "2026-09-04T03:49:29.413Z"
+    },
+    "improve-claude-md": {
+      "source": "humanlayer/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/humanlayer/skills.git",
+      "skillPath": "plugins/improve-claude-md/skills/improve-claude-md/SKILL.md",
+      "skillFolderHash": "742389d936458a62c303c5625232038788a9588f",
+      "installedAt": "2026-09-04T03:49:29.415Z",
+      "updatedAt": "2026-09-04T03:49:29.415Z"
+    },
+    "narrow-react-prop-types": {
+      "source": "humanlayer/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/humanlayer/skills.git",
+      "skillPath": "plugins/narrow-react-prop-types/skills/narrow-react-prop-types/SKILL.md",
+      "skillFolderHash": "172dfb205f5f1419354b431cbb903e1afd55ad87",
+      "installedAt": "2026-09-04T03:49:29.416Z",
+      "updatedAt": "2026-09-04T03:49:29.416Z"
+    },
+    "show-me": {
+      "source": "humanlayer/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/humanlayer/skills.git",
+      "skillPath": "plugins/show-me/skills/show-me/SKILL.md",
+      "skillFolderHash": "0bdb821a21e793a4f6f82a7078c052154447e5cc",
+      "installedAt": "2026-09-04T03:49:29.416Z",
+      "updatedAt": "2026-09-04T03:49:29.416Z"
     }
   },
   "dismissed": {
