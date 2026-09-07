@@ -56,6 +56,21 @@ mise run skills:install
 
 Inspect `skills:print` before running `skills:install`. The install task executes every printed command and writes all locked external skills into the global registry.
 
+## External plugins
+
+`.agents/plugins/*.lock.json` records external plugins. Keep plugin bodies out
+of Git. Local plugin files under `plugins/` are ignored.
+
+The Pstack record pins its upstream revision and records how Cursor and Codex
+use it. Cursor installs the native plugin. Codex keeps its skills under the
+`pstack:` namespace and uses `pstack-codex` for Codex-specific translation.
+
+When two providers publish the same skill name, keep one bare-name owner. Use
+the plugin namespace for the other provider. Add a deliberate alias only when
+both implementations need stable public names, then record that mapping in the
+matching plugin lock. The Pstack record currently assigns bare `tdd` and
+`teach` to `mattpocock/skills`.
+
 ## Authored skills
 
 On my authoring machine, the skills repo links authored skills into the shared registry:

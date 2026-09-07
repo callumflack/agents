@@ -1,5 +1,13 @@
 # Worklog
 
+## 2026-09-07
+
+- **Resolved:** replaced the pending Pstack packaging system with a
+  reference-only record. The record pins the upstream plugin, describes the
+  Codex adaptation, and names current bare-name owners. The external body stays
+  ignored. The marketplace, materializer, checks, and bootstrap wiring were
+  removed. Verification passed. No follow-up remains for this steer.
+
 ## 2026-09-04
 
 - **Correction:** the cross-app worklog slice depends on the Cursor adapter in

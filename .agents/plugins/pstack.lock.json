@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/cursor/plugins",
+  "subpath": "pstack",
+  "revision": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
+  "version": "0.14.8",
+  "install": {
+    "cursor": "/add-plugin pstack",
+    "codex": {
+      "namespace": "pstack",
+      "adaptation": [
+        "Copy the upstream skills into a local Codex plugin at ~/plugins/pstack.",
+        "Translate .cursor-plugin/plugin.json to .codex-plugin/plugin.json.",
+        "Remove disable-model-invocation from skill frontmatter.",
+        "Register the adapted plugin with Codex so its skills load as pstack:<skill>.",
+        "Use pstack-codex for Codex task, model, and session-mode translation."
+      ],
+      "compatibilitySkill": "pstack-codex",
+      "sessionModeSetup": "python3 ~/.agents/skills/pstack-codex/scripts/poteto-session-mode.py install"
+    }
+  },
+  "bareSkillOwners": {
+    "tdd": "mattpocock/skills",
+    "teach": "mattpocock/skills"
+  }
+}
