@@ -8,7 +8,8 @@ import {
   rmSync,
   symlinkSync,
 } from "node:fs";
-import { basename, dirname, join, relative, resolve, sep } from "node:path";
+import { basename, dirname, join, resolve, sep } from "node:path";
+import { homedir } from "node:os";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -48,6 +49,9 @@ const ensureTargetDir = (targetDir) => {
 const resolveLink = (linkPath) =>
   resolve(dirname(linkPath), readlinkSync(linkPath));
 
+const isInside = (candidate, parent) =>
+  candidate === parent || candidate.startsWith(parent + sep);
+
 export const syncSkills = (targetDir = defaultTargetDir, options = {}) => {
   const prune = options.prune === true;
   if (!existsSync(agentsDir)) {
@@ -64,6 +68,12 @@ export const syncSkills = (targetDir = defaultTargetDir, options = {}) => {
 
   const agentSet = new Set(agentEntries);
   const resolvedAgentsDir = resolve(agentsDir);
+  const managedAgentRoots = new Set([
+    resolvedAgentsDir,
+    resolve(homedir(), ".agents", "skills"),
+  ]);
+  const isManagedSkillTarget = (candidate) =>
+    [...managedAgentRoots].some((managedRoot) => isInside(candidate, managedRoot));
 
   let removed = 0;
   if (prune) {
@@ -77,7 +87,7 @@ export const syncSkills = (targetDir = defaultTargetDir, options = {}) => {
         continue;
       }
       const currentTarget = resolveLink(linkPath);
-      if (!currentTarget.startsWith(resolvedAgentsDir + sep)) {
+      if (!isManagedSkillTarget(currentTarget)) {
         continue;
       }
       if (!agentSet.has(entry.name)) {
@@ -91,19 +101,18 @@ export const syncSkills = (targetDir = defaultTargetDir, options = {}) => {
   let skipped = 0;
   let conflicts = 0;
   for (const name of agentEntries) {
-    const targetAbs = join(agentsDir, name);
     const linkPath = join(targetDir, name);
-    const linkTarget = relative(targetDir, targetAbs);
+    const linkTarget = join(homedir(), ".agents", "skills", name);
 
     if (existsSync(linkPath)) {
       const stat = lstatSync(linkPath);
       if (stat.isSymbolicLink()) {
         const currentTarget = resolveLink(linkPath);
-        if (currentTarget === resolve(targetAbs)) {
+        if (readlinkSync(linkPath) === linkTarget) {
           skipped += 1;
           continue;
         }
-        if (currentTarget.startsWith(resolvedAgentsDir + sep)) {
+        if (isManagedSkillTarget(currentTarget)) {
           rmSync(linkPath, { recursive: true, force: true });
         } else {
           console.log(

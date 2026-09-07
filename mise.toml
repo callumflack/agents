@@ -6,6 +6,10 @@ run = "bash scripts/link-home.sh"
 description = "Repair ~/.cursor/skills links from ~/.agents/skills"
 run = 'node scripts/sync-skills.js --target="$HOME/.cursor/skills"'
 
+[tasks."repair:codex"]
+description = "Repair ~/.codex/skills links from ~/.agents/skills"
+run = 'node scripts/sync-skills.js --target="$HOME/.codex/skills"'
+
 [tasks."repair:claude"]
 description = "Repair ~/.claude/skills links from ~/.agents/skills"
 run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills"'
@@ -13,6 +17,10 @@ run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills"'
 [tasks."repair:cursor:prune"]
 description = "Repair Cursor skill links and remove stale managed links"
 run = 'node scripts/sync-skills.js --target="$HOME/.cursor/skills" --prune'
+
+[tasks."repair:codex:prune"]
+description = "Repair Codex skill links and remove stale managed links"
+run = 'node scripts/sync-skills.js --target="$HOME/.codex/skills" --prune'
 
 [tasks."repair:claude:prune"]
 description = "Repair Claude skill links and remove stale managed links"
