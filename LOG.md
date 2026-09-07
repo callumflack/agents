@@ -8,6 +8,45 @@
   ignored. The marketplace, materializer, checks, and bootstrap wiring were
   removed. Verification passed. No follow-up remains for this steer.
 
+- **Steer:** Callum approved the reviewed worklog simplification and runtime
+  refresh. Keep the significant-writable/chat-fragile trigger; remove routine
+  playbook loading and the recovery-check workaround. **Resolved:** approved
+  changes applied; runtime adapters match. No remaining action for this steer.
+
+## 2026-09-05
+
+- **Resolved:** all three approved clarifications are applied; bootstrap and
+  adapter parity checks passed. No further investigation or commit made.
+- **Updated steer:** Callum approved the other three review clarifications:
+  log only significant work with chat-fragile state, protect the existing index
+  and inspect the full commit diff, and read Git conventions for the relevant
+  action. This supersedes the earlier instruction to leave them unadopted;
+  no further experiments requested. Next: apply and refresh Cursor.
+- **Resolved:** global guidance now limits cold-agent recovery checks to
+  requested validation or promotion; regenerated adapters match. No further
+  investigation or other rule changes made.
+- **Steer:** stop expanding the investigation. Apply only the trial-supported
+  recovery-check restriction to global guidance; leave other review proposals
+  unadopted. Next: refresh Cursor and verify instruction parity.
+- **Resolved:** three disposable tasks passed under both current and proposed
+  guidance. Current worklog rules caused one extra recovery agent; candidate
+  rules preserved the same checked outcomes without it. No live rule changes.
+  **Still untested:** automatic worklog activation when all state is already
+  durable. Stronger Git wording showed no advantage in this sample. Evidence:
+  `/var/folders/sn/vwf7jqdd3xv71m1bymmn2xbm0000gn/T/agents-guidance-trials-z7hirxr0/report.md`.
+- **Active:** run a small disposable comparison of current global guidance and
+  the four review proposals. Live guidance and Playbooks stay unchanged. Check
+  trivial-edit overhead, unresolved-decision preservation, and same-file staged
+  work isolation; report observed behavior separately from static expectations.
+- **Resolved:** global-guidance reduction is complete; the preserved worklog
+  safeguards remain explicit, and Codex, Claude, and Cursor match the canonical
+  body after bootstrap. No open follow-up for this change.
+- **Decision:** shorten global guidance after Eric's article; retain first-write
+  worklog updates, additive steers, unresolved-question protection, and rendered
+  UI proof. Remove the mandatory scope announcement format. Move the friction
+  template to README; keep other procedures in their existing owners. Next:
+  update the global body, regenerate Cursor, and check adapter parity.
+
 ## 2026-09-04
 
 - **Correction:** the cross-app worklog slice depends on the Cursor adapter in

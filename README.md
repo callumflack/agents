@@ -96,3 +96,18 @@ These commands leave unrelated entries alone. The `repair:*:prune` variants also
 ## Design rule
 
 `AGENTS.md` carries orientation. Skills carry uncommon procedures. Scripts encode repeated actions. Checks prove the result. The full rules live in [`.agents/AGENTS.md`](.agents/AGENTS.md).
+
+## Friction template
+
+Use this when an agent-process failure repeats or costs enough that another
+agent should not have to rediscover it. Ordinary iteration needs no rubric.
+Any resulting change stays within the authorized task scope.
+
+```text
+Miss:
+Repeated or expensive:
+Owning surface:
+Smallest constraint:
+Nearest oracle:
+Where this does not apply:
+```

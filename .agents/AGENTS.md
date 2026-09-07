@@ -1,57 +1,61 @@
 # How to work with Callum
 
 Keep responses short, idiomatic, and direct. Disagree when the premise is wrong.
-Don’t explain reasoning unless asked or the decision depends on it.
+Explain reasoning when asked or when the decision depends on it. Preserve the
+source's pressure: do not smooth away its claim, burden, or live distinction.
 
-**Owner and oracle.** Before nontrivial action, name the owner surface, allowed writes, forbidden surfaces, done gate, and first real check. For significant writable work, include the owning worklog in allowed writes and make reading then updating it the first real check, before any other material write. An explicit read-only or no-write boundary forbids that side write. Skip for trivial chat or one-line commands.
+**Scope and judgment.** Establish the owning surface, write boundaries, and
+completion check; explain them when scope or risk needs clarification. State
+material assumptions. Ask when a wrong assumption would be expensive.
+Distinguish observation, inference, and stale memory; check live files for
+repo-state claims. Translate analogies into local checks before adopting them.
 
-**Epistemics.** Don’t ask agents to know what they cannot sense, measure, or verify.
-Do not turn analogy into architecture: translate into repo-local checks before claiming they apply.
-Prefer the smallest constraint that prevents the miss. Do not add process unless a repeated failure or high-cost footgun proves it.
-When using memory, distinguish confirmed-current from stale. Re-check live files when the answer depends on repo state.
-If a task is ambiguous, make one concrete assumption and state it briefly. Ask only when the wrong assumption would be expensive.
+**Code and proof.** Make the smallest complete change, preserving a working
+end-to-end path and contracts outside the change. Inspect existing owners,
+docs, and types before adding dependencies or abstractions. Add them only for
+a concrete capability, risk, or reduction in owned code. Delete obsolete
+internal paths once callers are gone; retain compatibility only for identified
+external or persisted contracts. Put implementation claims in code, types,
+tests, or the nearest architecture document. Use the narrowest real completion
+check. Visible UI claims require the exact changed surface rendered in its real
+app; tests and typechecks do not prove appearance.
 
-**Code.**
+**Worklog.** For significant writable work with chat-fragile state, maintain one
+concise `LOG.md` at the owning root, unless that owner names another log. Read
+and update it before the first material write. Record only chat-fragile objectives, steers,
+preferences, todos, decisions, tradeoffs, surprises, unresolved questions, and
+next actions. Update before continuing when that state changes. Keep steers
+additive; explicitly mark resolutions, corrections, and handoffs. Never replace
+an unanswered question with a completion summary. Finish with the log matching
+reality. Do not duplicate facts owned by code, Git, issues, documentation, tests,
+or research. Do not create per-chat logs or logging machinery.
+Read-only and no-write boundaries forbid log mutation.
 
-- Make the smallest complete change that meets the current requirement end to end. Avoid speculative abstractions, config, and indirection. Do not leave a stopgap marked for later replacement.
-- Preserve a working end-to-end path. Do not replace it with unfinished architecture.
-- Delete an obsolete internal path once no remaining caller depends on it. Add a shim, fallback, or migration only for an identified external or persisted contract. Keep contracts outside the change intact.
-- Inspect the existing surface before adding a dependency, layer, or abstraction. Use what the project already has; read its docs and types before assuming a gap. Add a library only when it replaces code the project would otherwise own, closes a named risk, or provides a required capability the current stack lacks.
-- Put implementation and architecture claims in the nearest durable owner: code, type, test, narrow comment, ADR, `CONTEXT.md`, or Git. Keep prose for user guidance, decisions, domain language, and navigation.
-- Prove done with the narrowest real oracle: typecheck, test, lint, browser truth, runtime-boundary check, or exact file inspection.
-- Visible UI claims require the exact changed surface rendered in its real app. Tests and typechecks do not prove appearance.
+**Conditional references.** Playbooks are local to this Mac at
+`/Users/callumflack/Workspaces/Playbooks`; do not commit these paths into team
+repos. Read only the reference matching the task:
 
-**Writing.** Preserve the source's pressure. Do not smooth language until the claim, burden, and live distinction are clear.
+- Design or repair a worklog convention: `playbooks/maintain-owner-worklog.md`.
+- Author a repo format/lint/diagnostics gate: `playbooks/author-repo-verify-gate.md`.
+- Align editor or formatter settings across repos: `playbooks/copy-editor-settings-by-role.md`.
+- Diagnose CSS layout symptoms that contradict declared styles:
+  `references/css-pitfalls.md`.
+- Install or debug Ultracite, Oxlint, Oxfmt, or Oxc's editor extension:
+  `references/ultracite-oxc-cursor.md`.
 
-**Worklog.** For significant writable work, maintain one concise `LOG.md` at the owning root unless that owner already names another log; never create one per chat. Read it and write or refresh the current dated entry before the first material write. Record only chat-fragile state: the objective, material steers and personal preferences, on-the-fly todos, decisions and tradeoffs, surprises, unresolved questions, and next action. Update it before continuing whenever that state changes, not merely at completion. Keep steers additive; mark items resolved, corrected, or handed off explicitly; never delete or replace an unanswered question with a completion summary. Work is not done until the log matches reality. Newest date goes at the top; within a date, newest entry goes first. Do not duplicate detail recoverable from code, Git, issues, documentation, or test output. An explicit read-only or no-write boundary forbids log mutation. This is a pilot: do not invent log types, archives, hooks, or extra routing rules.
+For global skill installation, provider collisions, or the friction template,
+read the relevant section of `~/Repos/callumflack/agents/README.md`.
 
-**Playbooks.** Callum-only shelf on this Mac, not in team clones. Catalogue: `/Users/callumflack/Workspaces/Playbooks`. Git home: `/Users/callumflack/Repos/callumflack/playbooks`. When adopting, repairing, or reconciling an owner worklog, read `/Users/callumflack/Workspaces/Playbooks/playbooks/maintain-owner-worklog.md`. When writing a repo format/lint/diagnostics done-gate, read `/Users/callumflack/Workspaces/Playbooks/playbooks/author-repo-verify-gate.md`. When aligning `.vscode` or formatter editor config across repos, read `/Users/callumflack/Workspaces/Playbooks/playbooks/copy-editor-settings-by-role.md`. When installing, reinstalling, or debugging Ultracite, Oxlint, Oxfmt, or the Oxc editor extension, read `/Users/callumflack/Workspaces/Playbooks/references/ultracite-oxc-cursor.md`. Do not commit these paths into a team repo.
+**Repeated failures.** Add process only for a repeated or costly failure. Within
+the authorized scope, fix its smallest durable owner and add the nearest check.
 
-**Global skills.** Pstack is plugin-owned: Cursor loads `/add-plugin pstack`, and Codex loads the personal `pstack` plugin. Never run `npx skills add cursor/plugins --global` or put `pstack/` entries in the flat global lock. Matt Pocock owns the global bare `tdd` and `teach`. In Cursor, pstack remains the native default; to force Pocock, explicitly read and follow `~/.agents/skills/teach/SKILL.md` or `~/.agents/skills/tdd/SKILL.md` and reject the pstack skill of the same name.
+**Defaults.** Repo-local guidance wins. Prefer `rg`, `fd`, `eza`, and `bat`;
+fall back when unavailable. Preserve dirty and unrelated work. Before changing
+branches, committing, opening PRs, or releasing, read the repo conventions
+relevant to that action. Never push protected branches directly. Before staging,
+inspect the existing index and preserve user-staged changes. Stage exact paths
+or hunks; before committing, inspect the full staged diff and verify it contains
+only the authorized commit scope.
 
-**Cursor copy.** Codex and Claude symlink this file. Cursor does not: `mise run bootstrap` (agents repo) writes `~/.cursor/rules/callum-agents.mdc` from it. After any edit to this file, run that again or Cursor keeps the old body.
-
-## Friction Promotion Rubric (when a miss repeats or costs too much)
-
-Treat friction as evidence: when it repeats or costs too much, find where you are guessing, then add the smallest constraint and nearest check.
-
-This is not a second operating rule. It is the diagnostic shape for that line: use it only when friction repeats or costs enough that the next agent should not have to rediscover it.
-
-Miss:
-Repeated or expensive:
-Owning surface:
-Smallest constraint:
-Nearest oracle:
-Where this does not apply:
-
-If the issue is normal iteration, keep working. If it is repeated agent-process failure, patch the smallest surface the next cold agent will actually read or run: prompt, `AGENTS.md`, router, resolver, gate, skill, tool schema, test, snapshot, or runtime check.
-
-## Defaults (repo-local AGENTS.md wins)
-
-### CLI
-
-Prefer `rg` over `grep`, `fd` over `find`, `eza` over `ls`, and `bat` over `cat`; fall back to standard tools when unavailable.
-
-### Git
-
-Preserve dirty and unrelated work. Before git work, inspect the repo's own branch, commit, PR, and release conventions. Never push protected branches directly. Stage exact paths only, then verify with `git diff --cached --name-only` before committing.
+**Updating this file.** Codex and Claude use symlinks; Cursor uses a generated
+copy. After editing, run `mise run bootstrap` in `~/Repos/callumflack/agents`.
