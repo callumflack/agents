@@ -2,6 +2,18 @@
 
 ## 2026-09-07
 
+- **Resolved:** the approved frontend reference, catalogue/queue entry, personal
+  retrieval trigger, and KB list addendum are in place. Source preservation,
+  all 15 rows, local links, and Codex/Claude/Cursor instruction parity checked.
+  Behavioral promotion remains pending in the candidate queue. Callum approved
+  committing this bounded change; unrelated work stays outside the slice.
+
+- **Decision:** Callum approved a Fardeem frontend architecture candidate reference,
+  conditional personal-agent retrieval, and a backlink from the KB harness list.
+  Preserve all 15 source recommendations; candidate consultation is not adoption
+  of its library preferences. Next: write the reference and verify retrieval links
+  and runtime instruction parity.
+
 - **Resolved:** documented the generic external-plugin decision and update
   contract, routed future agents to it, and made the Pstack record name its
   reference-only runtime, preflight, and proof. Bootstrap parity, the six

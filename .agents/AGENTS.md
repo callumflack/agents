@@ -40,6 +40,10 @@ repos. Read only the reference matching the task:
 - Align editor or formatter settings across repos: `playbooks/copy-editor-settings-by-role.md`.
 - Diagnose CSS layout symptoms that contradict declared styles:
   `references/css-pitfalls.md`.
+- Plan a frontend app or change API contracts, routing, state ownership,
+  sync/streaming, or design-system foundations: `references/frontend-architecture.md`.
+  Consult the candidate's relevant checks against existing owners; ordinary
+  component or styling changes do not trigger an architecture audit.
 - Install or debug Ultracite, Oxlint, Oxfmt, or Oxc's editor extension:
   `references/ultracite-oxc-cursor.md`.
 
