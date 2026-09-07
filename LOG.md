@@ -2,6 +2,13 @@
 
 ## 2026-09-07
 
+- **Resolved:** committed the approved Agents Pack cleanup in four slices:
+  global guidance and CSS Playbook routing (`ea939f6`), external skill inventory
+  (`927b9e7`), Codex link repair (`8bf3252`), and the retained collision research
+  in this commit. Skills House stayed untouched and moved to a separate
+  read-only overview task. Pstack remains reference-only; none of its deleted
+  packaging machinery was restored.
+
 - **Resolved:** replaced the pending Pstack packaging system with a
   reference-only record. The record pins the upstream plugin, describes the
   Codex adaptation, and names current bare-name owners. The external body stays
