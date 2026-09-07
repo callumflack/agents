@@ -2,6 +2,15 @@
 
 ## 2026-09-07
 
+- **Resolved:** documented the generic external-plugin decision and update
+  contract, routed future agents to it, and made the Pstack record name its
+  reference-only runtime, preflight, and proof. Bootstrap parity, the six
+  `pstack-codex` hook tests, the 110-skill manifest, and ownership checks pass.
+  **Unresolved:** select a supported Codex marketplace owner before the next
+  Pstack update or reinstall. The cached plugin still loads, but the configured
+  manifest-free `personal` marketplace fails both plugin-list commands; do not
+  advance the pin, claim portability, or restore deleted machinery incidentally.
+
 - **Resolved:** committed the approved Agents Pack cleanup in four slices:
   global guidance and CSS Playbook routing (`ea939f6`), external skill inventory
   (`927b9e7`), Codex link repair (`8bf3252`), and the retained collision research

@@ -15,5 +15,5 @@ The global instruction body is `.agents/AGENTS.md`. After editing it, run
   `scripts/link-skills.sh`, not `npx skills` or the external lock.
 - Pstack is plugin-owned. Keep it out of the flat skill registry;
   bare `tdd` and `teach` belong to Matt Pocock.
-- For installation recovery or same-name skill selection, read the
-  relevant instructions in README.md.
+- For external-plugin installation, updates, host adaptation, recovery, or
+  same-name skill selection, read the relevant instructions in README.md.

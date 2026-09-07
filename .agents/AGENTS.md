@@ -43,8 +43,9 @@ repos. Read only the reference matching the task:
 - Install or debug Ultracite, Oxlint, Oxfmt, or Oxc's editor extension:
   `references/ultracite-oxc-cursor.md`.
 
-For global skill installation, provider collisions, or the friction template,
-read the relevant section of `~/Repos/callumflack/agents/README.md`.
+For global skill installation, provider collisions, external-plugin
+installation, updates, host adaptation, or the friction template, read the
+relevant section of `~/Repos/callumflack/agents/README.md`.
 
 **Repeated failures.** Add process only for a repeated or costly failure. Within
 the authorized scope, fix its smallest durable owner and add the nearest check.

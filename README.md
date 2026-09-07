@@ -61,15 +61,73 @@ Inspect `skills:print` before running `skills:install`. The install task execute
 `.agents/plugins/*.lock.json` records external plugins. Keep plugin bodies out
 of Git. Local plugin files under `plugins/` are ignored.
 
+Classify an external capability before installing it:
+
+1. A standalone Agent Skill belongs in `.agents/.skill-lock.json`.
+2. A provider plugin stays plugin-owned and gets its own
+   `.agents/plugins/<name>.lock.json`; do not flatten its skills into the global
+   skill registry.
+3. When the plugin assumes another host's tasks, models, hooks, or modes, put
+   only the host translation in a Callum-authored compatibility skill. The
+   plugin still owns the workflow.
+4. When names collide, keep one bare-name owner and expose the plugin's version
+   through its namespace. Add an alias only when both implementations need
+   independent stable names, then record it in the plugin lock.
+
+Each plugin record should name its upstream source, revision and version,
+native install route, host adaptations, namespace, bare-name owners,
+compatibility skill, stable runtime path, preflight, and completion checks.
+
+### Updating a plugin
+
+1. Read the plugin record and identify the upstream, runtime owner, namespace,
+   compatibility skill, and bare-name owners.
+2. Run the recorded plugin-manager preflight. If the manager cannot enumerate
+   its marketplaces and plugins, stop. A working cache is not proof that the
+   plugin can be updated or reinstalled.
+3. Inspect the new upstream revision. Build any host adaptation only in its
+   ignored runtime location; preserve upstream skill names inside the plugin.
+4. Run the compatibility-skill tests and prove the flat registry still has the
+   recorded bare-name owners and no flattened copy of the plugin.
+5. Install or register through the host's supported plugin system. In a fresh
+   host session, prove the plugin is reported at the intended version and its
+   skills load as `<namespace>:<skill>`.
+6. Update the plugin record last, after the installed result and checks agree.
+
+Do not add a materializer, marketplace, or bootstrap wiring merely to make this
+procedure automatic. Add machinery only when a selected plugin needs a
+repeatable installer and its owner and completion check are explicit.
+
+### Pstack
+
 The Pstack record pins its upstream revision and records how Cursor and Codex
 use it. Cursor installs the native plugin. Codex keeps its skills under the
 `pstack:` namespace and uses `pstack-codex` for Codex-specific translation.
 
-When two providers publish the same skill name, keep one bare-name owner. Use
-the plugin namespace for the other provider. Add a deliberate alias only when
-both implementations need stable public names, then record that mapping in the
-matching plugin lock. The Pstack record currently assigns bare `tdd` and
-`teach` to `mattpocock/skills`.
+The Pstack record currently assigns bare `tdd` and `teach` to
+`mattpocock/skills`; Pstack's variants load as `pstack:tdd` and
+`pstack:teach`. `pstack-codex` is a separate compatibility skill, not a renamed
+Pstack skill.
+
+Before updating Pstack, run:
+
+```sh
+codex plugin marketplace list
+codex plugin list
+python3 "$HOME/Repos/callumflack/skills/pstack-codex/scripts/test-poteto-session-mode.py"
+mise run skills:check
+```
+
+Then confirm `~/plugins/pstack` resolves to the ignored adapted bundle, a fresh
+Codex task exposes `pstack:<skill>`, `.agents/.skill-lock.json` contains no
+Pstack skills, and bare `tdd` and `teach` still resolve to `mattpocock/skills`.
+
+Current blocker: the configured Codex `personal` marketplace points at this
+repository, which intentionally has no marketplace manifest. The installed
+Pstack cache still loads, but both plugin-list commands fail. Do not advance the
+Pstack revision, run `codex plugin add pstack@personal`, or claim reinstall
+proof until a supported marketplace owner is deliberately selected. Do not
+restore the deleted marketplace or materializer as an incidental repair.
 
 ## Authored skills
 

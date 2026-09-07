@@ -7,6 +7,8 @@
     "cursor": "/add-plugin pstack",
     "codex": {
       "namespace": "pstack",
+      "management": "reference-only",
+      "runtimePath": "~/plugins/pstack",
       "adaptation": [
         "Copy the upstream skills into a local Codex plugin at ~/plugins/pstack.",
         "Translate .cursor-plugin/plugin.json to .codex-plugin/plugin.json.",
@@ -15,7 +17,17 @@
         "Use pstack-codex for Codex task, model, and session-mode translation."
       ],
       "compatibilitySkill": "pstack-codex",
-      "sessionModeSetup": "python3 ~/.agents/skills/pstack-codex/scripts/poteto-session-mode.py install"
+      "sessionModeSetup": "python3 ~/.agents/skills/pstack-codex/scripts/poteto-session-mode.py install",
+      "preflight": [
+        "codex plugin marketplace list",
+        "codex plugin list"
+      ],
+      "verification": [
+        "python3 ~/Repos/callumflack/skills/pstack-codex/scripts/test-poteto-session-mode.py",
+        "mise run skills:check",
+        "Confirm a fresh Codex task exposes Pstack skills as pstack:<skill>.",
+        "Confirm .agents/.skill-lock.json contains no Pstack skills and keeps the recorded bare-name owners."
+      ]
     }
   },
   "bareSkillOwners": {
