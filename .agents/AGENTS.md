@@ -17,8 +17,13 @@ a concrete capability, risk, or reduction in owned code. Delete obsolete
 internal paths once callers are gone; retain compatibility only for identified
 external or persisted contracts. Put implementation claims in code, types,
 tests, or the nearest architecture document. Use the narrowest real completion
-check. Visible UI claims require the exact changed surface rendered in its real
-app; tests and typechecks do not prove appearance.
+check. After editing a file, read its IDE diagnostics (`ReadLints` / Problems)
+and fix them on that set. Then run that repository's format/lint on the same
+paths from its Git root. Do not claim done with remaining diagnostics or
+unformatted files you touched. Do not sweep an inherited backlog. If the
+repository has no format, lint, or diagnostics surface, skip. Visible UI claims
+require the exact changed surface rendered in its real app; tests and
+typechecks do not prove appearance.
 
 **Worklog.** For significant writable work with chat-fragile state, maintain one
 concise `LOG.md` at the owning root, unless that owner names another log. Read

@@ -2,6 +2,12 @@
 
 ## 2026-09-14
 
+- **Resolved:** committed the remaining tracked worktree in two slices: the
+  external skill registry update, then the global diagnostics guidance and
+  accumulated owner-worklog history. The 114-skill manifest check, bootstrap,
+  Codex/Claude/Cursor instruction parity, and diff checks pass. Push `master`
+  directly after the guidance slice is committed.
+
 - **Resolved:** made the personal Pstack marketplace durable across cleanup and
   fresh clones. The tracked record and marketplace now own a deterministic
   ignored-bundle rebuild and freshness check; bootstrap reconstructs the locked
@@ -18,6 +24,20 @@
   is removed. Marketplace and plugin listing pass; Pstack `0.14.8` validates,
   reinstalls, and reports enabled. No materializer or flat Pstack skill install
   was restored.
+
+## 2026-09-08
+
+- **Steer:** Callum approved putting the after-edit diagnostics trigger in
+  global `.agents/AGENTS.md` (ReadLints / Problems, then that repo's
+  format/lint on the touched set; no backlog sweep). Keep commands and debt
+  exceptions repo-local. Re-run bootstrap. Do not paste Stake's oxlint
+  paragraph.
+- **Resolved:** trigger is in `.agents/AGENTS.md`. Bootstrap wrote Cursor
+  `callum-agents.mdc`; Codex and Claude match the canonical body. Workspace
+  `AGENTS.md` keeps only the nested-`.vscode` fact. Playbook non-applicability
+  now says not to globalize commands/debt; the trigger is already global.
+  Fresh Cursor chats load it; this chat still has the old prompt until
+  restarted.
 
 ## 2026-09-07
 
@@ -60,6 +80,18 @@
   playbook loading and the recovery-check workaround. **Resolved:** approved
   changes applied; runtime adapters match. No remaining action for this steer.
 
+- **Handoff:** Callum requested moving `orchestrate-astra` and its provenance
+  into the personal skills repo. That repo now owns the migration and global
+  linking; the earlier instruction to retain the local source is superseded.
+- **Resolved:** the existing runtime-linked skill now carries the approved
+  arrangement; structural validation passed. Its source remains Git-ignored
+  under the existing local installation policy. Fresh tasks load the update;
+  no source migration or commit was requested.
+- **Decision:** Callum approved adapting the existing `orchestrate-astra` skill
+  so Astra leads and Sol/Terra/Luna execute, with task-specific handoffs and
+  completion evidence. Keep its explicitly chosen local source location; no
+  new mode or ambient rules. Next: validate the skill and installed link.
+
 ## 2026-09-05
 
 - **Resolved:** all three approved clarifications are applied; bootstrap and
@@ -93,9 +125,48 @@
   UI proof. Remove the mandatory scope announcement format. Move the friction
   template to README; keep other procedures in their existing owners. Next:
   update the global body, regenerate Cursor, and check adapter parity.
+- **Resolved:** the requested standalone skill is created and structurally
+  validated; the original remains intact. No open follow-up for this addition.
+- **Decision:** Callum explicitly requested `orchestrate-astra` in this repo's
+  `.agents/skills`, overriding the usual authored-skill source location for
+  this addition. Use the tightened skill-creator draft and retain the original
+  `orchestrate`. Next: create the standalone skill and validate its structure.
 
 ## 2026-09-04
 
+- **Decision:** keep one small shared Pstack artifact module so sync and check
+  cannot compute different identities. Keep flat-registry cleanup separate.
+  Serialize materialization with the Mac's kernel `lockf`; do not add a plugin
+  framework, cache store, generated receipt, or home-grown lease protocol.
+- **Active:** fix the externally reviewed Pstack packaging defects before any
+  commit. Contain lock-driven deletion and upstream symlinks, serialize
+  materialization, make lock publication recoverable, bind artifact identity
+  to the packager, and make the check reject stale output. Preserve the live
+  Codex install, generated plugin route, unrelated dirty work, and empty index.
+- **Completed:** Pstack's generated Codex body is ignored and rebuilt from the
+  tracked upstream record. Locked local and remote-source rebuilds produced 123
+  files with no `node_modules`; repeated bootstrap converged; plugin validation
+  and all six Poteto hook tests passed. An isolated Codex home discovered the
+  marketplace through `~/.agents` and installed the recorded cache-safe
+  version. The live Codex installation was not changed.
+- **Decision:** bootstrap always reruns the locked Pstack materializer. Checking
+  only for an existing manifest would leave an old generated plugin after the
+  recorded revision changes.
+- **Correction:** Codex discovers the `personal` marketplace through the
+  bootstrapped `~/.agents/plugins/marketplace.json`. Registering the repository
+  as another marketplace duplicates `personal`; a new machine needs only
+  `codex plugin add pstack@personal` after bootstrap.
+- **Decision:** keep one Pstack record at
+  `.agents/plugins/pstack.lock.json`. Normal sync advances it from the monitored
+  checkout only after packaging succeeds; bootstrap recreates the recorded
+  revision with `--locked`. Keep Codex marketplace registration and plugin
+  installation as explicit one-time commands rather than hiding them in
+  bootstrap.
+- **Active:** make the Pstack Codex package disposable and ignored while this
+  repo tracks the small record and scripts needed to recreate it. Preserve the
+  existing `~/plugins/pstack` route used by the Poteto session hook. Do not add
+  a Playbook or general plugin framework; mirror the existing external-skill
+  install-home pattern and keep unrelated dirty work untouched.
 - **Correction:** the cross-app worklog slice depends on the Cursor adapter in
   `scripts/link-home.sh` plus its README and repository-instruction pointers.
   Include only those Cursor hunks. Keep the adjacent Pstack plugin packaging,
