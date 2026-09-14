@@ -37,3 +37,15 @@ run = "node scripts/install-skills-from-lock.js"
 [tasks."skills:install"]
 description = "Install skills from .agents/.skill-lock.json"
 run = "node scripts/install-skills-from-lock.js --apply"
+
+[tasks."plugin:pstack:sync"]
+description = "Package the clean monitored Pstack checkout and advance its record"
+run = "node scripts/sync-pstack-plugin.js"
+
+[tasks."plugin:pstack:build"]
+description = "Rebuild the ignored Pstack plugin from its recorded revision"
+run = "node scripts/sync-pstack-plugin.js --locked"
+
+[tasks."plugin:pstack:check"]
+description = "Check Pstack ownership, freshness, schema, and runtime link"
+run = "node scripts/check-skill-manifest.js && node scripts/check-pstack-plugin.js && uv run --with pyyaml python3 $HOME/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py plugins/pstack"

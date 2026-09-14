@@ -118,16 +118,32 @@ python3 "$HOME/Repos/callumflack/skills/pstack-codex/scripts/test-poteto-session
 mise run skills:check
 ```
 
+`mise run bootstrap` reconstructs the ignored plugin from the immutable Pstack
+record before linking `~/plugins/pstack`. To deliberately advance Pstack, first
+fast-forward the clean `~/Repos/cursor/plugins` checkout, then run:
+
+```sh
+mise run plugin:pstack:sync
+mise run plugin:pstack:check
+codex plugin add pstack@personal
+```
+
+`plugin:pstack:sync` publishes a package only from Git-tracked upstream files,
+rejects symlinks and a dirty monitored checkout, removes Cursor-only
+`disable-model-invocation` fields, and gives the generated package a version
+derived from the upstream revision and packager content. The generated body
+remains ignored; the lock, marketplace, materializer, and checks are tracked.
+
 Then confirm `~/plugins/pstack` resolves to the ignored adapted bundle, a fresh
 Codex task exposes `pstack:<skill>`, `.agents/.skill-lock.json` contains no
 Pstack skills, and bare `tdd` and `teach` still resolve to `mattpocock/skills`.
 
-Current blocker: the configured Codex `personal` marketplace points at this
-repository, which intentionally has no marketplace manifest. The installed
-Pstack cache still loads, but both plugin-list commands fail. Do not advance the
-Pstack revision, run `codex plugin add pstack@personal`, or claim reinstall
-proof until a supported marketplace owner is deliberately selected. Do not
-restore the deleted marketplace or materializer as an incidental repair.
+Codex discovers the `personal` marketplace from
+`~/.agents/plugins/marketplace.json`; its Pstack entry points at the ignored
+adapted bundle through `./plugins/pstack`. Do not also register this repository
+as an explicit `personal` marketplace in `~/.codex/config.toml`: that creates a
+duplicate owner. A working update must pass both plugin-list commands before it
+advances the Pstack record or reinstalls `pstack@personal`.
 
 ## Authored skills
 

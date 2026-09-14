@@ -9,6 +9,7 @@ payload_dir="$repo_root/.agents"
 codex_agents_file="${CODEX_AGENTS_FILE:-$HOME/.codex/AGENTS.md}"
 claude_agents_file="${CLAUDE_AGENTS_FILE:-$HOME/.claude/CLAUDE.md}"
 cursor_agents_rule="${CURSOR_AGENTS_RULE:-$HOME/.cursor/rules/callum-agents.mdc}"
+personal_pstack_plugin="${PSTACK_CODEX_PLUGIN:-$HOME/plugins/pstack}"
 
 if [ ! -d "$payload_dir" ]; then
   echo "error: expected agents payload at: $payload_dir" >&2
@@ -63,3 +64,12 @@ mkdir -p "$cursor_rule_dir"
   cat "$agents_home/AGENTS.md"
 } >"$cursor_agents_rule"
 echo "wrote: $cursor_agents_rule <- $agents_home/AGENTS.md"
+
+mkdir -p "$(dirname "$personal_pstack_plugin")"
+node "$repo_root/scripts/sync-pstack-plugin.js" --locked
+if [ -e "$personal_pstack_plugin" ] && [ ! -L "$personal_pstack_plugin" ]; then
+  echo "error: personal pstack plugin target already exists: $personal_pstack_plugin" >&2
+  exit 1
+fi
+ln -sfn "$repo_root/plugins/pstack" "$personal_pstack_plugin"
+echo "linked: $personal_pstack_plugin -> $repo_root/plugins/pstack"

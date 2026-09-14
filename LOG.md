@@ -1,5 +1,24 @@
 # Worklog
 
+## 2026-09-14
+
+- **Resolved:** made the personal Pstack marketplace durable across cleanup and
+  fresh clones. The tracked record and marketplace now own a deterministic
+  ignored-bundle rebuild and freshness check; bootstrap reconstructs the locked
+  revision, and the weekly heartbeat advances, validates, and reinstalls only
+  from a clean fast-forwarded checkout. Upgraded Pstack from `0.14.8` to
+  `0.15.2`; remote-fallback rebuild, bootstrap, plugin validation, six
+  compatibility tests, ownership checks, reinstall, and enabled-state proof
+  pass. **Correction:** this supersedes the earlier same-day decision not to
+  restore a materializer; Callum explicitly requested durability over time.
+
+- **Resolved:** repaired the `personal` Codex marketplace at its existing Agents
+  Pack owner. The tracked manifest points at the ignored adapted
+  `plugins/pstack` bundle, and the duplicate explicit marketplace registration
+  is removed. Marketplace and plugin listing pass; Pstack `0.14.8` validates,
+  reinstalls, and reports enabled. No materializer or flat Pstack skill install
+  was restored.
+
 ## 2026-09-07
 
 - **Resolved:** the approved frontend reference, catalogue/queue entry, personal

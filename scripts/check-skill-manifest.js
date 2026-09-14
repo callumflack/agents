@@ -41,6 +41,17 @@ if (!existsSync(canonical)) {
         console.error(`authored skill must be linked, not npx-managed: ${name}`);
         failed = true;
       }
+      if (typeof entry?.skillPath === "string" && entry.skillPath.startsWith("pstack/")) {
+        console.error(`pstack must be plugin-owned, not globally installed: ${name}`);
+        failed = true;
+      }
+    }
+
+    for (const name of ["tdd", "teach"]) {
+      if (manifest.skills[name]?.source !== "mattpocock/skills") {
+        console.error(`global ${name} must remain owned by mattpocock/skills`);
+        failed = true;
+      }
     }
   }
 }
@@ -75,6 +86,18 @@ if (tracked.status !== 0) {
     }
     failed = true;
   }
+}
+
+const trackedPluginBodies = spawnSync("git", ["ls-files", "plugins/pstack"], {
+  cwd: root,
+  encoding: "utf8",
+});
+if (trackedPluginBodies.status !== 0) {
+  console.error(trackedPluginBodies.stderr.trim());
+  failed = true;
+} else if (trackedPluginBodies.stdout.trim()) {
+  console.error("generated pstack plugin body must remain ignored");
+  failed = true;
 }
 
 process.exit(failed ? 1 : 0);
