@@ -24,6 +24,8 @@ unformatted files you touched. Do not sweep an inherited backlog. If the
 repository has no format, lint, or diagnostics surface, skip. Visible UI claims
 require the exact changed surface rendered in its real app; tests and
 typechecks do not prove appearance.
+Before adding or repairing tests, read the global `testing` skill at
+`~/.agents/skills/testing/SKILL.md`.
 
 **Worklog.** For significant writable work with chat-fragile state, maintain one
 concise `LOG.md` at the owning root, unless that owner names another log. Read
