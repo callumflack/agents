@@ -1,5 +1,24 @@
 # Worklog
 
+## 2026-09-18
+
+- **Current steer:** Callum asked to commit this repository and reconcile the
+  incoming skill lock. Keep the local `retro` hash and two new `flornkm`
+  skills, retain the remote's three Plannotator skills and `agent-browser`
+  metadata, then verify the manifest and runtime guidance. Earlier no-commit
+  notes applied to their prior tasks; this request supersedes that boundary.
+
+- **Post-merge route resolved:** bootstrap and Codex/Claude/Cursor instruction
+  parity pass. Existing guidance edits remain intact; the external lock is
+  byte-for-byte unchanged. The authored skills own reconciliation decisions.
+  No staging, commits or pushes.
+
+- **Post-merge route:** the shared plan fix needs global discovery when the user
+  reports or the agent observes a relevant merge during authorized writable
+  work. Keep the procedure in the authored plan skills; add only its trigger
+  here. Preserve existing global guidance and external-lock edits. No commits
+  or pushes. Next: regenerate runtime guidance and check parity.
+
 ## 2026-09-14
 
 - **Resolved:** committed the remaining tracked worktree in two slices: the

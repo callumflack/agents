@@ -26,6 +26,9 @@ require the exact changed surface rendered in its real app; tests and
 typechecks do not prove appearance.
 Before adding or repairing tests, read the global `testing` skill at
 `~/.agents/skills/testing/SKILL.md`.
+Composed React components carry a `data-slot` so they can be found in the DOM.
+Default one on the root; extra inner slots only when a region is worth tracing.
+Full judgment: `references/component-data-slots.md`.
 
 **Worklog.** For significant writable work with chat-fragile state, maintain one
 concise `LOG.md` at the owning root, unless that owner names another log. Read
@@ -38,6 +41,12 @@ reality. Do not duplicate facts owned by code, Git, issues, documentation, tests
 or research. Do not create per-chat logs or logging machinery.
 Read-only and no-write boundaries forbid log mutation.
 
+**Plan reconciliation.** During authorized writable work, when the user reports
+or live evidence shows a relevant PR merged, find its existing repository plan
+and load `~/.agents/skills/plan-sync/SKILL.md` before concluding. Do not wait for
+an explicit sync request. Respect the write boundary; status-only and read-only
+requests report pending reconciliation without editing.
+
 **Conditional references.** Playbooks are local to this Mac at
 `/Users/callumflack/Workspaces/Playbooks`; do not commit these paths into team
 repos. Read only the reference matching the task:
@@ -45,12 +54,22 @@ repos. Read only the reference matching the task:
 - Design or repair a worklog convention: `playbooks/maintain-owner-worklog.md`.
 - Author a repo format/lint/diagnostics gate: `playbooks/author-repo-verify-gate.md`.
 - Align editor or formatter settings across repos: `playbooks/copy-editor-settings-by-role.md`.
+- After a meaningful change to copied `ui-presentation` primitives, assess a
+  deliberate backfill to ds-kit: `playbooks/propose-ds-kit-backfill.md`.
+  Assessment is read-only: tell Callum the proposed delta and wait for his
+  explicit confirmation before writing. Never commit in ds-kit or Playbooks
+  unless he explicitly requests a commit naming that repository.
 - Diagnose CSS layout symptoms that contradict declared styles:
   `references/css-pitfalls.md`.
+- One route needs a different html/body/footer background than the app
+  default, and chrome `bg-*` utilities win: `references/page-background.md`.
 - Plan a frontend app or change API contracts, routing, state ownership,
   sync/streaming, or design-system foundations: `references/frontend-architecture.md`.
   Consult the candidate's relevant checks against existing owners; ordinary
   component or styling changes do not trigger an architecture audit.
+- Choose an edge for an elevated card, button, or container (ring vs border
+  vs outline): `references/ui-surfaces.md`.
+- Slot or trace a React component in the DOM: `references/component-data-slots.md`.
 - Install or debug Ultracite, Oxlint, Oxfmt, or Oxc's editor extension:
   `references/ultracite-oxc-cursor.md`.
 
