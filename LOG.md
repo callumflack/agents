@@ -2,11 +2,11 @@
 
 ## 2026-09-18
 
-- **Current steer:** Callum asked to commit this repository and reconcile the
-  incoming skill lock. Keep the local `retro` hash and two new `flornkm`
-  skills, retain the remote's three Plannotator skills and `agent-browser`
-  metadata, then verify the manifest and runtime guidance. Earlier no-commit
-  notes applied to their prior tasks; this request supersedes that boundary.
+- **Resolved:** committed the local skill inventory and global guidance, then
+  merged the incoming inventory. The 119-skill lock keeps the local `retro`
+  hash and two `flornkm` skills alongside the remote's three Plannotator
+  skills and `agent-browser` metadata. Earlier no-commit notes applied to
+  their prior tasks; this request superseded that boundary.
 
 - **Post-merge route resolved:** bootstrap and Codex/Claude/Cursor instruction
   parity pass. Existing guidance edits remain intact; the external lock is

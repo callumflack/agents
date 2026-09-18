@@ -952,8 +952,9 @@
       "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
       "skillPath": "skills/agent-browser/SKILL.md",
       "skillFolderHash": "82def67855a0d2aad7794207951820fa5422fdb0",
+      "pluginName": "agent-browser",
       "installedAt": "2026-08-26T22:22:52.146Z",
-      "updatedAt": "2026-08-26T22:22:52.146Z"
+      "updatedAt": "2026-09-14T04:59:41.061Z"
     },
     "react-doctor": {
       "source": "millionco/react-doctor",
@@ -1073,6 +1074,33 @@
       "skillFolderHash": "8e36626e6d9ed025d855c1eead912c5990317f39",
       "installedAt": "2026-09-16T03:14:36.014Z",
       "updatedAt": "2026-09-16T03:14:36.014Z"
+    },
+    "plannotator-compound": {
+      "source": "backnotprop/plannotator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-compound/SKILL.md",
+      "skillFolderHash": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
+      "installedAt": "2026-09-14T05:02:14.939Z",
+      "updatedAt": "2026-09-14T05:02:14.939Z"
+    },
+    "plannotator-setup-goal": {
+      "source": "backnotprop/plannotator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-setup-goal/SKILL.md",
+      "skillFolderHash": "29d5d60c2b8a88c1786d7bbdbbfa37e44b64f6a5",
+      "installedAt": "2026-09-14T05:02:14.943Z",
+      "updatedAt": "2026-09-14T05:02:14.943Z"
+    },
+    "plannotator-visual-explainer": {
+      "source": "backnotprop/plannotator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/backnotprop/plannotator.git",
+      "skillPath": "apps/skills/extra/plannotator-visual-explainer/SKILL.md",
+      "skillFolderHash": "e63f538e4fe05f9b101f3ad11559a79d43073d06",
+      "installedAt": "2026-09-14T05:02:14.944Z",
+      "updatedAt": "2026-09-14T05:02:14.944Z"
     }
   },
   "dismissed": {
