@@ -1,5 +1,44 @@
 # Worklog
 
+## 2026-09-30
+
+- **Resolved:** repaired external-skill maintenance so each already-tracked GitHub
+  source is checked for newly published `SKILL.md` paths instead of only
+  updating names already present in `.agents/.skill-lock.json`. Keep discovery
+  read-only, preserve explicit owner/collision decisions, reconcile the current
+  missing candidates, and wire the weekly heartbeat to a repository-owned
+  check. After verification, send the exact change and evidence to a new Sol
+  High review task. No automatic collision overwrite, commit, or push.
+  **Discovery proof:** the first live scan reached all source classes but
+  overflowed Node's default subprocess buffer on the large `openclaw/openclaw`
+  tree. The owner now uses an explicit 64 MiB read bound; rerun the complete
+  source scan before reconciling candidates.
+  **Reconciliation:** the bounded collection scan found 76 gaps: 21 genuine
+  unowned public-collection skills, five deliberate owner/path conflicts, and
+  50 OpenClaw repository-maintainer skills beside the explicit one-off
+  `test-audit` import. Record the latter two decisions in discovery policy,
+  import the 21 genuine gaps, then require a zero-candidate rerun.
+  **Correction:** candidate identity must come from `SKILL.md` frontmatter, not
+  its folder basename (`ast-grep/skills/outline` declares
+  `ast-grep-outline`). The first import stopped without writes; regenerate the
+  candidate/import set from declared names.
+  **Completion proof:** imported and linked the 21 genuine candidates (plus the
+  previously identified `mobile-native`), `skills:check` reports 142 canonical
+  skills, all 21 reconciled names exist in the four managed runtimes, and a
+  fresh `skills:discover` scan reports no unreviewed upstream candidates across
+  17 sources. The weekly heartbeat now treats that repository-owned scan as a
+  required check and reports new candidates for manual selection. Sol High
+  review found two boundary defects: Humanlayer's five explicit one-off plugin
+  imports still inferred sibling collections, and inline YAML comments could
+  contaminate a declared name. The policy now excludes those five provider
+  trees, and name parsing handles quoted or bare scalar comments while failing
+  closed on missing or invalid names. The first follow-up review caught and
+  removed a remaining folder-name fallback before final verification. Rerun
+  the full scan and reviewer after the fix. **Final review:** Sol High reported
+  no actionable findings after the fail-closed correction. **Delivery:** Callum
+  subsequently authorized commit and push; isolate this slice from the
+  pre-existing Pstack lock change and publish it from a non-protected branch.
+
 ## 2026-09-18
 
 - **Resolved:** committed the local skill inventory and global guidance, then

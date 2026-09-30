@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "excludedCollections": {
+    "humanlayer/skills": {
+      "plugins/build-iterated-agentic-loop/skills": "Provider-plugin tree represented by an explicit one-off global import.",
+      "plugins/design-control-loop/skills": "Provider-plugin tree represented by an explicit one-off global import.",
+      "plugins/improve-claude-md/skills": "Provider-plugin tree represented by an explicit one-off global import.",
+      "plugins/narrow-react-prop-types/skills": "Provider-plugin tree represented by an explicit one-off global import.",
+      "plugins/show-me/skills": "Provider-plugin tree represented by an explicit one-off global import."
+    },
+    "openclaw/openclaw": {
+      ".agents/skills": "Repository-maintainer skills; test-audit is an explicit one-off import, not authorization to flatten the project-local collection."
+    }
+  },
+  "acknowledgedCandidates": {
+    "cursor/plugins:thermos/skills/thermo-nuclear-code-quality-review/SKILL.md": "The bare name is already owned by cursor-team-kit.",
+    "emilkowalski/skills:skills/prototype/SKILL.md": "The bare name remains owned by mattpocock/skills.",
+    "mattpocock/skills:skills/engineering/implement-spec/SKILL.md": "The installed in-progress path remains selected until an explicit path migration.",
+    "mattpocock/skills:skills/engineering/retro/SKILL.md": "The installed in-progress path remains selected until an explicit path migration.",
+    "openclaw/agent-skills:skills/handoff/SKILL.md": "The bare name remains owned by mattpocock/skills."
+  }
+}
