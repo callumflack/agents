@@ -50,9 +50,25 @@ Use the manifest tasks from this repo root:
 
 ```sh
 mise run skills:check
+mise run skills:discover
 mise run skills:print
 mise run skills:install
 ```
+
+`skills:discover` performs a read-only scan of every GitHub source and skill
+collection already represented in the lock. A collection is the directory
+containing sibling skill folders, such as `skills/` or
+`cursor-team-kit/skills/`; unrelated repository-local and provider-plugin
+trees are not inferred as global candidates merely because they contain a
+`SKILL.md`. The command reports unrecorded paths and labels bare-name
+collisions with their current owner. Discovery does not install, rename, or
+overwrite anything; review each candidate and use an explicit
+`npx skills add owner/repo --skill name -g` import when wanted.
+`.agents/.skill-discovery.json` records deliberate collection exclusions and
+reviewed candidate conflicts so the weekly report stays actionable. Exclude a
+collection only when the selected skill was an explicit one-off from a
+repository-local or provider-owned tree; acknowledge a candidate only with its
+owner/path decision.
 
 Inspect `skills:print` before running `skills:install`. The install task executes every printed command and writes all locked external skills into the global registry.
 

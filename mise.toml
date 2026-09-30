@@ -30,6 +30,10 @@ run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills" --prune'
 description = "Check this repo has one canonical skill manifest"
 run = "node scripts/check-skill-manifest.js"
 
+[tasks."skills:discover"]
+description = "Find new upstream skills from sources already represented in the lock"
+run = "node scripts/discover-skills-from-lock.js"
+
 [tasks."skills:print"]
 description = "Print install commands from .agents/.skill-lock.json"
 run = "node scripts/install-skills-from-lock.js"
