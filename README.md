@@ -31,6 +31,12 @@ Bootstrap creates these links:
 - `~/.claude/CLAUDE.md` to `~/.agents/AGENTS.md`
 - `~/.cursor/rules/callum-agents.mdc` generated from `~/.agents/AGENTS.md` (`alwaysApply: true`; Cursor does not follow a symlink the way Codex/Claude do)
 
+After bootstrap, verify that every adapter points at the canonical owner and that Cursor's generated copy is current:
+
+```sh
+mise run runtime:check
+```
+
 The script renames existing regular files or directories with a timestamped `.backup` suffix before linking. Set `AGENTS_HOME`, `CODEX_AGENTS_FILE`, `CLAUDE_AGENTS_FILE`, or `CURSOR_AGENTS_RULE` to override the default targets.
 
 ## External skills

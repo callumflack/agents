@@ -2,6 +2,10 @@
 description = "Link the canonical .agents payload and runtime instruction adapters"
 run = "bash scripts/link-home.sh"
 
+[tasks."runtime:check"]
+description = "Check global instruction adapters and Cursor content parity"
+run = "bash scripts/check-home.sh"
+
 [tasks."repair:cursor"]
 description = "Repair ~/.cursor/skills links from ~/.agents/skills"
 run = 'node scripts/sync-skills.js --target="$HOME/.cursor/skills"'

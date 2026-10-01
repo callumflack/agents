@@ -1,6 +1,18 @@
 # Worklog
 
+## 2026-10-01
+
+- **Delivery authorized:** Callum requested committing and pushing the pending global Playbooks route repair and its `runtime:check` oracle. Preserve unrelated repository state, run bootstrap to regenerate Cursor's instruction copy, and require the runtime check before pushing.
+
 ## 2026-09-30
+
+- **Runtime repair resolved:** Homebase audit found the global Playbooks root still
+  named the retired `/Users/callumflack/Workspaces/Playbooks` compatibility
+  path, so all conditional references fail on the live Mac and Cursor still
+  carried an older generated instruction copy. The global owner now uses
+  `/Users/callumflack/Repos/callumflack/playbooks`; runtime adapters were
+  regenerated, and the new `mise run runtime:check` gate proves Codex, Claude,
+  and Cursor parity. No commit or push.
 
 - **Resolved:** repaired external-skill maintenance so each already-tracked GitHub
   source is checked for newly published `SKILL.md` paths instead of only

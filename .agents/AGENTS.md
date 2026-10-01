@@ -48,7 +48,7 @@ an explicit sync request. Respect the write boundary; status-only and read-only
 requests report pending reconciliation without editing.
 
 **Conditional references.** Playbooks are local to this Mac at
-`/Users/callumflack/Workspaces/Playbooks`; do not commit these paths into team
+`/Users/callumflack/Repos/callumflack/playbooks`; do not commit these paths into team
 repos. Read only the reference matching the task:
 
 - Design or repair a worklog convention: `playbooks/maintain-owner-worklog.md`.
