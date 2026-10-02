@@ -14,6 +14,21 @@
   regenerated, and the new `mise run runtime:check` gate proves Codex, Claude,
   and Cursor parity. No commit or push.
 
+- **Resolved:** promoted the external Codex-use review through the existing
+  owner chain rather than creating another framework. Playbooks owns the
+  reusable finish-contract method; the KB owns the source, synthesis, and
+  routing-cycle explanation; global guidance owns the exact ambient verbs and
+  retrieval pointer. The promotion-review skill now points at the central
+  lifecycle playbook, and the broken external `continual-learning` wrapper was
+  removed from the lock and all three runtimes. No commit or push.
+
+- **Resolved:** global guidance now defines local, commit, push, ship, PR,
+  production-deploy, and parallel-work meanings while keeping one writer per
+  checkout, real UI render proof, and the protected-branch guardrail. The
+  worklog is limited to chat-fragile state and forbids completion-only updates;
+  the obsolete `plan-sync` trigger is gone. No skill, hook, repo-local rule,
+  commit, or push was added.
+
 - **Resolved:** repaired external-skill maintenance so each already-tracked GitHub
   source is checked for newly published `SKILL.md` paths instead of only
   updating names already present in `.agents/.skill-lock.json`. Keep discovery

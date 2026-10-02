@@ -622,15 +622,6 @@
       "installedAt": "2026-07-31T03:01:33.465Z",
       "updatedAt": "2026-09-01T02:01:23.664Z"
     },
-    "continual-learning": {
-      "source": "cursor/plugins",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/cursor/plugins.git",
-      "skillPath": "continual-learning/skills/continual-learning/SKILL.md",
-      "skillFolderHash": "ca8838b5cb190bcf29560f34f0a33d235fefe2b8",
-      "installedAt": "2026-07-31T03:01:33.465Z",
-      "updatedAt": "2026-09-01T02:01:23.669Z"
-    },
     "control-cli": {
       "source": "cursor/plugins",
       "sourceType": "github",

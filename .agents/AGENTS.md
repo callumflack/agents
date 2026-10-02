@@ -4,6 +4,35 @@ Keep responses short, idiomatic, and direct. Disagree when the premise is wrong.
 Explain reasoning when asked or when the decision depends on it. Preserve the
 source's pressure: do not smooth away its claim, burden, or live distinction.
 
+**Outcome and delivery.** Answer what I asked first, in plain words, using my
+product terms. Complete the requested outcome and its normal in-scope proof. Do
+not broaden the outcome; offer materially different work separately.
+
+- Default finish is local. `Commit` adds a scoped local commit. `Push` adds a
+  remote push. `Ship` continues through the repository's normal delivery path,
+  required green CI, and a link to the remote result. `PR this` delivers a
+  green, reviewable pull request. `Deploy production` additionally authorizes
+  the named deployment and live verification. Shipping alone does not
+  authorize provider, environment, domain, or contract changes. Do not ask
+  again for steps already authorized.
+- Use the current checkout by default, with one writer. Use an isolated
+  worktree only for explicitly parallel work or when the repository requires
+  it. Repository delivery rules override branch, worktree, and pull-request
+  steps in skills.
+- Ask only when a missing choice would materially change product behavior, an
+  external or irreversible target is unspecified, or checkout ownership
+  conflicts. Otherwise make the smallest reversible in-scope decision.
+- For visible UI changes, render the exact changed route and state. Report what
+  was objectively observed and provide the URL and state; do not present
+  subjective visual approval as proven.
+- After changing files, lead with any material assumption, deviation, or
+  unrequested decision; omit this when there is none. Then report the absolute
+  checkout path and whether it is shared or a worktree, changed paths, proof,
+  and exact delivery state—local, committed, pushed, CI-green, or deployed—with
+  links where available. If complete, stop. If blocked, ask one clear question.
+- Archive or remove a task-created worktree only when it is clean and its work
+  is integrated or deliberately abandoned.
+
 **Scope and judgment.** Establish the owning surface, write boundaries, and
 completion check; explain them when scope or risk needs clarification. State
 material assumptions. Ask when a wrong assumption would be expensive.
@@ -30,27 +59,24 @@ Composed React components carry a `data-slot` so they can be found in the DOM.
 Default one on the root; extra inner slots only when a region is worth tracing.
 Full judgment: `references/component-data-slots.md`.
 
-**Worklog.** For significant writable work with chat-fragile state, maintain one
-concise `LOG.md` at the owning root, unless that owner names another log. Read
-and update it before the first material write. Record only chat-fragile objectives, steers,
-preferences, todos, decisions, tradeoffs, surprises, unresolved questions, and
-next actions. Update before continuing when that state changes. Keep steers
-additive; explicitly mark resolutions, corrections, and handoffs. Never replace
-an unanswered question with a completion summary. Finish with the log matching
-reality. Do not duplicate facts owned by code, Git, issues, documentation, tests,
-or research. Do not create per-chat logs or logging machinery.
-Read-only and no-write boundaries forbid log mutation.
-
-**Plan reconciliation.** During authorized writable work, when the user reports
-or live evidence shows a relevant PR merged, find its existing repository plan
-and load `~/.agents/skills/plan-sync/SKILL.md` before concluding. Do not wait for
-an explicit sync request. Respect the write boundary; status-only and read-only
-requests report pending reconciliation without editing.
+**Worklog.** For significant writable work whose state may be lost across chat
+compaction, use one concise `LOG.md` at the owning root unless that owner names
+another log. Read it before the first material write and record only
+chat-fragile objectives, steers, material decisions and tradeoffs, unresolved
+questions, and handoff state. Update it when that state changes. Code, Git,
+issues, documentation, tests, and research own routine progress and delivery
+evidence. Never update or commit `LOG.md` solely to record checks, issue status,
+commits, pushes, deployments, or completion. If an entry was needed, resolve
+its active state before final verification or an authorized commit; never make
+a later LOG-only delivery commit. Read-only and no-write boundaries forbid log
+mutation. Do not create per-chat logs or logging machinery.
 
 **Conditional references.** Playbooks are local to this Mac at
 `/Users/callumflack/Repos/callumflack/playbooks`; do not commit these paths into team
 repos. Read only the reference matching the task:
 
+- Design or repair agent outcome, finish, or delivery vocabulary:
+  `playbooks/maintain-agent-harness.md`.
 - Design or repair a worklog convention: `playbooks/maintain-owner-worklog.md`.
 - Author a repo format/lint/diagnostics gate: `playbooks/author-repo-verify-gate.md`.
 - Align editor or formatter settings across repos: `playbooks/copy-editor-settings-by-role.md`.
@@ -83,10 +109,11 @@ the authorized scope, fix its smallest durable owner and add the nearest check.
 **Defaults.** Repo-local guidance wins. Prefer `rg`, `fd`, `eza`, and `bat`;
 fall back when unavailable. Preserve dirty and unrelated work. Before changing
 branches, committing, opening PRs, or releasing, read the repo conventions
-relevant to that action. Never push protected branches directly. Before staging,
-inspect the existing index and preserve user-staged changes. Stage exact paths
-or hunks; before committing, inspect the full staged diff and verify it contains
-only the authorized commit scope.
+relevant to that action. Never infer branch protection; check live repository or
+remote evidence. Never push protected branches directly. Before staging, inspect
+the existing index and preserve user-staged changes. Stage exact paths or hunks;
+before committing, inspect the full staged diff and verify it contains only the
+authorized commit scope.
 
 **Updating this file.** Codex and Claude use symlinks; Cursor uses a generated
 copy. After editing, run `mise run bootstrap` in `~/Repos/callumflack/agents`.
