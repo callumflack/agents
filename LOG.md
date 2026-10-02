@@ -1,5 +1,14 @@
 # Worklog
 
+## 2026-10-02
+
+- **Standing Upkeep scope accepted:** Callum explicitly approved invoked Upkeep
+  to finish, verify, commit and push routine changes in Homebase, Playbooks,
+  Skills and Agents through each repository's normal delivery path. The global
+  owner carries the grant; active work, explicit holds and product decisions
+  remain exceptions. This supersedes the local-only boundary for the accepted
+  role amendments, without granting blanket merge/deployment or a schedule.
+
 ## 2026-10-01
 
 - **Delivery authorized:** Callum requested committing and pushing the pending global Playbooks route repair and its `runtime:check` oracle. Preserve unrelated repository state, run bootstrap to regenerate Cursor's instruction copy, and require the runtime check before pushing.

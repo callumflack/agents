@@ -8,7 +8,8 @@ source's pressure: do not smooth away its claim, burden, or live distinction.
 product terms. Complete the requested outcome and its normal in-scope proof. Do
 not broaden the outcome; offer materially different work separately.
 
-- Default finish is local. `Commit` adds a scoped local commit. `Push` adds a
+- Default finish is local except for the invoked Upkeep grant below.
+  `Commit` adds a scoped local commit. `Push` adds a
   remote push. `Ship` continues through the repository's normal delivery path,
   required green CI, and a link to the remote result. `PR this` delivers a
   green, reviewable pull request. `Deploy production` additionally authorizes
@@ -32,6 +33,26 @@ not broaden the outcome; offer materially different work separately.
   links where available. If complete, stop. If blocked, ask one clear question.
 - Archive or remove a task-created worktree only when it is clean and its work
   is integrated or deliberately abandoned.
+
+**Task housekeeping.** Own the requested outcome through its authorized finish.
+Resolve task-created temporary artifacts, obsolete handoff state and worklog
+state; reconcile the existing delivery record where updating it is authorized.
+Complete already-authorized commit, push and delivery steps before returning.
+Preserve unrelated changes and concurrent work. Leave each unfinished item with
+its exact owner, next action and blocker; do not transfer routine task cleanup
+to Callum or Upkeep.
+
+**Standing Upkeep grant.** When Callum invokes Upkeep, finish, verify, commit
+and push routine changes in Homebase, Playbooks, Skills and Agents through each
+repository's normal delivery path. Use its default branch when direct delivery
+is permitted; follow its required branch/PR path otherwise. Check live branch
+rules. This grant covers complete bounded changes traceable to accepted tasks,
+including the accepted role amendments and ready Playbooks candidates. It does
+not cover active work, explicit holds, unresolved product decisions or unknown
+ownership. Preserve narrower source instructions and future timing. It grants
+no blanket merge, deployment, deletion, reset or history-rewrite permission and
+creates no schedule. Do not ask again for covered publication steps. The
+Homebase role playbook supplies the assessment method and invocation.
 
 **Scope and judgment.** Establish the owning surface, write boundaries, and
 completion check; explain them when scope or risk needs clarification. State
@@ -75,6 +96,13 @@ mutation. Do not create per-chat logs or logging machinery.
 `/Users/callumflack/Repos/callumflack/playbooks`; do not commit these paths into team
 repos. Read only the reference matching the task:
 
+- When the same correction recurs, a discussion revisits a settled choice, or
+  a proposed fix adds coordination machinery to coordination friction,
+  consult the Playbooks `README.md` catalogue before proposing another system.
+  Read the matching entry, check it against the current owner, and apply or
+  reject it explicitly. Preserve valid work and resume the original outcome.
+- Run Homebase Learning, Upkeep, or project overlook:
+  `playbooks/homebase-learning-and-upkeep.md`.
 - Design or repair agent outcome, finish, or delivery vocabulary:
   `playbooks/maintain-agent-harness.md`.
 - Design or repair a worklog convention: `playbooks/maintain-owner-worklog.md`.
@@ -83,8 +111,9 @@ repos. Read only the reference matching the task:
 - After a meaningful change to copied `ui-presentation` primitives, assess a
   deliberate backfill to ds-kit: `playbooks/propose-ds-kit-backfill.md`.
   Assessment is read-only: tell Callum the proposed delta and wait for his
-  explicit confirmation before writing. Never commit in ds-kit or Playbooks
-  unless he explicitly requests a commit naming that repository.
+  explicit confirmation before writing. Never commit in ds-kit unless Callum
+  explicitly requests a commit naming that repository. Playbooks publication
+  follows its repository instructions and any explicit standing grant.
 - Diagnose CSS layout symptoms that contradict declared styles:
   `references/css-pitfalls.md`.
 - One route needs a different html/body/footer background than the app
