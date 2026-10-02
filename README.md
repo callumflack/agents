@@ -78,6 +78,16 @@ owner/path decision.
 
 Inspect `skills:print` before running `skills:install`. The install task executes every printed command and writes all locked external skills into the global registry.
 
+After the install commands finish, `skills:install` runs the authored Skills
+checkout's `~/Repos/callumflack/skills/scripts/check-links.sh`. Success requires
+both successful install commands and a valid global topology: authored links,
+the complete canonical registry, and its Claude, Codex, and Cursor links. This
+full check also runs when `SKILLS_LOCK` selects a custom manifest. A missing
+checker or a pre-existing topology mismatch makes the install fail; the check
+does not repair or overwrite conflicting entries. `skills:print` stays read-only.
+
+Run `mise run skills:test` for the isolated repair/install regression tests.
+
 ## External plugins
 
 `.agents/plugins/*.lock.json` records external plugins. Keep plugin bodies out
@@ -188,6 +198,9 @@ mise run repair:claude
 ```
 
 These commands leave unrelated entries alone. The `repair:*:prune` variants also remove stale links previously managed from `~/.agents/skills`.
+
+Repair commands exit unsuccessfully if any same-name file, directory, or
+unmanaged link prevents linking a skill. Conflicting entries are preserved.
 
 ## Design rule
 

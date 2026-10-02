@@ -42,4 +42,13 @@ for (const command of commands) {
   }
 }
 
+const checkLinks = join(homedir(), "Repos", "callumflack", "skills", "scripts", "check-links.sh");
+const checked = spawnSync("bash", [checkLinks], {
+  cwd: root,
+  stdio: "inherit",
+});
+if (checked.status !== 0) {
+  failed += 1;
+}
+
 process.exit(failed === 0 ? 0 : 1);

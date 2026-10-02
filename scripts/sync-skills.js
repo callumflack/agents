@@ -152,5 +152,6 @@ const isMain = process.argv[1]
 if (isMain) {
   const targetDir = resolveTargetDir(parseTargetArg());
   const prune = process.argv.includes("--prune");
-  syncSkills(targetDir, { prune });
+  const { conflicts } = syncSkills(targetDir, { prune });
+  process.exitCode = conflicts > 0 ? 1 : 0;
 }
