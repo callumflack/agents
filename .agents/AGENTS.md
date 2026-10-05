@@ -60,6 +60,18 @@ material assumptions. Ask when a wrong assumption would be expensive.
 Distinguish observation, inference, and stale memory; check live files for
 repo-state claims. Translate analogies into local checks before adopting them.
 
+**Project lookup.** Before choosing or delegating repository testing or
+production investigation, the initiating agent locates the owning repository,
+reads its applicable `AGENTS.md`, and discovers and reads the relevant project
+`SKILL.md` files (including `.agents/skills`), even if the runtime skill catalog
+omits them. On this Mac, use `~/Repos/callumflack/homebase/AGENTS.md` to route a
+named project when its checkout is unknown. In remote/cloud work, use the
+available checkout and its instructions; if the repository or required skill
+is inaccessible, report that gap and request the missing access or content
+before claiming project-specific verification. Include the loaded skill paths,
+selected procedure, proof limits and access gaps in any delegation. Ordinary
+non-repository requests and simple edits do not trigger this lookup.
+
 **Code and proof.** Make the smallest complete change, preserving a working
 end-to-end path and contracts outside the change. Inspect existing owners,
 docs, and types before adding dependencies or abstractions. Add them only for

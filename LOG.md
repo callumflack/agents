@@ -1,5 +1,9 @@
 # Worklog
 
+## 2026-10-05
+
+- **Approved for delivery:** Callum reviewed the project lookup fix and explicitly requested commit/push. Bootstrap, runtime parity and diff checks pass. Fresh-context evaluation loaded actual Stake skills before selecting production procedures; simple requests remained immediate; simulated cloud missing access stayed unverified. No production or credential changes. Preserve unrelated skill-maintenance work. Real cloud instruction injection and future model compliance remain unproven.
+
 ## 2026-10-02
 
 - **Standing Upkeep scope accepted:** Callum explicitly approved invoked Upkeep
@@ -8,6 +12,7 @@
   owner carries the grant; active work, explicit holds and product decisions
   remain exceptions. This supersedes the local-only boundary for the accepted
   role amendments, without granting blanket merge/deployment or a schedule.
+
 
 ## 2026-10-01
 
