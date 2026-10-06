@@ -60,6 +60,12 @@ material assumptions. Ask when a wrong assumption would be expensive.
 Distinguish observation, inference, and stale memory; check live files for
 repo-state claims. Translate analogies into local checks before adopting them.
 
+**Instruction placement.** Preserve substantial learning at its code or document owner. Put required
+reading in the narrowest applicable `AGENTS.md` the relevant work encounters,
+with an explicit task trigger that includes verification work when applicable.
+Keep that instruction to a short pointer; keep details at the linked owner,
+not in task descriptions. Root instructions hold only cross-cutting rules.
+
 **Project lookup.** Before choosing or delegating repository testing or
 production investigation, the initiating agent locates the owning repository,
 reads its applicable `AGENTS.md`, and discovers and reads the relevant project
