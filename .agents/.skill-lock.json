@@ -1300,6 +1300,15 @@
       "skillFolderHash": "0901aa3667db7a6e5cc40b213327290bf6556373",
       "installedAt": "2026-09-29T23:42:38.118Z",
       "updatedAt": "2026-09-29T23:42:38.118Z"
+    },
+    "2password": {
+      "source": "kitlangton/2password",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kitlangton/2password.git",
+      "skillPath": "skills/2password/SKILL.md",
+      "skillFolderHash": "84a70ae6b98b6052ebce164e7aa7cbb132a44410",
+      "installedAt": "2026-10-07T07:11:38.165Z",
+      "updatedAt": "2026-10-07T07:11:38.165Z"
     }
   },
   "dismissed": {
