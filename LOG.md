@@ -1,8 +1,16 @@
 # Worklog
 
+## 2026-10-07
+
+- **Resolved:** Callum requested explicit ownership for finishing across the real boundary. Strengthened the existing outcome rule: complete dependent updates needed for the requested use and compare the result to the request, since a passing check proves only its scope. The repeated-failure rule now invokes learning-loop for warranted durable repairs. Skills owns the repair procedure and so-what explanation; project owners retain their actual completion checks. No additional universal checklist or finish skill.
+
+- **Resolved:** Callum authorized automatic preservation of reusable findings from substantial agent research. Global instructions trigger the existing learning-save skill (renamed from knowledge-handoff at Callum's request); KB wiki instructions and the writing playbook own the bounded write permission. Explicit discussion/read-only work, governing changes and Playbooks remain outside the grant. No capture hooks or schedule; actual unprompted follow-through is to be observed on the next organic research task.
+
 ## 2026-10-05
 
 - **Approved for delivery:** Callum reviewed the project lookup fix and explicitly requested commit/push. Bootstrap, runtime parity and diff checks pass. Fresh-context evaluation loaded actual Stake skills before selecting production procedures; simple requests remained immediate; simulated cloud missing access stayed unverified. No production or credential changes. Preserve unrelated skill-maintenance work. Real cloud instruction injection and future model compliance remain unproven.
+
+- **Weekly maintenance resolved in part:** applied authorized updates, restored available missing installs, and added non-colliding discoveries while preserving owners, pinned paths, and exclusions. Managed links and authored topology pass. No commit or push. **Unresolved:** `to-issues`, `to-prd`, `decision-mapping`, and `review` remain unavailable upstream and absent locally; retain their records until Callum selects retirement or replacements. Retired upstream skills with local bodies remain preserved; `implement-spec` and `retro` retain the explicit path selections in discovery policy. The identical Claude `test-audit` copy was preserved in a temporary backup before linking the canonical owner. Final discovery verification passed across all 17 sources with no unreviewed candidates.
 
 ## 2026-10-02
 
@@ -12,6 +20,7 @@
   owner carries the grant; active work, explicit holds and product decisions
   remain exceptions. This supersedes the local-only boundary for the accepted
   role amendments, without granting blanket merge/deployment or a schedule.
+
 
 
 ## 2026-10-01

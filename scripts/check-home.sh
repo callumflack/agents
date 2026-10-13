@@ -35,4 +35,19 @@ expected_cursor_rule() {
 
 cmp -s <(expected_cursor_rule) "$cursor_agents_rule" || fail "stale generated Cursor rule: $cursor_agents_rule"
 
+# Explicit required skill pointers must resolve at the runtime instruction boundary.
+node - "$agents_home/AGENTS.md" "$agents_home" <<'NODE'
+const { readFileSync, existsSync } = require("node:fs");
+const { join } = require("node:path");
+const [instructions, home] = process.argv.slice(2);
+const pointers = readFileSync(instructions, "utf8").matchAll(/~\/\.agents\/skills\/([^`\s]+\/SKILL\.md)/g);
+for (const [, relative] of pointers) {
+  const path = join(home, "skills", relative);
+  if (!existsSync(path)) {
+    console.error(`error: required global skill is missing: ${path}`);
+    process.exitCode = 1;
+  }
+}
+NODE
+
 echo "ok: Codex, Claude, and Cursor use the current global instructions"

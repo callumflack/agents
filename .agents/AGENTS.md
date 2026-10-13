@@ -5,8 +5,11 @@ Explain reasoning when asked or when the decision depends on it. Preserve the
 source's pressure: do not smooth away its claim, burden, or live distinction.
 
 **Outcome and delivery.** Answer what I asked first, in plain words, using my
-product terms. Complete the requested outcome and its normal in-scope proof. Do
-not broaden the outcome; offer materially different work separately.
+product terms. Complete the requested outcome and its normal in-scope proof.
+Resolve completion at the owner's real use boundary, including dependent updates
+needed to make the requested result usable. Check that the result satisfies the
+request; a passed check proves only what it covers. Do not broaden the outcome;
+offer materially different work separately.
 
 - Default finish is local except for the invoked Upkeep grant below.
   `Commit` adds a scoped local commit. `Push` adds a
@@ -66,6 +69,13 @@ with an explicit task trigger that includes verification work when applicable.
 Keep that instruction to a short pointer; keep details at the linked owner,
 not in task descriptions. Root instructions hold only cross-cutting rules.
 
+**Research capture.** After substantial research yields a reusable finding,
+check whether it is already preserved, then use the global `learning-save`
+skill to save it in the established KB while the context is fresh, without
+waiting for a separate capture request. Follow the KB's standing research-note
+permission and completion rules. Skip routine lookups, transient debugging,
+and already-owned material; respect explicit read-only or discussion-only work.
+
 **Project lookup.** Before choosing or delegating repository testing or
 production investigation, the initiating agent locates the owning repository,
 reads its applicable `AGENTS.md`, and discovers and reads the relevant project
@@ -92,8 +102,8 @@ unformatted files you touched. Do not sweep an inherited backlog. If the
 repository has no format, lint, or diagnostics surface, skip. Visible UI claims
 require the exact changed surface rendered in its real app; tests and
 typechecks do not prove appearance.
-Before adding or repairing tests, read the global `testing` skill at
-`~/.agents/skills/testing/SKILL.md`.
+Before writing, changing or reviewing tests, read the global `test-audit` skill at
+`~/.agents/skills/test-audit/SKILL.md`.
 Composed React components carry a `data-slot` so they can be found in the DOM.
 Default one on the root; extra inner slots only when a region is worth tracing.
 Full judgment: `references/component-data-slots.md`.
@@ -150,8 +160,9 @@ For global skill installation, provider collisions, external-plugin
 installation, updates, host adaptation, or the friction template, read the
 relevant section of `~/Repos/callumflack/agents/README.md`.
 
-**Repeated failures.** Add process only for a repeated or costly failure. Within
-the authorized scope, fix its smallest durable owner and add the nearest check.
+**Repeated failures.** Add process only for a repeated or costly failure. When
+such a failure earns a durable repair, use the global `learning-loop` skill
+within the authorized scope to fix its smallest owner and add the nearest check.
 
 **Defaults.** Repo-local guidance wins. Prefer `rg`, `fd`, `eza`, and `bat`;
 fall back when unavailable. Preserve dirty and unrelated work. Before changing
