@@ -1,5 +1,9 @@
 # Worklog
 
+## 2026-10-19
+
+- **Pstack scope resolved:** Callum authorized Pstack updates in the existing weekly skills heartbeat, superseding its plugin-update exclusion for Pstack only. Preserve all other plugin boundaries, bare-name owners, and unrelated dirty work. Restored the missing monitored upstream checkout. Removed the obsolete bundled-validator path from the check task; artifact checks plus native plugin installation/loading own this update boundary.
+
 ## 2026-10-07
 
 - **Resolved:** Callum requested explicit ownership for finishing across the real boundary. Strengthened the existing outcome rule: complete dependent updates needed for the requested use and compare the result to the request, since a passing check proves only its scope. The repeated-failure rule now invokes learning-loop for warranted durable repairs. Skills owns the repair procedure and so-what explanation; project owners retain their actual completion checks. No additional universal checklist or finish skill.

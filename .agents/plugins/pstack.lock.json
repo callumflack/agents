@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/cursor/plugins",
   "subpath": "pstack",
-  "revision": "12d587dfb20741cafc376c42c696c5f6e2a64487",
-  "version": "0.15.5",
+  "revision": "8ad8a41fe418f7c948540641cf1d8649fba99db7",
+  "version": "0.15.27",
   "install": {
     "cursor": "/add-plugin pstack",
     "codex": {
