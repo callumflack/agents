@@ -12,7 +12,7 @@ This repo is an install home. My authored skills live in [callumflack/skills](ht
 
 ## Bootstrap
 
-Bootstrap requires Bash, Node.js with `npx`, and [mise](https://mise.jdx.dev/).
+Bootstrap requires Bash, Node.js 24.22.1 with `npx`, and [mise](https://mise.jdx.dev/).
 
 Setup:
 
