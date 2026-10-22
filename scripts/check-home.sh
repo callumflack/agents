@@ -8,6 +8,7 @@ agents_home="${AGENTS_HOME:-$HOME/.agents}"
 payload_dir="$repo_root/.agents"
 codex_agents_file="${CODEX_AGENTS_FILE:-$HOME/.codex/AGENTS.md}"
 claude_agents_file="${CLAUDE_AGENTS_FILE:-$HOME/.claude/CLAUDE.md}"
+pi_agents_file="${PI_AGENTS_FILE:-$HOME/.pi/agent/AGENTS.md}"
 cursor_agents_rule="${CURSOR_AGENTS_RULE:-$HOME/.cursor/rules/callum-agents.mdc}"
 
 fail() {
@@ -18,7 +19,7 @@ fail() {
 [ -L "$agents_home" ] || fail "canonical agents home is not a symlink: $agents_home"
 [ "$(readlink "$agents_home")" = "$payload_dir" ] || fail "wrong canonical agents home target: $agents_home"
 
-for adapter in "$codex_agents_file" "$claude_agents_file"; do
+for adapter in "$codex_agents_file" "$claude_agents_file" "$pi_agents_file"; do
   [ -L "$adapter" ] || fail "instruction adapter is not a symlink: $adapter"
   [ "$(readlink "$adapter")" = "$agents_home/AGENTS.md" ] || fail "wrong instruction adapter target: $adapter"
 done
@@ -50,4 +51,4 @@ for (const [, relative] of pointers) {
 }
 NODE
 
-echo "ok: Codex, Claude, and Cursor use the current global instructions"
+echo "ok: Codex, Claude, Cursor, and Pi use the current global instructions"

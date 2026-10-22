@@ -9,6 +9,8 @@ The global instruction body is `.agents/AGENTS.md`. After editing it, run
 
 ## Skill management
 
+For global skill maintenance, updates or verification, read README.md’s “Weekly skill maintenance” section and run `mise run skills:check` before and after writes. Preserve recorded adaptations; upstream hashes and valid links alone do not prove installed content.
+
 - Install external skills with `npx skills add <owner/repo> -g`.
   `.agents/.skill-lock.json` is the canonical external-skill lock.
 - Manage Callum-authored skills through the skills repo's

@@ -1,10 +1,10 @@
 # Agents Pack
 
-My Git-backed home for global Codex, Claude, and Cursor instructions, external skill install records, and the scripts that link them into each agent. Published as a reference, not a drop-in configuration.
+My Git-backed home for global Codex, Claude, Cursor, and Pi instructions, external skill install records, and the scripts that link them into each agent. Published as a reference, not a drop-in configuration.
 
 ## Purpose
 
-- `.agents/AGENTS.md` owns global instructions for Codex, Claude, and Cursor
+- `.agents/AGENTS.md` owns global instructions for Codex, Claude, Cursor, and Pi
 - `.agents/.skill-lock.json` records external skill installs
 - `scripts/` owns bootstrap, reinstall, validation, and link repair
 
@@ -29,6 +29,7 @@ Bootstrap creates these links:
 - `~/.agents` to this checkout's `.agents` directory
 - `~/.codex/AGENTS.md` to `~/.agents/AGENTS.md`
 - `~/.claude/CLAUDE.md` to `~/.agents/AGENTS.md`
+- `~/.pi/agent/AGENTS.md` to `~/.agents/AGENTS.md`
 - `~/.cursor/rules/callum-agents.mdc` generated from `~/.agents/AGENTS.md` (`alwaysApply: true`; Cursor does not follow a symlink the way Codex/Claude do)
 
 After bootstrap, verify that every adapter points at the canonical owner and that Cursor's generated copy is current:
@@ -37,7 +38,32 @@ After bootstrap, verify that every adapter points at the canonical owner and tha
 mise run runtime:check
 ```
 
-The script renames existing regular files or directories with a timestamped `.backup` suffix before linking. Set `AGENTS_HOME`, `CODEX_AGENTS_FILE`, `CLAUDE_AGENTS_FILE`, or `CURSOR_AGENTS_RULE` to override the default targets.
+The script renames existing regular files or directories with a timestamped `.backup` suffix before linking. Set `AGENTS_HOME`, `CODEX_AGENTS_FILE`, `CLAUDE_AGENTS_FILE`, `PI_AGENTS_FILE`, or `CURSOR_AGENTS_RULE` to override the default targets.
+
+## Portable replica setup
+
+On another Mac or a Linux devbox, install mise, Git, Bash and tar first; Linux also needs `flock` (util-linux). Clone this Agents repository at the same accepted revision as your other machines, then run:
+
+```sh
+mise trust
+mise run setup
+mise run setup:check
+```
+
+Mise supplies Node 24.22.1 and obtains the authored Skills checkout at the full commit recorded in `mise.toml`. Setup links instructions, rebuilds the locked Pstack artifact, restores exact external skill trees, runs the existing Skills linker and Pi adapter, and verifies content and links. Use `mise run setup`, not bare `mise bootstrap`, for the complete sequence and its preflight checks.
+
+The committed Skills baseline currently predates the local Pi linker edits; Agents supplies the Pi adapter explicitly. Unpublished authored changes are not part of this baseline. Setup rejects a dirty Skills checkout before changing it. On the authoring Mac, keep using the existing bootstrap and Skills linker while editing; do not reset or stash your work to make replica setup pass. After publishing an accepted Skills change, deliberately advance the Skills `ref` in `[bootstrap.repos]` and apply the same Agents revision elsewhere.
+
+The external lock's `skillFolderHash` is the upstream Git tree SHA, covering every file and executable mode. Accepted local variants have an `adaptation` record and a tracked patch in `.agents/skill-patches/`. Restoration fetches the upstream tree, verifies and applies its patch, checks the accepted result hash, and stages and verifies all missing skills before installation. It never rewrites the lock or substitutes latest. Existing matching skills are left alone. Differing directories, symlinks and runtime ownership conflicts stop setup; review and move the conflicting entry aside before restoring. Unrelated registry and runtime entries remain untouched, so parity covers the managed skill set, not every provider-owned skill on a machine.
+
+```sh
+mise run skills:sources:check  # retrieve all recorded trees without installing
+mise run skills:content:check # offline comparison of installed external content
+```
+
+Unadapted skill updates remain deliberate `npx skills` operations followed by inspection of the lock and content check. Adapted skills require review against their pinned upstream base; do not overwrite them through `npx skills`. Follow the maintenance procedure below. Commit/push the accepted records only when authorized, then reproduce that baseline on other machines. Setup does not advance versions, register provider plugins, copy credentials, or transport Homebase/KB content. Pstack still needs its recorded native registration and a fresh-session load check.
+
+Local verification: [portable setup evidence](docs/portable-setup-verification.md). Run the restoration regressions with `node --test scripts/install-skills-from-lock.test.js`.
 
 ## External skills
 
@@ -76,7 +102,19 @@ collection only when the selected skill was an explicit one-off from a
 repository-local or provider-owned tree; acknowledge a candidate only with its
 owner/path decision.
 
-Inspect `skills:print` before running `skills:install`. The install task executes every printed command and writes all locked external skills into the global registry.
+Inspect `skills:print` before running `skills:install`. It lists the exact source and tree for each skill. The install task restores missing recorded trees into the global registry, refuses differing existing content, and leaves the lock unchanged.
+
+## Weekly skill maintenance
+
+For updates, repairs and verification, `mise run skills:check` is the entry and completion check. It checks both manifest ownership and every installed file and executable mode against the accepted tree. Upstream-versus-lock comparisons establish available updates; file existence and working links do not establish installed content parity. Run `mise run runtime:check` and the Skills link checker as well; include Pi alongside Codex, Claude and Cursor.
+
+1. Before writes, snapshot the working tree/index and installed entries being updated. Run `mise run skills:check`. Diagnose any drift before reinstalling; preserve unrecorded local changes. Read the lock's `adaptation` records and the discovery policy's `retiredSkills`.
+2. Compare upstream versions and discover candidates. Do not bulk-update adapted skills: preserve their live variants and report an upstream change for a deliberate patch review. Do not reinstall retired names. Missing paths on upstream HEAD do not mean a locked historical tree is unavailable; use `skills:sources:check` to check retrievability.
+3. For unadapted skills, use the supported global installer selectively. Inspect its output and lock, then run `mise run skills:check`. Some installer versions omit upstream metadata; compare against the exact tree before repairing omissions. Never change the expected hash merely to hide an unexplained mismatch.
+4. For an accepted adaptation update, review the patch against its new upstream base, retain its reason, and verify its accepted tree and patch digest. Exercise fresh restoration and repeated setup in a disposable home. The lock records upstream provenance and the expected installed result separately.
+5. Finish the authorized delivery only after content, instruction, link and applicable plugin checks pass. Report partial failures as partial; preserve unrelated work and existing publication boundaries.
+
+The 19 October maintenance run checked upstream hashes, body presence and host links but did not hash installed contents. That missed local variants and omitted support files. The four missing Matt Pocock skills were reported and retained under the old preservation instruction; Callum explicitly retired those records on 22 October. The full content gate now prevents either condition being called healthy.
 
 ## External plugins
 
@@ -176,18 +214,20 @@ cd "$HOME/Repos/callumflack/skills"
 scripts/link-skills.sh
 ```
 
-Do not manage authored skills with `npx skills` or add them to `.agents/.skill-lock.json`. Other machines should follow the install instructions in [callumflack/skills](https://github.com/callumflack/skills).
+Do not manage authored skills with `npx skills` or add them to `.agents/.skill-lock.json`. For Callum’s other machines, use the pinned replica setup above. Public consumers can use the install instructions in [callumflack/skills](https://github.com/callumflack/skills).
 
 ## Repair links
 
-Normal installs and the authored-skills linker create the required links. Repair them only when Cursor or Claude has missing or stale entries:
+Normal installs and the authored-skills linker create the required links. Repair a runtime when it has missing or stale entries. After installing external skills, run `repair:pi` to expose new entries to Pi: its shared-directory discovery respects the registry’s ignore rules.
 
 ```sh
 mise run repair:cursor
 mise run repair:claude
+mise run repair:codex
+mise run repair:pi
 ```
 
-These commands leave unrelated entries alone. The `repair:*:prune` variants also remove stale links previously managed from `~/.agents/skills`.
+These commands leave unrelated entries, including Pi-only skills, alone. The `repair:*:prune` variants also remove stale links previously managed from `~/.agents/skills`.
 
 ## Design rule
 

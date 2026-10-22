@@ -1,5 +1,17 @@
 # Worklog
 
+## 2026-10-22 — Reconcile the live skill baseline
+
+- **Scope:** Preserve the 13 accepted local variants, reconcile Plannotator with the installed Mermaid version, restore metadata, retire four stale records and verify clean replica setup. Preserve inherited work and indexes; local only.
+- **Decision:** Keep small, hash-checked adaptation patches beside the external lock instead of moving these variants into the separately pinned, dirty Skills checkout. This makes one Agents revision carry the accepted baseline without requiring an unpublished Skills commit. The weekly updater missed local drift because it checked upstream-versus-lock hashes, body existence and links, not installed tree content. Require the existing content verifier at the maintenance boundary.
+- **Resolved:** Accepted local variants now travel as verified patches alongside the external lock. The existing maintenance gate checks content as well as ownership; retired names stay excluded from discovery. Local replica verification, preserved-state checks and the explicitly approved independent review are complete; the existing verification document owns the evidence and limits. The dirty authored Skills baseline remains excluded from replicas. Callum subsequently authorized committing and pushing this reconciliation and the portability change only. No provider-registration or schedule change is authorized.
+
+## 2026-10-22 — Portable mise setup
+
+- **Scope:** Callum authorized checking all 180 recorded external skill trees, then implementing and verifying the smallest local portable setup. Preserve all inherited edits and the index; no commit, push, live skill replacement, or provider registration.
+- **Decision:** All recorded trees were retrieved before implementation. Reuse their existing Git tree hashes for exact restoration; preserve the linkers and Pstack ownership. Pin the committed Skills baseline for replica setup, reject dirty authoring checkouts rather than switching them, and retain the lightweight authoring bootstrap.
+- **Resolved implementation scope:** Replica setup and exact-tree restoration are implemented locally, with the existing Pi adapter covering the pinned linker. Preserve the 24 live registry differences and dirty authored checkout; do not reconcile them as part of this task. The repository documentation owns the setup boundary and proof. Callum explicitly approved the scoped Codex review; it is complete, with its scope and limitations recorded in the existing verification document. No review handoff remains. Callum subsequently authorized committing and pushing this portability change and its reconciliation only; provider registration remains outside scope.
+
 ## 2026-10-19
 
 - **Pstack scope resolved:** Callum authorized Pstack updates in the existing weekly skills heartbeat, superseding its plugin-update exclusion for Pstack only. Preserve all other plugin boundaries, bare-name owners, and unrelated dirty work. Restored the missing monitored upstream checkout. Removed the obsolete bundled-validator path from the check task; artifact checks plus native plugin installation/loading own this update boundary.

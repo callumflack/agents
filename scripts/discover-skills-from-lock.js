@@ -15,6 +15,7 @@ const manifest = JSON.parse(readFileSync(lockPath, "utf8"));
 const policy = JSON.parse(readFileSync(policyPath, "utf8"));
 const excludedCollections = policy.excludedCollections ?? {};
 const acknowledgedCandidates = policy.acknowledgedCandidates ?? {};
+const retiredSkills = policy.retiredSkills ?? {};
 const lockedSkills = Object.entries(manifest.skills ?? {}).map(([name, entry]) => ({
   name,
   source: entry.source,
@@ -103,6 +104,7 @@ try {
       if (`${source}:${skillPath}` in acknowledgedCandidates) continue;
 
       const name = readSkillName(checkout, skillPath);
+      if (retiredSkills[name]?.source === source) continue;
       const owner = lockedOwners.get(name);
       candidates.push({
         name,

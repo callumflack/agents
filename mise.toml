@@ -1,6 +1,25 @@
 [tools]
 node = "24.22.1"
 
+[bootstrap.repos]
+"~/Repos/callumflack/skills" = { url = "https://github.com/callumflack/skills.git", ref = "c2d215b081353424fb3134594218f5926fe45298" }
+
+[tasks.setup]
+description = "Restore the pinned agent setup on a clean replica machine"
+run = "node scripts/setup.js"
+
+[tasks."setup:check"]
+description = "Verify pinned Skills, external content, instructions, and runtime links"
+run = "node scripts/setup.js --check"
+
+[tasks."skills:content:check"]
+description = "Verify external skill bytes and executable modes against the lock"
+run = "node scripts/install-skills-from-lock.js --check"
+
+[tasks."skills:sources:check"]
+description = "Retrieve and verify every recorded external skill tree without installing"
+run = "node scripts/install-skills-from-lock.js --verify-sources"
+
 [tasks.bootstrap]
 description = "Link the canonical .agents payload and runtime instruction adapters"
 run = "bash scripts/link-home.sh"
@@ -21,6 +40,14 @@ run = 'node scripts/sync-skills.js --target="$HOME/.codex/skills"'
 description = "Repair ~/.claude/skills links from ~/.agents/skills"
 run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills"'
 
+[tasks."repair:pi"]
+description = "Repair ~/.pi/agent/skills links from ~/.agents/skills"
+run = 'node scripts/sync-skills.js --target="$HOME/.pi/agent/skills"'
+
+[tasks."repair:pi:prune"]
+description = "Repair Pi skill links and remove stale managed links"
+run = 'node scripts/sync-skills.js --target="$HOME/.pi/agent/skills" --prune'
+
 [tasks."repair:cursor:prune"]
 description = "Repair Cursor skill links and remove stale managed links"
 run = 'node scripts/sync-skills.js --target="$HOME/.cursor/skills" --prune'
@@ -34,19 +61,19 @@ description = "Repair Claude skill links and remove stale managed links"
 run = 'node scripts/sync-skills.js --target="$HOME/.claude/skills" --prune'
 
 [tasks."skills:check"]
-description = "Check this repo has one canonical skill manifest"
-run = "node scripts/check-skill-manifest.js"
+description = "Check skill ownership and all installed content against the accepted baseline"
+run = "node scripts/check-skill-manifest.js && node scripts/install-skills-from-lock.js --check"
 
 [tasks."skills:discover"]
 description = "Find new upstream skills from sources already represented in the lock"
 run = "node scripts/discover-skills-from-lock.js"
 
 [tasks."skills:print"]
-description = "Print install commands from .agents/.skill-lock.json"
+description = "Print exact skill trees from .agents/.skill-lock.json"
 run = "node scripts/install-skills-from-lock.js"
 
 [tasks."skills:install"]
-description = "Install skills from .agents/.skill-lock.json"
+description = "Restore missing skills exactly from .agents/.skill-lock.json"
 run = "node scripts/install-skills-from-lock.js --apply"
 
 [tasks."plugin:pstack:sync"]

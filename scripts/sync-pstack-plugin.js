@@ -110,9 +110,12 @@ function runLocked() {
   const lockMarker = "PSTACK_SYNC_LOCK_HELD";
   if (process.env[lockMarker] === processLockPath) return;
   assertDirectory(pluginParent, "pstack plugin parent");
+  // Both commands hold a kernel lock across the child and release it on exit.
+  const locker = process.platform === "darwin" ? "/usr/bin/lockf" : "flock";
+  const lockArgs = process.platform === "darwin" ? ["-k", processLockPath] : [processLockPath];
   const result = spawnSync(
-    "/usr/bin/lockf",
-    ["-k", processLockPath, process.execPath, scriptPath, ...argumentsList],
+    locker,
+    [...lockArgs, process.execPath, scriptPath, ...argumentsList],
     {
       stdio: "inherit",
       env: { ...process.env, [lockMarker]: processLockPath },

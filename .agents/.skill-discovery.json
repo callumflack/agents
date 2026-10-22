@@ -18,5 +18,23 @@
     "mattpocock/skills:skills/engineering/implement-spec/SKILL.md": "The installed in-progress path remains selected until an explicit path migration.",
     "mattpocock/skills:skills/engineering/retro/SKILL.md": "The installed in-progress path remains selected until an explicit path migration.",
     "openclaw/agent-skills:skills/handoff/SKILL.md": "The bare name remains owned by mattpocock/skills."
+  },
+  "retiredSkills": {
+    "to-issues": {
+      "source": "mattpocock/skills",
+      "reason": "Retired from the live baseline by Callum on 22 October 2026; do not automatically reinstall."
+    },
+    "to-prd": {
+      "source": "mattpocock/skills",
+      "reason": "Retired from the live baseline by Callum on 22 October 2026; do not automatically reinstall."
+    },
+    "decision-mapping": {
+      "source": "mattpocock/skills",
+      "reason": "Retired from the live baseline by Callum on 22 October 2026; do not automatically reinstall."
+    },
+    "review": {
+      "source": "mattpocock/skills",
+      "reason": "Retired from the live baseline by Callum on 22 October 2026; do not automatically reinstall."
+    }
   }
 }

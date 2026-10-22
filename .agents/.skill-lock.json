@@ -131,26 +131,6 @@
       "installedAt": "2026-06-19T22:51:57.552Z",
       "updatedAt": "2026-10-11T23:03:50.839Z"
     },
-    "to-issues": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/to-issues/SKILL.md",
-      "skillFolderHash": "8d7393a4127ee678f4b99070f436a2a87014c6e7",
-      "pluginName": "mattpocock-skills",
-      "installedAt": "2026-06-19T22:51:57.553Z",
-      "updatedAt": "2026-07-01T00:42:49.868Z"
-    },
-    "to-prd": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/to-prd/SKILL.md",
-      "skillFolderHash": "d74909eec8906ceb3341a9b30e2e51cdf62a67c7",
-      "pluginName": "mattpocock-skills",
-      "installedAt": "2026-06-19T22:51:57.553Z",
-      "updatedAt": "2026-07-01T00:42:49.868Z"
-    },
     "triage": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -170,15 +150,6 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-06-19T22:51:57.555Z",
       "updatedAt": "2026-07-27T00:42:32.481Z"
-    },
-    "decision-mapping": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/in-progress/decision-mapping/SKILL.md",
-      "skillFolderHash": "cc8beaadfa5f515a3d8d017de205bbc17b6facbf",
-      "installedAt": "2026-06-19T22:51:57.555Z",
-      "updatedAt": "2026-07-01T00:42:49.870Z"
     },
     "design-an-interface": {
       "source": "mattpocock/skills",
@@ -253,15 +224,6 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-06-19T22:51:57.561Z",
       "updatedAt": "2026-09-16T03:24:00.990Z"
-    },
-    "review": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/in-progress/review/SKILL.md",
-      "skillFolderHash": "7358042ff9636cf903d3183e1d86744ea7ffda40",
-      "installedAt": "2026-06-19T22:51:57.561Z",
-      "updatedAt": "2026-07-01T00:42:49.875Z"
     },
     "scaffold-exercises": {
       "source": "mattpocock/skills",
@@ -854,7 +816,13 @@
       "skillPath": "skills/animate/SKILL.md",
       "skillFolderHash": "a92e36f28d741aee4ff77d1a001300d7e86e07fe",
       "installedAt": "2026-08-21T03:18:12.628Z",
-      "updatedAt": "2026-09-23T06:57:19.802Z"
+      "updatedAt": "2026-09-23T06:57:19.802Z",
+      "adaptation": {
+        "baseTree": "a92e36f28d741aee4ff77d1a001300d7e86e07fe",
+        "tree": "adf23358fac7bdce5febcb85d7fd985407ead56f",
+        "patchSha256": "7249243f0c5618dc2145a106a248d83caaea2a568c9e341cf430bc7832d8d5e9",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "animate-expo": {
       "source": "emilkowalski/skills",
@@ -863,7 +831,13 @@
       "skillPath": "skills/animate-expo/SKILL.md",
       "skillFolderHash": "6874701c790c7e74926ccd0a8716647a81424c85",
       "installedAt": "2026-08-21T03:18:12.634Z",
-      "updatedAt": "2026-09-23T06:57:22.173Z"
+      "updatedAt": "2026-09-23T06:57:22.173Z",
+      "adaptation": {
+        "baseTree": "6874701c790c7e74926ccd0a8716647a81424c85",
+        "tree": "2daf5ab8f4d3db7690e46d3d6d63e7ebae89a090",
+        "patchSha256": "89de937ebf25cfc8ef9347e4906fd121fc20da72883cfb175ae961fe0f4d6429",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "animation-vocabulary": {
       "source": "emilkowalski/skills",
@@ -872,7 +846,13 @@
       "skillPath": "skills/animation-vocabulary/SKILL.md",
       "skillFolderHash": "d49565744427887a1f719de1ceee04d941d4e681",
       "installedAt": "2026-08-21T03:18:12.636Z",
-      "updatedAt": "2026-09-23T06:57:24.641Z"
+      "updatedAt": "2026-09-23T06:57:24.641Z",
+      "adaptation": {
+        "baseTree": "d49565744427887a1f719de1ceee04d941d4e681",
+        "tree": "e6dc24ca1ff1e70c9677df9a1d2d1c80415cbb3c",
+        "patchSha256": "0fc3de662d6e45f43fbff58ff1ebbac09c1fac32c41928f55d07dc5470c2d8ce",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "apple-design": {
       "source": "emilkowalski/skills",
@@ -881,7 +861,13 @@
       "skillPath": "skills/apple-design/SKILL.md",
       "skillFolderHash": "cd509ae729c86487d352e17a26651217a4c25711",
       "installedAt": "2026-08-21T03:18:12.637Z",
-      "updatedAt": "2026-09-23T06:57:26.914Z"
+      "updatedAt": "2026-09-23T06:57:26.914Z",
+      "adaptation": {
+        "baseTree": "cd509ae729c86487d352e17a26651217a4c25711",
+        "tree": "e9f5b472dfb28d8cf29f64001b6c01ef94b8168b",
+        "patchSha256": "31fef95e57850c9f8db2928cbd4a7d94b33e171c16eb390491d0343a5073ced1",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "ask-sonner": {
       "source": "emilkowalski/skills",
@@ -890,7 +876,13 @@
       "skillPath": "skills/ask-sonner/SKILL.md",
       "skillFolderHash": "aeca3dba0eb0415fa5a310cd6823b824fe60323d",
       "installedAt": "2026-08-21T03:18:12.638Z",
-      "updatedAt": "2026-09-23T06:57:29.396Z"
+      "updatedAt": "2026-09-23T06:57:29.396Z",
+      "adaptation": {
+        "baseTree": "aeca3dba0eb0415fa5a310cd6823b824fe60323d",
+        "tree": "591cfb58ec1eb38a7ca04f3b6453a75a4fcf9fc8",
+        "patchSha256": "742bfda6cd15688eb2bdeee24114646daba0f1030d98c0e64c79ca09762e21fd",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "emil-design-eng": {
       "source": "emilkowalski/skills",
@@ -908,7 +900,13 @@
       "skillPath": "skills/find-animation-opportunities/SKILL.md",
       "skillFolderHash": "e6443880f38e33cf78e5d678471eed35e8566763",
       "installedAt": "2026-08-21T03:18:12.640Z",
-      "updatedAt": "2026-09-23T06:57:33.941Z"
+      "updatedAt": "2026-09-23T06:57:33.941Z",
+      "adaptation": {
+        "baseTree": "e6443880f38e33cf78e5d678471eed35e8566763",
+        "tree": "502f891c05c9cade7e7bd815e3f228fdd20b61b6",
+        "patchSha256": "db14f6c642e8d48236eb8356875acd375b31b30960d1b8b017c5f3ca5a8df26b",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "improve-animations": {
       "source": "emilkowalski/skills",
@@ -917,7 +915,13 @@
       "skillPath": "skills/improve-animations/SKILL.md",
       "skillFolderHash": "cf1f7aabac34c08f2cf833f039fa99af2f415183",
       "installedAt": "2026-08-21T03:18:12.641Z",
-      "updatedAt": "2026-09-23T06:57:36.467Z"
+      "updatedAt": "2026-09-23T06:57:36.467Z",
+      "adaptation": {
+        "baseTree": "cf1f7aabac34c08f2cf833f039fa99af2f415183",
+        "tree": "2ff93ddb9833df45f5e83080de838bb668530820",
+        "patchSha256": "71b44c576fdfd8cbbee8df5e7264f0be58baeadfebd1cccd8d8fce46c50ad2f6",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "pick-ui-library": {
       "source": "emilkowalski/skills",
@@ -926,7 +930,13 @@
       "skillPath": "skills/pick-ui-library/SKILL.md",
       "skillFolderHash": "370e19776f0aa2403a2edeed78266bd6a5d78036",
       "installedAt": "2026-08-21T03:18:12.643Z",
-      "updatedAt": "2026-09-23T06:57:39.312Z"
+      "updatedAt": "2026-09-23T06:57:39.312Z",
+      "adaptation": {
+        "baseTree": "370e19776f0aa2403a2edeed78266bd6a5d78036",
+        "tree": "cfc9a519a1b554eef39bba7bd74bd6845524ccd1",
+        "patchSha256": "53bc9420f1b6e2727ce414c8e3ad2382c02915bff037fe044942e2e4a40f7d6e",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "review-animations": {
       "source": "emilkowalski/skills",
@@ -935,7 +945,13 @@
       "skillPath": "skills/review-animations/SKILL.md",
       "skillFolderHash": "0e0d3cb3e07ca307fe946ccaf57f6c82eb75124a",
       "installedAt": "2026-08-21T03:18:12.651Z",
-      "updatedAt": "2026-09-23T06:57:42.350Z"
+      "updatedAt": "2026-09-23T06:57:42.350Z",
+      "adaptation": {
+        "baseTree": "0e0d3cb3e07ca307fe946ccaf57f6c82eb75124a",
+        "tree": "82571acae75a97764fa7899f10bd21d93a4f1414",
+        "patchSha256": "620f376e6ab03d729318b3fa71f7f39393d7ffa8d7578fd05b0468018e9eb7d1",
+        "reason": "Preserve direct task execution without the introductory wait."
+      }
     },
     "agent-browser": {
       "source": "vercel-labs/agent-browser",
@@ -1008,7 +1024,13 @@
       "skillPath": "plugins/show-me/skills/show-me/SKILL.md",
       "skillFolderHash": "362200ac2fb3c17b765049444e88de73767e6d08",
       "installedAt": "2026-09-04T03:49:29.416Z",
-      "updatedAt": "2026-09-23T06:57:44.713Z"
+      "updatedAt": "2026-09-23T06:57:44.713Z",
+      "adaptation": {
+        "baseTree": "362200ac2fb3c17b765049444e88de73767e6d08",
+        "tree": "0bdb821a21e793a4f6f82a7078c052154447e5cc",
+        "patchSha256": "0f04504c8c3e5a97b381eb3a6aca2543412aa30263c5298eb1413d7fab6a831a",
+        "reason": "Preserve implicit invocation; remove both explicit-invocation restrictions."
+      }
     },
     "wait-what": {
       "source": "mattpocock/skills",
@@ -1046,7 +1068,13 @@
       "skillPath": "skills/in-progress/retro/SKILL.md",
       "skillFolderHash": "335c1862a43da9d629abafdb79ca0c0de118be08",
       "installedAt": "2026-09-10T07:12:44.025Z",
-      "updatedAt": "2026-09-16T03:24:00.996Z"
+      "updatedAt": "2026-09-16T03:24:00.996Z",
+      "adaptation": {
+        "baseTree": "335c1862a43da9d629abafdb79ca0c0de118be08",
+        "tree": "5831252c5e3692fa01645b0279ea5c444facec9d",
+        "patchSha256": "622be1c91fc85a962d3042c0e96ac173a48313e9cb2ec6aaca1ad0925c28cdc9",
+        "reason": "Preserve bounded retrospective guidance without blanket enforcement requirements."
+      }
     },
     "prefer-container-queries": {
       "source": "flornkm/skills",
@@ -1073,7 +1101,13 @@
       "skillPath": "apps/skills/extra/plannotator-compound/SKILL.md",
       "skillFolderHash": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
       "installedAt": "2026-09-14T05:02:14.939Z",
-      "updatedAt": "2026-09-14T05:02:14.939Z"
+      "updatedAt": "2026-09-14T05:02:14.939Z",
+      "adaptation": {
+        "baseTree": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
+        "tree": "0674434e68124b087d6cc1d8e844636ec8f691bb",
+        "patchSha256": "e2d5a1dcc628c99dc4d29843a4a3cee15cef47b0e33034bc1203d97b1561411a",
+        "reason": "Preserve implicit invocation."
+      }
     },
     "plannotator-setup-goal": {
       "source": "backnotprop/plannotator",
@@ -1082,7 +1116,13 @@
       "skillPath": "apps/skills/extra/plannotator-setup-goal/SKILL.md",
       "skillFolderHash": "29d5d60c2b8a88c1786d7bbdbbfa37e44b64f6a5",
       "installedAt": "2026-09-14T05:02:14.943Z",
-      "updatedAt": "2026-09-14T05:02:14.943Z"
+      "updatedAt": "2026-09-14T05:02:14.943Z",
+      "adaptation": {
+        "baseTree": "29d5d60c2b8a88c1786d7bbdbbfa37e44b64f6a5",
+        "tree": "7cb59677e968eeef334e545fef6cc93e65075d95",
+        "patchSha256": "46d193d6b99500e0b3ad999424e95b354decaa6ad095bf3f93cb551f67b9ccfd",
+        "reason": "Preserve implicit invocation."
+      }
     },
     "plannotator-visual-explainer": {
       "source": "backnotprop/plannotator",
@@ -1091,7 +1131,13 @@
       "skillPath": "apps/skills/extra/plannotator-visual-explainer/SKILL.md",
       "skillFolderHash": "060525d9a83760cc7cbc3004217c596a76a3e39a",
       "installedAt": "2026-09-14T05:02:14.944Z",
-      "updatedAt": "2026-09-23T06:58:14.298Z"
+      "updatedAt": "2026-09-23T06:58:14.298Z",
+      "adaptation": {
+        "baseTree": "060525d9a83760cc7cbc3004217c596a76a3e39a",
+        "tree": "a2f9e50bb864f2e44a9218b9e1ecfe7ffb4df291",
+        "patchSha256": "72af41c07be48f896921a163fbcec63c6dd02ff84e530e34a2ee1a0790c226bc",
+        "reason": "Preserve implicit invocation and Mermaid 11 compatibility with Plannotator 0.27.14; retain upstream diagram-shell repair."
+      }
     },
     "test-audit": {
       "source": "openclaw/openclaw",

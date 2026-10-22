@@ -6,7 +6,7 @@ Skills are lazy-loaded workflow bundles. This README is the local map: what is a
 
 - Owned public skills live in `callumflack/skills` and are linked from its local checkout on Callum's machine.
 - Project-local skills live in that project's `.agents/skills`.
-- External skills are accounted for here and in `.agents/.skill-lock.json`; do not commit skill bodies.
+- External skills are accounted for here and in `.agents/.skill-lock.json`; do not commit installed skill bodies. Accepted adaptations are tracked as patches in `.agents/skill-patches/` with upstream and result hashes in the same lock.
 - Git tracks only `.agents/skills/README.md` and `.agents/skills/.gitignore` under `.agents/skills`.
 - External directories under `.agents/skills` are installer material; Callum-authored entries are links to their source repo.
 - GitHub skill repos are installable with `npx skills add <owner/repo>`.
@@ -29,7 +29,7 @@ cd "$HOME/Repos/callumflack/skills"
 scripts/link-skills.sh
 ```
 
-Do not run `npx skills add callumflack/skills` on this machine. Public consumers and other machines can use the install commands published by the skills repository.
+Do not run `npx skills add callumflack/skills` on this machine. Callum’s other machines use `mise run setup` from Agents to link the pinned Skills checkout. Public consumers can use the install commands published by the skills repository.
 
 Archive:
 - `$HOME/Repos/callumflack/skills/archive`
@@ -54,13 +54,13 @@ mise run skills:check
 
 ## Mass Install From Lock
 
-Print install commands:
+Print recorded sources and exact tree hashes:
 
 ```sh
 mise run skills:print
 ```
 
-Apply install commands:
+Restore missing skills from the recorded upstream trees plus accepted adaptation patches (differing existing content is preserved and reported):
 
 ```sh
 mise run skills:install

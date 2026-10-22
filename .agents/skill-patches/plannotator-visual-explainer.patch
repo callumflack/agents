@@ -1,0 +1,55 @@
+--- a/SKILL.md
++++ b/SKILL.md
+@@ -1,6 +1,5 @@
+ ---
+ name: plannotator-visual-explainer
+-disable-model-invocation: true
+ description: >
+   Generate self-contained HTML visualizations with Plannotator theming. Use for implementation
+   plans, PR explainers, architecture diagrams, data tables, slide decks, and any visual
+@@ -24,7 +23,7 @@
+ 
+ Always deliver via Plannotator's annotation UI. Do NOT use `open` or `xdg-open`.
+ 
+-For any deliverable that uses Mermaid, render every diagram with Mermaid 12 in both the light
++For any deliverable that uses Mermaid, render every diagram with Mermaid 11 in both the light
+ and dark palettes before opening the annotation UI. Rendering is a hard gate: an exception,
+ empty SVG, or error output such as `aria-roledescription="error"` or `Syntax error in text`
+ means the explainer is not deliverable. Fix the diagram or theme configuration and rerun both
+--- a/SKILL.test.ts
++++ b/SKILL.test.ts
+@@ -80,7 +80,7 @@
+     );
+   });
+ 
+-  test("renders representative Mermaid 12 diagrams in both palettes", async () => {
++  test("renders representative Mermaid 11 diagrams in both palettes", async () => {
+     const palettes = [captureMermaidConfig("light"), captureMermaidConfig("dark")];
+     const uiPackageDir = join(import.meta.dir, "../../../../packages/ui");
+     const renderProbe = String.raw`
+@@ -92,8 +92,8 @@
+         import("mermaid/package.json", { with: { type: "json" } }),
+       ]);
+ 
+-      if (!String(mermaidPackage.version).startsWith("12.")) {
+-        throw new Error("Expected Mermaid 12, received " + mermaidPackage.version);
++      if (!String(mermaidPackage.version).startsWith("11.")) {
++        throw new Error("Expected Mermaid 11, received " + mermaidPackage.version);
+       }
+ 
+       const palettes = JSON.parse(process.env.PLANNOTATOR_MERMAID_PALETTES ?? "[]");
+@@ -184,12 +184,12 @@
+       throw new Error(`Mermaid render probe failed:\n${stderr || stdout}`);
+     }
+     expect(stdout).toMatch(
+-      /Rendered 4 Mermaid 12\.[0-9.]+\.[0-9]+ SVGs without error signatures/,
++      /Rendered 4 Mermaid 11\.[0-9.]+\.[0-9]+ SVGs without error signatures/,
+     );
+   }, 20_000);
+ 
+   test("keeps Mermaid rendering as a pre-delivery gate", () => {
+-    expect(skill).toContain("render every diagram with Mermaid 12");
++    expect(skill).toContain("render every diagram with Mermaid 11");
+     expect(skill).toContain('aria-roledescription="error"');
+     expect(skill).toContain("Syntax error in text");
+     expect(skill).toContain("the explainer is not deliverable");
