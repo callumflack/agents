@@ -1,5 +1,5 @@
 // Complete replica setup. Authoring checkouts keep using the lightweight linkers.
-import { existsSync, lstatSync, readFileSync, readdirSync, readlinkSync } from "node:fs";
+import { existsSync, lstatSync, readFileSync, readdirSync, readlinkSync, realpathSync } from "node:fs";
 import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
@@ -12,7 +12,9 @@ const checkOnly = process.argv[2] === "--check";
 if (process.argv.length > (checkOnly ? 3 : 2) || !source || !/^[0-9a-f]{40}$/.test(revision || "")) {
   throw new Error("run through mise run setup or mise run setup:check");
 }
-const registry = join(homedir(), ".agents", "skills");
+const agentsHome = join(homedir(), ".agents");
+const payload = join(root, ".agents");
+const registry = join(agentsHome, "skills");
 const targets = [".codex/skills", ".claude/skills", ".cursor/skills", ".pi/agent/skills"].map((path) => join(homedir(), path));
 const lockPath = join(root, ".agents", ".skill-lock.json");
 const lock = readFileSync(lockPath);
@@ -35,15 +37,29 @@ function cleanSource() {
 }
 function assertPinned() {
   cleanSource();
-  if (run("git", ["rev-parse", "HEAD"], source, true) !== revision) throw new Error(`Skills checkout does not match pinned revision ${revision}`);
+  const head = run("git", ["rev-parse", "HEAD"], source, true);
+  if (head !== revision) throw new Error(`preserving Skills checkout at ${head}: ${source}; expected ${revision}. Review and publish local commits before deliberately aligning the checkout or pin`);
 }
 
-// Stop before repository reconciliation or registry changes on the authoring Mac.
-if (stat(source)) cleanSource();
+// Reject local state before cloning Skills, restoring content or relinking runtimes.
+// Setup owns fixed locations; the standalone linkers/installer support overrides.
+for (const [key, expected] of [["AGENTS_HOME", agentsHome], ["SKILLS_LOCK", lockPath]]) {
+  if (process.env[key] && resolve(process.env[key]) !== expected) {
+    throw new Error(`setup requires ${key}=${expected}; preserving the overridden location`);
+  }
+}
+if (!checkOnly && run("git", ["status", "--porcelain", "--untracked-files=all"], root, true)) {
+  throw new Error(`preserving dirty Agents checkout: ${root}; review and publish intended changes before replica setup; do not reset or stash just to bypass this check`);
+}
+if (stat(agentsHome) && (!existsSync(agentsHome) || realpathSync(agentsHome) !== realpathSync(payload))) {
+  throw new Error(`preserving existing agent home: ${agentsHome}; reconcile its local skills with ${payload} before changing the link`);
+}
+if (stat(source)) assertPinned();
+run(process.execPath, ["scripts/install-skills-from-lock.js", "--preflight"]);
 for (const target of targets) {
   if (stat(target) && !stat(target).isDirectory()) throw new Error(`preserving conflicting runtime directory: ${target}`);
 }
-if (!checkOnly) run("mise", ["bootstrap", "repos", "apply"]);
+if (!checkOnly && !stat(source)) run("mise", ["bootstrap", "repos", "apply"]);
 assertPinned();
 const authoredNames = readdirSync(source).filter((name) => existsSync(join(source, name, "SKILL.md")));
 for (const name of authoredNames) {
@@ -54,8 +70,14 @@ for (const name of authoredNames) {
   }
 }
 const names = [...externalNames, ...authoredNames];
+// The authored linker fans out unrecorded registry entries too. Preserve their
+// runtime variants just as strictly as the pinned set before invoking it.
+const registryPath = join(payload, "skills");
+const registeredNames = stat(registryPath) ? readdirSync(registryPath, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory() || entry.isSymbolicLink()).map((entry) => entry.name) : [];
+const linkedNames = [...new Set([...names, ...registeredNames])];
 for (const target of targets) {
-  for (const name of names) {
+  for (const name of linkedNames) {
     const path = join(target, name);
     if (stat(path) && (!stat(path).isSymbolicLink() || resolve(dirname(path), readlinkSync(path)) !== join(registry, name))) {
       throw new Error(`preserving conflicting runtime skill: ${path}`);
@@ -63,8 +85,8 @@ for (const target of targets) {
   }
 }
 if (!checkOnly) {
-  run("bash", ["scripts/link-home.sh"]);
   run(process.execPath, ["scripts/install-skills-from-lock.js", "--apply"]);
+  run("bash", ["scripts/link-home.sh"]);
   run("bash", [join(source, "scripts", "link-skills.sh")]);
   // The pinned Skills linker predates Pi. Keep using Agents' existing adapter.
   run(process.execPath, ["scripts/sync-skills.js", `--target=${targets[3]}`]);

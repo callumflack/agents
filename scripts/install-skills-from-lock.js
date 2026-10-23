@@ -13,8 +13,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const lockPath = resolve(process.env.SKILLS_LOCK || join(root, ".agents", ".skill-lock.json"));
 const registry = join(dirname(lockPath), "skills");
 const mode = process.argv[2] || "--print";
-if (process.argv.length > 3 || !["--print", "--apply", "--check", "--verify-sources"].includes(mode)) {
-  throw new Error("usage: install-skills-from-lock.js [--print|--apply|--check|--verify-sources]");
+if (process.argv.length > 3 || !["--print", "--apply", "--check", "--preflight", "--verify-sources"].includes(mode)) {
+  throw new Error("usage: install-skills-from-lock.js [--print|--apply|--check|--preflight|--verify-sources]");
 }
 const lockBytes = readFileSync(lockPath);
 const lock = JSON.parse(lockBytes);
@@ -101,7 +101,7 @@ function matches(name, entry) {
   const target = join(registry, name);
   if (!stat(target)) return false;
   if (treeHash(target).toString("hex") !== expectedTree(entry)) {
-    throw new Error(`preserving differing skill: ${target}; move it aside after review before restoring`);
+    throw new Error(`preserving differing skill: ${target}; review and preserve local changes before restoring`);
   }
   return true;
 }
@@ -135,14 +135,21 @@ function exportTree(repository, hash, destination) {
 
 if (mode === "--print") {
   for (const [name, entry] of skills) console.log(`${name}\t${entry.source}\t${entry.skillFolderHash}${entry.adaptation ? `\tadapted:${entry.adaptation.tree}` : ""}`);
-} else if (mode === "--check") {
+} else if (mode === "--check" || mode === "--preflight") {
+  if (stat(registry) && !stat(registry).isDirectory()) throw new Error(`registry must be a real directory: ${registry}`);
   const failures = [];
+  let missing = 0;
   for (const [name, entry] of skills) {
-    try { if (!matches(name, entry)) failures.push(`missing recorded skill: ${name}`); }
+    try {
+      if (!matches(name, entry)) {
+        missing++;
+        if (mode === "--check") failures.push(`missing recorded skill: ${name}`);
+      }
+    }
     catch (error) { failures.push(error.message); }
   }
   if (failures.length) throw new Error(failures.join("\n"));
-  console.log(`ok: ${skills.length} external skills match their accepted trees (${patches.size} adapted)`);
+  console.log(`ok: ${skills.length - missing} external skills match their accepted trees (${patches.size} adapted)${missing ? `; ${missing} missing skills may be restored` : ""}`);
 } else {
   if (stat(registry) && !stat(registry).isDirectory()) throw new Error(`registry must be a real directory: ${registry}`);
   // Check all existing destinations before any fetch or installation.

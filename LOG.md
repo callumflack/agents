@@ -1,5 +1,11 @@
 # Worklog
 
+## 2026-10-24 — Setup preservation guards
+
+- **Scope:** Move the other-Mac preservation checks into `mise run setup`, then commit and push only this change. Preserve unrelated dirty files, skill records, experiments and the index.
+- **Decision:** Setup must reject dirty Agents/Skills checkouts, a different authored Skills commit, an agent home owned elsewhere, and differing installed external skills before changing repositories or runtime links. Git updates remain explicit; setup does not merge local skill variants.
+- **Resolved decision:** Preservation checks belong to setup and its offline content preflight, including unrecorded registry entries that the authored linker fans out. Conflicting local variants remain in place for deliberate reconciliation; Git updates remain explicit. No new updater, override workflow or active handoff.
+
 ## 2026-10-22 — Reconcile the live skill baseline
 
 - **Scope:** Preserve the 13 accepted local variants, reconcile Plannotator with the installed Mermaid version, restore metadata, retire four stale records and verify clean replica setup. Preserve inherited work and indexes; local only.

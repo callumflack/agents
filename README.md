@@ -52,9 +52,9 @@ mise run setup:check
 
 Mise supplies Node 24.22.1 and obtains the authored Skills checkout at the full commit recorded in `mise.toml`. Setup links instructions, rebuilds the locked Pstack artifact, restores exact external skill trees, runs the existing Skills linker and Pi adapter, and verifies content and links. Use `mise run setup`, not bare `mise bootstrap`, for the complete sequence and its preflight checks.
 
-The committed Skills baseline currently predates the local Pi linker edits; Agents supplies the Pi adapter explicitly. Unpublished authored changes are not part of this baseline. Setup rejects a dirty Skills checkout before changing it. On the authoring Mac, keep using the existing bootstrap and Skills linker while editing; do not reset or stash your work to make replica setup pass. After publishing an accepted Skills change, deliberately advance the Skills `ref` in `[bootstrap.repos]` and apply the same Agents revision elsewhere.
+The committed Skills baseline currently predates the local Pi linker edits; Agents supplies the Pi adapter explicitly. Unpublished authored changes are not part of this baseline. Setup rejects dirty Agents or Skills checkouts (including staged and untracked work), a clean Skills checkout at a different commit, and an existing `~/.agents` owned by another location before cloning, restoring or relinking anything. Existing Skills checkouts are never automatically switched to the pin. Setup uses the standard home and lock paths; conflicting `AGENTS_HOME` or `SKILLS_LOCK` overrides are rejected. On the authoring Mac, keep using the existing bootstrap and Skills linker while editing; do not reset or stash your work to make replica setup pass. After publishing an accepted Skills change, deliberately advance the Skills `ref` in `[bootstrap.repos]` and apply the same Agents revision elsewhere.
 
-The external lock's `skillFolderHash` is the upstream Git tree SHA, covering every file and executable mode. Accepted local variants have an `adaptation` record and a tracked patch in `.agents/skill-patches/`. Restoration fetches the upstream tree, verifies and applies its patch, checks the accepted result hash, and stages and verifies all missing skills before installation. It never rewrites the lock or substitutes latest. Existing matching skills are left alone. Differing directories, symlinks and runtime ownership conflicts stop setup; review and move the conflicting entry aside before restoring. Unrelated registry and runtime entries remain untouched, so parity covers the managed skill set, not every provider-owned skill on a machine.
+The external lock's `skillFolderHash` is the upstream Git tree SHA, covering every file and executable mode. Accepted local variants have an `adaptation` record and a tracked patch in `.agents/skill-patches/`. Restoration fetches the upstream tree, verifies and applies its patch, checks the accepted result hash, and stages and verifies all missing skills before installation. It never rewrites the lock or substitutes latest. Existing matching skills are left alone. An offline preflight checks existing external files and executable modes before setup changes repositories or links; missing recorded skills are allowed and restored afterward. Differing directories, symlinks and runtime ownership conflicts stop setup. Leave conflicting entries in place while reviewing them: preserve accepted variants as tracked adaptation patches, or publish authored changes and deliberately advance the Skills pin. Do not delete, reset, stash or move local work aside merely to make setup pass. Unrelated registry and runtime entries remain untouched, so parity covers the managed skill set, not every provider-owned skill on a machine.
 
 ```sh
 mise run skills:sources:check  # retrieve all recorded trees without installing
@@ -63,7 +63,18 @@ mise run skills:content:check # offline comparison of installed external content
 
 Unadapted skill updates remain deliberate `npx skills` operations followed by inspection of the lock and content check. Adapted skills require review against their pinned upstream base; do not overwrite them through `npx skills`. Follow the maintenance procedure below. Commit/push the accepted records only when authorized, then reproduce that baseline on other machines. Setup does not advance versions, register provider plugins, copy credentials, or transport Homebase/KB content. Pstack still needs its recorded native registration and a fresh-session load check.
 
-Local verification: [portable setup evidence](docs/portable-setup-verification.md). Run the restoration regressions with `node --test scripts/install-skills-from-lock.test.js`.
+For an existing Mac, update Agents explicitly, then use the guarded setup command:
+
+```sh
+cd ~/Repos/callumflack/agents &&
+git pull --ff-only &&
+mise trust &&
+mise run setup
+```
+
+Run these commands in order and stop if any fails. Git updates stay separate from setup; it does not pull, merge or publish either repository. A successful setup already performs the full verification; `mise run setup:check` repeats the checks without installation. Run setup with other writers to these repositories paused.
+
+Local verification: [portable setup evidence](docs/portable-setup-verification.md). Run the restoration and setup-preservation regressions with `mise exec -- node --test scripts/install-skills-from-lock.test.js scripts/setup.test.js`.
 
 ## External skills
 
