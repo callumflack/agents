@@ -2,7 +2,7 @@
 node = "24.22.1"
 
 [bootstrap.repos]
-"~/Repos/callumflack/skills" = { url = "https://github.com/callumflack/skills.git", ref = "c2d215b081353424fb3134594218f5926fe45298" }
+"~/Repos/callumflack/skills" = { url = "https://github.com/callumflack/skills.git", ref = "c1f0c5261fead553fd20567e46b8e901de93b7c7" }
 
 [tasks.setup]
 description = "Restore the pinned agent setup on a clean replica machine"

@@ -1697,6 +1697,15 @@
       "skillFolderHash": "c509197c75a36eb04c5e27a671799026f9f91435",
       "installedAt": "2026-10-18T22:56:51.979Z",
       "updatedAt": "2026-10-18T22:56:51.979Z"
+    },
+    "scrawl": {
+      "source": "kitlangton/scrawl",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kitlangton/scrawl.git",
+      "skillPath": "skills/scrawl/SKILL.md",
+      "skillFolderHash": "afddc05003828078d088586e829c1938d3b731f9",
+      "installedAt": "2026-10-22T23:59:19.527Z",
+      "updatedAt": "2026-10-22T23:59:19.527Z"
     }
   },
   "dismissed": {
