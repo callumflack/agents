@@ -173,5 +173,12 @@ the existing index and preserve user-staged changes. Stage exact paths or hunks;
 before committing, inspect the full staged diff and verify it contains only the
 authorized commit scope.
 
+**Unity Surfaces clone safeguard.** For `~/Repos/vana-com/unity-surfaces`
+and every linked worktree of that clone, agents must not bypass or disable the
+`dev`/`main` commit guard—including with `--no-verify`, `core.hooksPath`
+overrides, or hook removal—unless Callum explicitly authorizes that specific
+action. A request to commit, resolve conflicts, push, or open a PR does not
+grant that permission. Use a feature branch and the PR workflow otherwise.
+
 **Updating this file.** Codex and Claude use symlinks; Cursor uses a generated
 copy. After editing, run `mise run bootstrap` in `~/Repos/callumflack/agents`.
