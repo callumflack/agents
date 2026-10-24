@@ -56,7 +56,7 @@ function fixture(t) {
   symlinkSync(payload, join(home, ".agents"));
   commit(root);
   return { home, root, source, registry, env, git, commit,
-    run: () => spawnSync(process.execPath, [join(root, "scripts/setup.js")], { cwd: root, env, encoding: "utf8", timeout: 15000 }),
+    run: (...args) => spawnSync(process.execPath, [join(root, "scripts/setup.js"), ...args], { cwd: root, env, encoding: "utf8", timeout: 15000 }),
   };
 }
 
@@ -145,3 +145,65 @@ test("external preflight allows missing skills without installing them", (t) => 
   assert.match(result.stdout, /1 missing skills may be restored/);
   assert.deepEqual(snapshot(f), before);
 });
+
+// Build a real upstream whose latest commit is newer than the requested pin.
+function advanceFixture(f) {
+  const base = f.git(f.source, "rev-parse", "HEAD");
+  const upstream = join(f.home, "upstream");
+  f.git(f.source, "clone", "--quiet", "--no-local", f.source, upstream);
+  f.git(upstream, "config", "user.name", "Fixture");
+  f.git(upstream, "config", "user.email", "fixture@example.invalid");
+  writeFileSync(join(upstream, "authored/SKILL.md"), "Pinned authored version\n");
+  mkdirSync(join(upstream, "incoming"));
+  writeFileSync(join(upstream, "incoming/SKILL.md"), "New pinned skill\n");
+  f.commit(upstream);
+  const pin = f.git(upstream, "rev-parse", "HEAD");
+  writeFileSync(join(upstream, "authored/SKILL.md"), "Newer upstream version\n");
+  f.commit(upstream);
+  writeFileSync(join(f.root, "mise.toml"), `[bootstrap.repos]\n"~/Repos/callumflack/skills" = { url = "${upstream}", ref = "${pin}" }\n`);
+  f.commit(f.root);
+  return { base, pin };
+}
+
+test("fast-forwards an older checkout to the exact pin, retaining its branch", (t) => {
+  const f = fixture(t); const { base, pin } = advanceFixture(f);
+  const branch = f.git(f.source, "symbolic-ref", "HEAD");
+  const result = f.run();
+  assert.equal(f.git(f.source, "rev-parse", "HEAD"), pin, result.stderr);
+  assert.equal(f.git(f.source, "symbolic-ref", "HEAD"), branch);
+  f.git(f.source, "merge-base", "--is-ancestor", base, "HEAD");
+  assert.equal(readFileSync(join(f.source, "authored/SKILL.md"), "utf8"), "Pinned authored version\n");
+  assert.equal(f.git(f.source, "status", "--porcelain"), "");
+  // This fixture exercises the checkout boundary only; it has no Pstack artifact.
+  // Full setup completion is verified separately with a complete replica.
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /could not inspect pstack plugin parent/);
+});
+
+for (const [name, prepare, args, error] of [
+  ["divergent commits", (f) => {
+    writeFileSync(join(f.source, "authored/SKILL.md"), "Local committed variant\n"); f.commit(f.source);
+  }, [], /preserving Skills checkout at/],
+  ["ignored incoming local file", (f) => {
+    writeFileSync(join(f.source, ".git/info/exclude"), "incoming/\n");
+    mkdirSync(join(f.source, "incoming"));
+    writeFileSync(join(f.source, "incoming/SKILL.md"), "Ignored local variant\n");
+  }, [], /would be overwritten by merge/],
+  ["read-only check behind the pin", () => {}, ["--check"], /preserving Skills checkout at/],
+  ["incoming authored registry conflict", (f) => {
+    mkdirSync(join(f.registry, "incoming"));
+    writeFileSync(join(f.registry, "incoming/SKILL.md"), "Local incoming variant\n");
+  }, [], /preserving conflicting authored skill/],
+  ["incoming runtime conflict", (f) => {
+    mkdirSync(join(f.home, ".codex/skills/incoming"), { recursive: true });
+    writeFileSync(join(f.home, ".codex/skills/incoming/SKILL.md"), "Local runtime variant\n");
+  }, [], /preserving conflicting runtime skill/],
+]) {
+  test(`setup preserves ${name} when advancing the pin`, (t) => {
+    const f = fixture(t); advanceFixture(f); prepare(f);
+    const before = snapshot(f); const result = f.run(...args);
+    assert.notEqual(result.status, 0);
+    assert.deepEqual(snapshot(f), before);
+    assert.match(result.stderr, error);
+  });
+}

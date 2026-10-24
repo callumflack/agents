@@ -54,14 +54,29 @@ if (!checkOnly && run("git", ["status", "--porcelain", "--untracked-files=all"],
 if (stat(agentsHome) && (!existsSync(agentsHome) || realpathSync(agentsHome) !== realpathSync(payload))) {
   throw new Error(`preserving existing agent home: ${agentsHome}; reconcile its local skills with ${payload} before changing the link`);
 }
-if (stat(source)) assertPinned();
+if (stat(source)) cleanSource();
 run(process.execPath, ["scripts/install-skills-from-lock.js", "--preflight"]);
 for (const target of targets) {
   if (stat(target) && !stat(target).isDirectory()) throw new Error(`preserving conflicting runtime directory: ${target}`);
 }
 if (!checkOnly && !stat(source)) run("mise", ["bootstrap", "repos", "apply"]);
-assertPinned();
-const authoredNames = readdirSync(source).filter((name) => existsSync(join(source, name, "SKILL.md")));
+const head = run("git", ["rev-parse", "HEAD"], source, true);
+const advancing = head !== revision;
+if (advancing) {
+  if (checkOnly) assertPinned();
+  const url = run("mise", ["config", "get", "--file", join(root, "mise.toml"), "bootstrap.repos.~/Repos/callumflack/skills.url"], root, true);
+  run("git", ["fetch", "--no-tags", url, revision], source);
+  const ancestry = spawnSync("git", ["merge-base", "--is-ancestor", head, revision], { cwd: source });
+  if (ancestry.error) throw ancestry.error;
+  if (ancestry.status !== 0) {
+    throw new Error(`preserving Skills checkout at ${head}: ${source}; expected ${revision}. Current HEAD is not a proven ancestor of the pin; review local commits before retrying`);
+  }
+}
+// Inspect incoming names before moving HEAD, including newly added skills.
+const authoredNames = advancing
+  ? run("git", ["ls-tree", "-r", "--name-only", "-z", revision], source, true).split("\0")
+    .filter((path) => /^[^/]+\/SKILL\.md$/.test(path)).map((path) => path.slice(0, -"/SKILL.md".length))
+  : readdirSync(source).filter((name) => existsSync(join(source, name, "SKILL.md")));
 for (const name of authoredNames) {
   if (externalNames.includes(name)) throw new Error(`authored/external skill ownership collision: ${name}`);
   const target = join(registry, name);
@@ -85,6 +100,11 @@ for (const target of targets) {
   }
 }
 if (!checkOnly) {
+  if (advancing) {
+    cleanSource();
+    run("git", ["merge", "--ff-only", "--no-autostash", "--no-overwrite-ignore", revision], source);
+  }
+  assertPinned();
   run(process.execPath, ["scripts/install-skills-from-lock.js", "--apply"]);
   run("bash", ["scripts/link-home.sh"]);
   run("bash", [join(source, "scripts", "link-skills.sh")]);

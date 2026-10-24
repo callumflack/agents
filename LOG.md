@@ -1,5 +1,11 @@
 # Worklog
 
+## 2026-10-24 — Safe Skills fast-forward
+
+- **Scope:** Let `mise run setup` advance an existing clean Skills checkout to the configured pin, then commit and push only this change. Preserve unrelated dirty work and the index.
+- **Decision:** Fetch the exact configured revision, require the current HEAD to be its ancestor, preflight the incoming skill names, then fast-forward with autostash and ignored-file overwrites disabled. Reject dirty, ahead or divergent checkouts; keep `setup:check` read-only and Agents updates explicit.
+- **Resolved decision:** Existing replica checkouts may advance only along the pinned history. Conflicts remain in place for reconciliation; no stash, reset, branch switch or alternate update workflow is introduced.
+
 ## 2026-10-24 — Setup preservation guards
 
 - **Scope:** Move the other-Mac preservation checks into `mise run setup`, then commit and push only this change. Preserve unrelated dirty files, skill records, experiments and the index.
