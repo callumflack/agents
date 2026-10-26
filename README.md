@@ -76,6 +76,17 @@ Run these commands in order and stop if any fails. Agents updates stay explicit.
 
 Local verification: [portable setup evidence](docs/portable-setup-verification.md). Run the restoration and setup-preservation regressions with `mise exec -- node --test scripts/install-skills-from-lock.test.js scripts/setup.test.js`.
 
+### When setup stops on local skill changes
+
+Leave the changes in place. A preservation error is a request to reconcile, not permission to reset, stash, delete, move aside or reinstall local skills to make setup pass. Run reconciliation on the Mac holding those changes, with other writers paused, and follow [Weekly skill maintenance](#weekly-skill-maintenance).
+
+1. **Capture before changing anything.** Keep the setup error, inspect Git status and the index in Agents and Skills, and snapshot affected files, executable modes and symlink targets. Include ignored and untracked skill contents and separate runtime copies; Git diffs alone do not capture them. Preserve unrelated work and existing staged changes.
+2. **Compare local and published versions.** Identify the owner of each difference and compare against the configured Skills pin or external skill's recorded upstream tree plus its existing adaptation. Keep accepted changes from both machines. Ask Callum when conflicting behavior needs a choice; do not silently prefer either machine.
+3. **Reconcile authored skills in Skills.** Integrate accepted edits and local commits into the published Skills history. Keep authored skills out of the external lock. When publication is authorized, commit and push the scoped Skills changes first, then update the full Skills commit in Agents' `mise.toml`. Committing Skills alone is insufficient: setup still rejects a checkout ahead of its configured pin.
+4. **Reconcile external skills in Agents.** Preserve accepted local variants as tracked patches in `.agents/skill-patches/` and corresponding `adaptation` records in `.agents/.skill-lock.json`. Retain upstream provenance and the reason for the adaptation; verify the resulting tree and patch digest. Never change a hash merely to suppress a mismatch. Capture separate `.codex/skills`, `.claude/skills`, `.cursor/skills` or `.pi/agent/skills` copies before relinking, and incorporate their accepted differences into the appropriate authored source or external adaptation. Resolve provider-owned collisions through the external-plugin guidance instead.
+5. **Prove the combined baseline.** Run the maintenance checks, then exercise exact restoration, repeated `mise run setup` and `mise run setup:check` in a disposable home using the proposed committed baseline. Confirm the accepted contents, executable modes and all four runtime link sets. An authoring checkout with unrelated work should remain dirty; do not clear it to pass replica setup.
+6. **Publish only the accepted scope when authorized.** Follow each repository's delivery rules, publish Skills before the Agents pin that references it, and leave unrelated changes out. On a clean replica, run `git pull --ff-only` in Agents followed by `mise run setup`. If another Mac has additional local variants, reconcile those before retrying there too.
+
 ## External skills
 
 Do not install the Skills CLI globally. Invoke it through `npx` from `$HOME`:
