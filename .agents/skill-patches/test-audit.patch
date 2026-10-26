@@ -1,0 +1,186 @@
+diff --git a/SKILL.md b/SKILL.md
+index 6c6565a..54fe8ca 100644
+--- a/SKILL.md
++++ b/SKILL.md
+@@ -5,6 +5,8 @@ description: "Writing/changing/reviewing/sweeping tests: reject duplicate or imp
+ 
+ # Test Audit
+ 
++Use the owning repository’s instructions, commands, review and delivery rules. This skill grants no additional task authority.
++
+ - Authoring gates every new/changed test.
+ - Audits: remove low-value proof in coherent owner batches; never chase deletion counts.
+ - Whole-subsystem campaign: read [CAMPAIGN.md](CAMPAIGN.md) first.
+@@ -15,43 +17,30 @@ Before adding test, answer:
+ 
+ 1. Protected observable behavior, invariant, or independent contract?
+ 2. Credible regression that makes it fail?
+-3. Why existing proof misses it? Each contract: one primary owner at strongest
+-   boundary. Another layer needs distinct transport/lifecycle risk. Extend
+-   tables/shared fixtures; consolidate repeated setup.
+-4. Export, flag, wrapper, injection hook with no production caller needed?
+-   Move proof to real boundary instead.
+-
+-- Use [boundary and cost guide](../../../docs/help/testing/writing-tests.md).
+-- Regressions must fail pre-fix for intended reason, pass after repair; report
+-  unavailable baseline proof.
++3. Why existing proof misses it? Each contract: one primary owner at strongest boundary. Another layer needs distinct transport/lifecycle risk. Extend tables/shared fixtures; consolidate repeated setup.
++4. Export, flag, wrapper, injection hook with no production caller needed? Move proof to real boundary instead.
++
++- Use [boundary and cost guide](references/testing.md#boundary-and-cost).
++- Regressions must fail pre-fix for intended reason, pass after repair; report unavailable baseline proof.
+ - One owner regression covers bug; never replay at every crossed layer.
+ - Behavior-preserving refactors should not break test.
+ 
+ ## Junk patterns
+ 
+-- Reject self-comparisons, copied inventories, source greps,
+-  implementation/call-shape assertions, duplicate contracts, test-only seams,
+-  subject-generated expected values, mocks supplying asserted behavior.
+-- Fixtures must not fabricate owner receipts/order or claim persistence path
+-  never writes.
++- Reject self-comparisons, copied inventories, source greps, implementation/call-shape assertions, duplicate contracts, test-only seams, subject-generated expected values, mocks supplying asserted behavior.
++- Fixtures must not fabricate owner receipts/order or claim persistence path never writes.
+ - Negative controls must fail at intended guard; names must match exercised behavior.
+ - Auditing candidates: use [full checklist](references/audit.md#junk-patterns).
+ 
+ ## Retention bar
+ 
+-- Keep independent API, SDK, protocol, config, migration, storage, security,
+-  platform, default, prompt-byte, generated-language, package, release,
+-  architecture, observable-ordering contracts. Static/slow ≠ disposable.
+-- Source inspection must survive identifier-only refactors and guard independent
+-  user-facing contract.
++- Keep independent API, SDK, protocol, config, migration, storage, security, platform, default, prompt-byte, generated-language, package, release, architecture, observable-ordering contracts. Static/slow ≠ disposable.
++- Source inspection must survive identifier-only refactors and guard independent user-facing contract.
+ - Baseline failures may be bugs to repair, not tests to delete.
+ 
+ ## Audit and validation
+ 
+-- Before audit edit: read [candidate evidence and workflow](references/audit.md#candidate-evidence);
+-  inspect full owners/callers/history; record remaining proof before deletion.
++- Before audit edit: read [candidate evidence and workflow](references/audit.md#candidate-evidence); inspect full owners/callers/history; record remaining proof before deletion.
+ - Delete obsolete production seams with tests; never optimize for deletion counts.
+-- Follow [proof policy](../openclaw-testing/SKILL.md#proof-policy); preserve active
+-  Vitest checkouts; run owner/sibling proof + changed checks; then autoreview.
+-- Report causes, retained contracts, proof/cost, production versus test LOC,
+-  follow-ups. Commit/push/land only with task authority.
++- Follow [proof policy](references/testing.md#proof-policy); preserve active test checkouts; run owner/sibling proof + changed checks and the repository’s required review.
++- Report causes, retained contracts, proof/cost, production versus test LOC, follow-ups. Commit/push/land only with task authority.
+diff --git a/references/audit.md b/references/audit.md
+index e1d39da..261caf6 100644
+--- a/references/audit.md
++++ b/references/audit.md
+@@ -5,64 +5,43 @@
+ 
+ ## Junk patterns
+ 
+-Reject new matches unless [retention bar](#retention-bar) identifies independent
+-contract. Audit existing matches:
++Reject new matches unless [retention bar](#retention-bar) identifies independent contract. Audit existing matches:
+ 
+-- Assertion-free probes, self-comparisons, identity copiers, subject-generated
+-  expected values.
++- Assertion-free probes, self-comparisons, identity copiers, subject-generated expected values.
+ - Copied inventories/manifests/export lists; exact source/import/string greps.
+-- Private predicate/call-shape tests duplicating boundary proof; repeated
+-  invocations/provider-local replays of shared helpers.
++- Private predicate/call-shape tests duplicating boundary proof; repeated invocations/provider-local replays of shared helpers.
+ - Test-only exports/globals/wrappers; production paths called only by tests.
+ - Mocks implementing asserted behavior or pretending distinct APIs match.
+-- Fixtures supplying receipts, admission, callback ordering owner should produce;
+-  persistence asserted against store path never writes.
++- Fixtures supplying receipts, admission, callback ordering owner should produce; persistence asserted against store path never writes.
+ - Capability flags asserted instead of promised delivery/acknowledgement.
+ - Negative controls passing on unrelated guard or unreachable rejection.
+ - Names promising behavior inputs/assertions never exercise.
+ 
+ ## Retention bar
+ 
+-- Keep independent public API, SDK, protocol, config, migration, storage,
+-  security, platform, default, prompt-byte, generated cross-language, package,
+-  release, architecture contracts. Keep observable ordering + credible regressions.
+-- Source inspection valid when cheapest independent guard of user-facing key,
+-  byte, path, and survives identifier-only refactoring.
+-- Static/slow ≠ deletion reason. Baseline failure may be product bug:
+-  reproduce + repair owner; never delete test for it.
++- Keep independent public API, SDK, protocol, config, migration, storage, security, platform, default, prompt-byte, generated cross-language, package, release, architecture contracts. Keep observable ordering + credible regressions.
++- Source inspection valid when cheapest independent guard of user-facing key, byte, path, and survives identifier-only refactoring.
++- Static/slow ≠ deletion reason. Baseline failure may be product bug: reproduce + repair owner; never delete test for it.
+ 
+ ## Candidate evidence
+ 
+-- Before editing: read full test, production owner, entry point, callers,
+-  callees, siblings, overlapping proof, CI routing, history. Dependency-backed
+-  claims: inspect dependency source/types. Read root/scoped instructions.
++- Before editing: read full test, production owner, entry point, callers, callees, siblings, overlapping proof, CI routing, history. Dependency-backed claims: inspect dependency source/types. Read root/scoped instructions.
+ - Record each candidate's:
+   - Exact name/location + detectable failure.
+   - Non-test callers of covered production/support seam.
+   - Stronger remaining owner proof, or why none needed.
+   - History/reason it exists + deletion it unlocks.
+   - Risk + focused validation command.
+-- Missing evidence: no deletion. Discovery read-only; report before edits.
+-  Prefer few high-confidence candidates. Parallel discovery may split independent
+-  owners.
+-- Delete obsolete seams/dead paths; move retained regressions to owner;
+-  consolidate generic package/dependency contracts.
+-- Prefer net-negative production LOC. Never add replacement implementation tests
+-  or turn uncertainty into cleanup.
++- Missing evidence: no deletion. Discovery read-only; report before edits. Prefer few high-confidence candidates. Parallel discovery may split independent owners.
++- Delete obsolete seams/dead paths; move retained regressions to owner; consolidate generic package/dependency contracts.
++- Prefer net-negative production LOC. Never add replacement implementation tests or turn uncertainty into cleanup.
+ 
+ ## Validation and handoff
+ 
+-- Follow [proof policy](../../openclaw-testing/SKILL.md#proof-policy).
+-  Never edit checkout during active Vitest run. Run owner/sibling tests.
++- Follow [proof policy](testing.md#proof-policy). Never edit the checkout during an active test run. Run owner/sibling tests.
+ - Removed source greps/plan assertions: exercise owning executable/dry-run.
+-- Run targeted format, `git diff --check`; classify changed gate with
+-  `node scripts/check-changed.mjs --dry-run -- <changed-paths>` before running it.
+-- Before landing removal batches, run CI's `pnpm deadcode:dependencies`,
+-  `pnpm deadcode:unused-files`, and `pnpm deadcode:exports` (all phases): removed
+-  tests orphan support files/exports that ordinary PR CI misses and main's
+-  `check-dependencies` catches.
+-- Inspect `git diff --numstat`; get final autoreview.
+-- Report causes, removed categories/seams, retained false positives, proof/cost,
+-  production versus test/support LOC, PR state, follow-ups.
+-- Commit/push/land only when authorized through native maintainer workflow.
+-  Refresh from main + rediscover before another audit batch.
++- Run the owning repository’s targeted format and changed-file checks, plus `git diff --check`.
++- Before landing test-removal batches, run the owning repository’s dependency, unused-file and unused-export checks through all applicable phases where provided. Removed tests can orphan support files and exports that ordinary PR checks miss.
++- Inspect `git diff --numstat`; complete the owning repository’s required review within task authority.
++- Report causes, removed categories/seams, retained false positives, proof/cost, production versus test/support LOC, PR state, follow-ups.
++- Commit/push/land only when authorized through native maintainer workflow. Refresh from main + rediscover before another audit batch.
+diff --git a/references/testing.md b/references/testing.md
+new file mode 100644
+index 0000000..7ddfa63
+--- /dev/null
++++ b/references/testing.md
+@@ -0,0 +1,25 @@
++# Testing boundaries and proof
++
++## Boundary and cost
++
++Prove a caller-visible contract through its production owner, with fixed external I/O fixtures and independent expected values. Prefer focused integration proof or an independent unit contract to mocked internal decisions or whole-product boots. Name the credible regression and what the test cannot prove.
++
++For a regression, reproduce the original defect, repair its owner, and rerun the proof. The pre-fix failure must come from the defect, not fixture setup; report when baseline proof is unavailable. Preserve distinct contracts when consolidating coverage. Behavior-preserving refactors should keep tests green.
++
++Use synthetic content and keep credentials out of fixtures and captures. Isolate state, ports and clocks with the repository’s existing helpers. Avoid real sleeps and polling where controlled time can prove the same contract. Fix leaked state instead of hiding it with serial execution or retries.
++
++Use the repository’s focused test command and cost budgets. Measure new or materially changed test cost when relevant to the change; choose the cheapest layer that still proves the contract. Keep live, whole-product and release proof separate where they exercise distinct risks.
++
++## Proof policy
++
++- Read the owning repository’s root and scoped instructions. Use its test wrappers, changed-file gates and required review; this reference adds no permission to publish, provision remote machines, contact live services or run an external review.
++- Prove the changed contract through its real entry point and relevant sibling behavior. Complete required targeted type, lint and format checks. Broaden or repeat only for changed inputs, failures or a named unresolved risk.
++- Where the authorized delivery path includes CI, use its required broad proof. Do not rerun or re-push merely to obtain green; diagnose failures against the actual revision and job.
++- State unavailable OS, device, credentialed or live-provider proof as a gap. Local, mocked or fixture proof establishes only the boundary exercised.
++- Preserve active writers, running tests, operator processes and real data. Use isolated task-owned fixtures and clean them up. Do not edit a checkout while its tests are running.
++- For documentation-only changes, use relevant link, format and diff checks; do not invent runtime testing.
++- Complete the repository’s required review and delivery only within existing task authority. No commit, push or landing permission is implied by this skill.
++
++## Provenance
++
++Portable excerpts adapted from OpenClaw’s [writing tests guide](https://github.com/openclaw/openclaw/blob/71b5563397e95d67ad902f79a717559519010ac8/docs/help/testing/writing-tests.md) and [testing proof policy](https://github.com/openclaw/openclaw/blob/71b5563397e95d67ad902f79a717559519010ac8/.agents/skills/openclaw-testing/SKILL.md#proof-policy). Repository-specific commands, infrastructure and budgets remain with the repository being changed.

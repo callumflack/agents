@@ -1129,13 +1129,13 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/backnotprop/plannotator.git",
       "skillPath": "apps/skills/extra/plannotator-visual-explainer/SKILL.md",
-      "skillFolderHash": "060525d9a83760cc7cbc3004217c596a76a3e39a",
+      "skillFolderHash": "48b1d39f317db181b75c8c4dafba6b78bb8f17a4",
       "installedAt": "2026-09-14T05:02:14.944Z",
-      "updatedAt": "2026-09-23T06:58:14.298Z",
+      "updatedAt": "2026-10-26T21:14:36.822Z",
       "adaptation": {
-        "baseTree": "060525d9a83760cc7cbc3004217c596a76a3e39a",
-        "tree": "a2f9e50bb864f2e44a9218b9e1ecfe7ffb4df291",
-        "patchSha256": "72af41c07be48f896921a163fbcec63c6dd02ff84e530e34a2ee1a0790c226bc",
+        "baseTree": "48b1d39f317db181b75c8c4dafba6b78bb8f17a4",
+        "tree": "b9167b1d0d4049561e744b2d09ae5937d9fc035c",
+        "patchSha256": "cd19c27e039d63b5d7966717b682b10508f9059ba97ba5c30a7c0bc695243eaa",
         "reason": "Preserve implicit invocation and Mermaid 11 compatibility with Plannotator 0.27.14; retain upstream diagram-shell repair."
       }
     },
@@ -1144,9 +1144,15 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/openclaw/openclaw.git",
       "skillPath": ".agents/skills/test-audit/SKILL.md",
-      "skillFolderHash": "c03e9e2763b288bae6ab3af5475b4e7a89fe8905",
+      "skillFolderHash": "82367863dec20b463d0c361d0c754c728bed5827",
       "installedAt": "2026-09-24T22:41:10.549Z",
-      "updatedAt": "2026-10-18T22:41:11.998Z"
+      "updatedAt": "2026-10-26T21:14:36.752Z",
+      "adaptation": {
+        "baseTree": "82367863dec20b463d0c361d0c754c728bed5827",
+        "tree": "200665b97d2b7c92ca2102718fff15a298e3f8c1",
+        "patchSha256": "bd55c77b7f3d73902bf520b5513b95ace4633f7ba6ee57cfe6c202dbba0fb961",
+        "reason": "Package the portable boundary/cost and proof guidance from OpenClaw commit 71b5563397e95d67ad902f79a717559519010ac8; replace dangling repository-relative references and OpenClaw-only check/review instructions with the owning repository\u2019s procedures and existing task authority."
+      }
     },
     "mobile-native": {
       "source": "emilkowalski/skills",

@@ -1,3 +1,5 @@
+diff --git a/SKILL.md b/SKILL.md
+index da2efc3..10426d6 100644
 --- a/SKILL.md
 +++ b/SKILL.md
 @@ -1,6 +1,5 @@
@@ -7,7 +9,7 @@
  description: >
    Generate self-contained HTML visualizations with Plannotator theming. Use for implementation
    plans, PR explainers, architecture diagrams, data tables, slide decks, and any visual
-@@ -24,7 +23,7 @@
+@@ -24,7 +23,7 @@ Three paths depending on content type. Each has its own references and structure
  
  Always deliver via Plannotator's annotation UI. Do NOT use `open` or `xdg-open`.
  
@@ -16,9 +18,11 @@
  and dark palettes before opening the annotation UI. Rendering is a hard gate: an exception,
  empty SVG, or error output such as `aria-roledescription="error"` or `Syntax error in text`
  means the explainer is not deliverable. Fix the diagram or theme configuration and rerun both
+diff --git a/SKILL.test.ts b/SKILL.test.ts
+index b6a1307..9943a4d 100644
 --- a/SKILL.test.ts
 +++ b/SKILL.test.ts
-@@ -80,7 +80,7 @@
+@@ -80,7 +80,7 @@ describe("plannotator-visual-explainer Mermaid theming", () => {
      );
    });
  
@@ -27,7 +31,7 @@
      const palettes = [captureMermaidConfig("light"), captureMermaidConfig("dark")];
      const uiPackageDir = join(import.meta.dir, "../../../../packages/ui");
      const renderProbe = String.raw`
-@@ -92,8 +92,8 @@
+@@ -92,8 +92,8 @@ describe("plannotator-visual-explainer Mermaid theming", () => {
          import("mermaid/package.json", { with: { type: "json" } }),
        ]);
  
@@ -38,7 +42,7 @@
        }
  
        const palettes = JSON.parse(process.env.PLANNOTATOR_MERMAID_PALETTES ?? "[]");
-@@ -184,12 +184,12 @@
+@@ -184,12 +184,12 @@ describe("plannotator-visual-explainer Mermaid theming", () => {
        throw new Error(`Mermaid render probe failed:\n${stderr || stdout}`);
      }
      expect(stdout).toMatch(
