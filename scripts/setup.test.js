@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { chmodSync, cpSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, readlinkSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { chmodSync, cpSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, readlinkSync, realpathSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { spawnSync } from "node:child_process";
@@ -131,6 +131,7 @@ for (const [name, error, prepare] of cases) {
     assert.notEqual(result.status, 0, result.stdout);
     assert.deepEqual(snapshot(f), before, "setup changed existing files, links, index or HEAD");
     assert.match(result.stderr, error);
+    assert.ok(result.stderr.includes(`${join(realpathSync(f.root), "README.md")}#when-setup-stops-on-local-skill-changes`), "failure must point to this checkout's reconciliation guide");
   });
 }
 
@@ -205,5 +206,6 @@ for (const [name, prepare, args, error] of [
     assert.notEqual(result.status, 0);
     assert.deepEqual(snapshot(f), before);
     assert.match(result.stderr, error);
+    assert.ok(result.stderr.includes(`${join(realpathSync(f.root), "README.md")}#when-setup-stops-on-local-skill-changes`), "failure must point to this checkout's reconciliation guide");
   });
 }
