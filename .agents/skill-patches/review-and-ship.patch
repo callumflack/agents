@@ -1,0 +1,96 @@
+diff --git a/NOTICE.md b/NOTICE.md
+new file mode 100644
+index 0000000..634fbd6
+--- /dev/null
++++ b/NOTICE.md
+@@ -0,0 +1,31 @@
++# Attribution
++
++This local adaptation retains the existing [Cursor Team Kit finishing skill](https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/review-and-ship), recorded upstream tree `4c59edfc89811ff444ded5e4a3a07932852769a1`. It routes PR reassessment, takeover, and bounded review to the installed tstack specialists instead of duplicating those procedures.
++
++The tstack methods come from [Theo Browne’s tstack](https://github.com/t3dotgg/tstack/tree/7de017b3fc9d50c03cf3ecb98fb71e0ca65a78bd). The adaptation preserves repository authority, existing task permissions, and contributor credit.
++
++The tstack portions are used under the following license:
++
++```text
++MIT License
++
++Copyright (c) 2026 Theo Browne
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all
++copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
++```
+diff --git a/SKILL.md b/SKILL.md
+index 000e753..23e181c 100644
+--- a/SKILL.md
++++ b/SKILL.md
+@@ -1,41 +1,27 @@
+ ---
+ name: review-and-ship
+-description: Review the current branch for bugs, intent fit, and test coverage; run or write tests; commit focused work; open or update a PR.
++description: Reviews current or inherited changes for intent, correctness, and proof, then completes the authorized delivery. Use before shipping or finishing work; routes old PRs, takeovers, and independent review to their existing specialist skills.
+ ---
+ 
+ # Review and ship
+ 
+-## Trigger
+-
+-Reviewing changes before shipping. Close key issues, verify behavior, and open or update a PR.
++Finish the user's goal through the owning repository's checks and shortest authorized delivery path. Honor existing permission; this skill adds no authority to push, rewrite history, merge, close PRs, or post comments. A PR is needed only when the chosen delivery path requires one.
+ 
+ ## Workflow
+ 
+-1. Gather context: diff against base branch, uncommitted changes, recent commits, changed files, and user intent from recent relevant chats if useful.
+-2. Run targeted tests for changed behavior. If no focused tests exist, decide whether to add them or document the gap.
+-3. Review for correctness, regressions, security, and intent fit. Use parallel subagents for larger diffs.
+-4. Fix critical issues before finalizing and re-run affected tests.
+-5. Commit selective files with a concise message.
+-6. Push branch and open or update a PR.
+-
+-## Suggested Checks
++1. Gather the latest user intent and corrections, repository instructions, Git status, index, untracked changes, recent commits, and the complete candidate diff. For a PR, resolve its live head and actual base; fetch relevant refs and pin the merge base. Preserve unrelated work and isolate changes when the active checkout cannot be safely used.
++2. For an old PR or a requested rebase, use `modernize` to decide whether the goal and implementation still fit before updating history. For inherited PR, branch, or agent work, use `takeover`; it owns provenance, contributor credit, and continuation, and calls `modernize` when needed. Do not repeat those procedures here. These methods retain their own authority limits.
++3. Prove changed behavior with the repository's focused checks. Reproduce the original defect when applicable and observe runtime behavior when that is the contract. Add a test only for a meaningful proof gap; state what remains unverified.
++4. Review correctness, regressions, security, and intent fit. Verify findings against source and make the smallest useful fix. Rerun affected checks. When independent review is requested or required, use `sol-loop` for its bounded cycle, backed by `autoreview`; honor an explicitly requested alternative. Keep reviewer targets and priority rules with `autoreview`. Do not launch extra panels merely because the diff is large.
++5. Complete required proof and review before the authorized commit, push, or PR update. Stage only intended task changes, preserving unrelated index entries. Fix failing hooks rather than bypassing them. Loading a specialist does not expand delivery authority.
++6. Before a PR handoff or authorized merge, refresh its head/base, checks, human review state, unresolved threads, and mergeability. Confirm required proof and review cover the final candidate. Diagnose changed head/base state before claiming readiness; an earlier green run or watcher result alone is insufficient. Use the existing CI monitoring skill when monitoring is requested.
+ 
+-```bash
+-git fetch origin main
+-git diff origin/main...HEAD
+-git status
+-gh pr checks --json name,bucket,state,workflow,link
+-```
++Load the named specialist skill through the active harness. If it is unavailable, report the missing dependency rather than installing a second implementation or claiming its work passed. Specialist skills invoked from this workflow should complete their phase and return; they must not recursively start this workflow or perform later delivery steps early.
+ 
+-## Guardrails
++## Report
+ 
+-- Prioritize correctness, security, and regressions over style-only comments.
+-- Keep commits focused and avoid unrelated file changes.
+-- If pre-commit checks fail, fix the issues rather than bypassing hooks.
+-- Use `gh pr checks` instead of GitHub Actions-only commands when judging PR readiness.
++State what changed, proof and limits, material findings fixed or declined, independent-review outcome and rounds when used, and actual delivery state. Include the PR URL when one exists. Distinguish local availability, pushed work, readiness, and merge completion.
+ 
+-## Output
++## Provenance
+ 
+-- Findings summary (critical, warning, note)
+-- Tests run and outcomes
+-- PR URL
++The existing Cursor Team Kit finishing skill now routes to the installed tstack specialists instead of duplicating their procedures. `autoreview` retains the independent-review implementation. See [NOTICE.md](NOTICE.md) for source attribution.

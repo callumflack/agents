@@ -726,7 +726,13 @@
       "skillPath": "cursor-team-kit/skills/review-and-ship/SKILL.md",
       "skillFolderHash": "4c59edfc89811ff444ded5e4a3a07932852769a1",
       "installedAt": "2026-07-31T03:01:33.498Z",
-      "updatedAt": "2026-09-01T02:01:23.709Z"
+      "updatedAt": "2026-09-01T02:01:23.709Z",
+      "adaptation": {
+        "baseTree": "4c59edfc89811ff444ded5e4a3a07932852769a1",
+        "tree": "5fce0a76bff4b70c8cdbf17c74d451a9fc04bc54",
+        "patchSha256": "2efc1b65fa57a520fecfb11c1fa1601217239747bcece57b6929ab591778d179",
+        "reason": "Route old PRs, inherited work and independent review to the user-installed modernize, takeover and sol-loop skills instead of duplicating their methods. Retain repository-owned delivery authority, focused proof and final-state checks; autoreview remains the review implementation. Includes pinned tstack provenance and MIT attribution."
+      }
     },
     "review-plugin-submission": {
       "source": "cursor/plugins",
@@ -1498,13 +1504,13 @@
       "updatedAt": "2026-10-18T22:41:21.232Z"
     },
     "council": {
-      "source": "warpdotdev/common-skills",
+      "source": "t3dotgg/tstack",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/council/SKILL.md",
-      "skillFolderHash": "b0d73477a8a540d765e57a2440b05485b12a0cda",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/council/SKILL.md",
+      "skillFolderHash": "8242f6403b2313f82cdc28e3faad90604c6ad469",
       "installedAt": "2026-10-18T22:41:21.233Z",
-      "updatedAt": "2026-10-18T22:41:21.233Z"
+      "updatedAt": "2026-10-27T02:05:49.331Z"
     },
     "create-pr": {
       "source": "warpdotdev/common-skills",
@@ -1721,6 +1727,84 @@
       "skillFolderHash": "91d64102b1eed1bba2cff8455ce4a0b0185f174b",
       "installedAt": "2026-10-25T23:19:10.265Z",
       "updatedAt": "2026-10-25T23:19:10.265Z"
+    },
+    "babysit-pr": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/babysit-pr/SKILL.md",
+      "skillFolderHash": "7b4e3e4e0f8b53a1fd049d6a27d5f998395ace52",
+      "installedAt": "2026-10-27T02:05:49.329Z",
+      "updatedAt": "2026-10-27T02:05:49.329Z"
+    },
+    "file-pr": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/file-pr/SKILL.md",
+      "skillFolderHash": "04b5dff2274053132e131912257c82c4d8141dd0",
+      "installedAt": "2026-10-27T02:05:49.333Z",
+      "updatedAt": "2026-10-27T02:05:49.333Z"
+    },
+    "full-send": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/full-send/SKILL.md",
+      "skillFolderHash": "de21961fbb3f6892ab4ea1fb2b58e0f95debec87",
+      "installedAt": "2026-10-27T02:05:49.334Z",
+      "updatedAt": "2026-10-27T02:05:49.334Z"
+    },
+    "full-stop": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/full-stop/SKILL.md",
+      "skillFolderHash": "dee091aa3cdc5019dcc541256a77db717b15f43f",
+      "installedAt": "2026-10-27T02:05:49.335Z",
+      "updatedAt": "2026-10-27T02:05:49.335Z"
+    },
+    "leaving-pr-comments": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/leaving-pr-comments/SKILL.md",
+      "skillFolderHash": "3905d758fb70b4e660038456f86ac02343a3dedf",
+      "installedAt": "2026-10-27T02:05:49.336Z",
+      "updatedAt": "2026-10-27T02:05:49.336Z"
+    },
+    "modernize": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/modernize/SKILL.md",
+      "skillFolderHash": "149f54a0835d2da770b564eb8624f1e3618a33a7",
+      "installedAt": "2026-10-27T02:05:49.336Z",
+      "updatedAt": "2026-10-27T02:05:49.336Z"
+    },
+    "sol-loop": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/sol-loop/SKILL.md",
+      "skillFolderHash": "9d2b1c1b00bf54e1b4e6e6243aec6d39037ce624",
+      "installedAt": "2026-10-27T02:05:49.337Z",
+      "updatedAt": "2026-10-27T02:05:49.337Z",
+      "adaptation": {
+        "baseTree": "9d2b1c1b00bf54e1b4e6e6243aec6d39037ce624",
+        "tree": "11666f13f7339345f771a837ab07be85ba0f6d85",
+        "patchSha256": "9405a8f3771d07f458018b82d2efc7234930a494761e34bf5ff647d039a5a38b",
+        "reason": "Retain tstack bounded review and stable finding-ledger method while using the existing autoreview engine, target capture, isolation, severity and validated results. Keep explicit Sol model selection, complete candidate coverage and caller-owned delivery; do not install another reviewer implementation. Includes tstack MIT attribution."
+      }
+    },
+    "takeover": {
+      "source": "t3dotgg/tstack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/t3dotgg/tstack.git",
+      "skillPath": "skills/takeover/SKILL.md",
+      "skillFolderHash": "54cfa8d25b9a356cc826daa964979e8cdce377ad",
+      "installedAt": "2026-10-27T02:05:49.338Z",
+      "updatedAt": "2026-10-27T02:05:49.338Z"
     }
   },
   "dismissed": {
