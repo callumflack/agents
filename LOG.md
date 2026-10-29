@@ -1,5 +1,13 @@
 # Worklog
 
+## 2026-10-29 — Restore audited global instructions
+
+- **Scope:** Callum asked for a broader KB prompting-guide search and an actual audit of the useful content in the disabled `AGENTSX.md`, applying across agents/models and kinds of work. Revise the shared instructions, annotate all original sections, and retain specific technical rules behind task triggers. Callum explicitly directed preserving the concurrent removal of Chrome policy from global guidance. Local only; preserve unrelated skills, locks, experiments and the index.
+- **Decision:** The first pass's shortening and Codex frame was insufficient. Restore the real-use completion boundary, distinct reference triggers, component data-slot requirement, code cleanup/compatibility details, worklog timing and existing bounded learning-loop route. Generalize expert methods, raw material, evidence, uncertainty and continuity for inquiry, writing, design and operations. `AGENTSX.md` now keeps original wording beside audit decisions; `AGENTS.md` and its project reference are the active destinations. No skill/provider migration or retired learning-runtime reactivation.
+- **Review steer:** Callum authorized all three focused findings from the fresh Astra review: restore missing root triggers, restore the explicit repeated-or-costly threshold for adding process, and extend the existing runtime checker to the required companion and both files' skill pointers. Update the audit and verify Codex, Claude, Cursor and Pi. Keep the current structure, browser-policy removal, unrelated edits and local-only delivery.
+- **Resolved scope:** All three approved review repairs are applied locally: complete outer reading triggers, the explicit process threshold, and companion/two-file skill checks. The audit owns the before/after regression evidence and direct four-agent installation verification. User-directed browser-policy removal and unrelated work remain preserved; no active repair or activation handoff remains.
+- **Delivery steer:** Callum subsequently authorized committing and pushing only this instruction/audit/checker change and its task-owned log entry. Exclude the unrelated external-skill lock, experiments and all older pending log entries; Git owns the resulting commit and remote state.
+
 ## 2026-10-24 — Safe Skills fast-forward
 
 - **Scope:** Let `mise run setup` advance an existing clean Skills checkout to the configured pin, then commit and push only this change. Preserve unrelated dirty work and the index.
