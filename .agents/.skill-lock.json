@@ -376,9 +376,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/openclaw/agent-skills.git",
       "skillPath": "skills/autoreview/SKILL.md",
-      "skillFolderHash": "30826fffb19b45f88dfe9a48018796e956e13aeb",
+      "skillFolderHash": "ba3e7c7dd0b1efbc39994ce3ba97d789f6ad1ce7",
       "installedAt": "2026-07-09T06:02:29.538Z",
-      "updatedAt": "2026-10-29T21:55:42.471Z"
+      "updatedAt": "2026-11-01T23:04:53.547Z"
     },
     "code-review": {
       "source": "mattpocock/skills",
@@ -964,10 +964,10 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "skillFolderHash": "82def67855a0d2aad7794207951820fa5422fdb0",
+      "skillFolderHash": "aee3afd3dd9c879a14816dd6dca77c938f8c9c10",
       "pluginName": "agent-browser",
       "installedAt": "2026-08-26T22:22:52.146Z",
-      "updatedAt": "2026-09-14T04:59:41.061Z"
+      "updatedAt": "2026-11-01T23:04:56.158Z"
     },
     "react-doctor": {
       "source": "millionco/react-doctor",
@@ -1418,9 +1418,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/in-progress/chief-of-staff/SKILL.md",
-      "skillFolderHash": "e27d538afafcd3dc55b7787e1476101b2f1f319e",
+      "skillFolderHash": "58e0a4122260ba45c150d8201dad2d6de4153d18",
       "installedAt": "2026-10-11T23:03:50.836Z",
-      "updatedAt": "2026-10-29T21:55:36.471Z"
+      "updatedAt": "2026-11-01T23:04:50.717Z"
     },
     "build-design": {
       "source": "jakubkrehel/skills",
