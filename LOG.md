@@ -1,5 +1,9 @@
 # Worklog
 
+## 2026-11-03 — Plannotator compound adaptation update
+
+- **Resolved decision:** Accept upstream data-directory discovery and report/hook path corrections while retaining implicit invocation through the unchanged adaptation patch. Publish only this skill record and this task-owned log hunk; preserve unrelated work.
+
 ## 2026-10-29 — Restore audited global instructions
 
 - **Scope:** Callum asked for a broader KB prompting-guide search and an actual audit of the useful content in the disabled `AGENTSX.md`, applying across agents/models and kinds of work. Revise the shared instructions, annotate all original sections, and retain specific technical rules behind task triggers. Callum explicitly directed preserving the concurrent removal of Chrome policy from global guidance. Local only; preserve unrelated skills, locks, experiments and the index.

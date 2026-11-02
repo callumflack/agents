@@ -1105,12 +1105,12 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/backnotprop/plannotator.git",
       "skillPath": "apps/skills/extra/plannotator-compound/SKILL.md",
-      "skillFolderHash": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
+      "skillFolderHash": "73dcebd303714bcc3fbdffae162068435eb49d97",
       "installedAt": "2026-09-14T05:02:14.939Z",
-      "updatedAt": "2026-09-14T05:02:14.939Z",
+      "updatedAt": "2026-11-02T21:30:31.227Z",
       "adaptation": {
-        "baseTree": "e7cb3bf5836705facedb2f94c6648f269d3f0748",
-        "tree": "0674434e68124b087d6cc1d8e844636ec8f691bb",
+        "baseTree": "73dcebd303714bcc3fbdffae162068435eb49d97",
+        "tree": "90c4c2741922a7c337fc90944a391fe69441f7e6",
         "patchSha256": "e2d5a1dcc628c99dc4d29843a4a3cee15cef47b0e33034bc1203d97b1561411a",
         "reason": "Preserve implicit invocation."
       }
