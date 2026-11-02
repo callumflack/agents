@@ -1814,6 +1814,21 @@
       "skillFolderHash": "e1d06083891b6445c7fb5dae31f06b1e8b81f0dc",
       "installedAt": "2026-10-29T21:55:47.405Z",
       "updatedAt": "2026-10-29T21:55:47.405Z"
+    },
+    "software-factory": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/in-progress/software-factory/SKILL.md",
+      "skillFolderHash": "4b9e59cb67b8e5858525d93cf2ac1eb03a39d46b",
+      "installedAt": "2026-11-02T21:44:52.391Z",
+      "updatedAt": "2026-11-02T21:44:52.391Z",
+      "adaptation": {
+        "baseTree": "4b9e59cb67b8e5858525d93cf2ac1eb03a39d46b",
+        "tree": "f0a92eef265a6c939a619142919f1c91785d4415",
+        "patchSha256": "58bca244930f073f695a34a898a1d181e4bd26c50f5802e819b3b62708d661ba",
+        "reason": "Quote the upstream description to repair invalid YAML while preserving its text and explicit invocation."
+      }
     }
   },
   "dismissed": {

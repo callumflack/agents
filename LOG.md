@@ -1,5 +1,9 @@
 # Worklog
 
+## 2026-11-03 — Software factory installation
+
+- **Resolved decision:** Install Matt Pocock’s in-progress software-factory glossary and surveys. Quote only the invalid YAML description, preserving its text, explicit-invocation setting and all body files. Track the upstream tree and reproducible local patch; publish only this installation and this task-owned log hunk. Preserve unrelated work.
+
 ## 2026-11-03 — Plannotator compound adaptation update
 
 - **Resolved decision:** Accept upstream data-directory discovery and report/hook path corrections while retaining implicit invocation through the unchanged adaptation patch. Publish only this skill record and this task-owned log hunk; preserve unrelated work.
