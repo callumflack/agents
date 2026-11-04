@@ -1,5 +1,11 @@
 # Worklog
 
+## 2026-11-04 — Linear project update placement
+
+- **Authorized scope:** Fix the Data connectors — builder experience project and update the existing human-first-linear skill and shared agent instructions. Callum subsequently authorized committing and pushing only this skill/instruction repair, its catalogue and this worklog entry. Advance the existing Skills pin to the published repair so replica setup receives it; preserve all unrelated dirty work and the index.
+- **Decision:** Native project updates own progress, results, blockers and next steps. Project summaries and descriptions own purpose and agreed scope. Save and read back a native update before removing misplaced reporting, preserve historical updates and source claims, and verify the actual update list rather than treating a description edit as proof. The 3 November report is now native update `e63fadb8-6342-4498-b34f-4a3e00cbe143`; the description retains the agreed release scope and resources.
+- **Resolved locally:** The skill and its catalogue entry now distinguish issues, project purpose/scope and native status updates; the global task-entry pointer routes Linear work to that owner. Native update readback and project-field comparison passed, preserving the previous update, project status, ownership, milestones and resources. Bootstrap, repository verification, paragraph and registry/runtime checks passed for Codex, Claude, Cursor and Pi. The optional Python validator lacks PyYAML; installed Ruby YAML parsing supplies the frontmatter check. Skills commit `1e3e3af0d5a6292574393ef965e515643f6ee7e4` is the published dependency for the shared instruction. The isolated clean-checkout publication procedure owns website verification; Git owns commit and remote delivery state. Later organic agent work remains the evidence of reduced recurrence; instruction installation alone does not establish that outcome.
+
 ## 2026-11-03 — Software factory installation
 
 - **Resolved decision:** Install Matt Pocock’s in-progress software-factory glossary and surveys. Quote only the invalid YAML description, preserving its text, explicit-invocation setting and all body files. Track the upstream tree and reproducible local patch; publish only this installation and this task-owned log hunk. Preserve unrelated work.

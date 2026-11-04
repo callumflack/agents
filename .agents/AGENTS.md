@@ -101,6 +101,9 @@ debugging, and already-owned material; honor discussion-only and read-only work.
 
 ## Task-specific guidance
 
+- For Linear issue, project or status-update work, read
+  `~/.agents/skills/human-first-linear/SKILL.md` before choosing the destination
+  or writing. It owns content placement and saved-result verification.
 - For repository implementation, testing, production investigation, UI
   verification, or Git delivery, read `~/.agents/references/project-work.md`
   and the applicable local instructions. This preserves the project-specific
