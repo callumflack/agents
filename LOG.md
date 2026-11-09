@@ -1,5 +1,9 @@
 # Worklog
 
+## 2026-11-09 — Weekly skill update follow-through
+
+- **Decision:** Treat the live external lock as the update inventory, including existing global installs with unpublished records. Publish the verified Stageshow record with its update. Review compatible animation patches in the weekly run and carry them forward when the behavior is preserved. Keep the specific software-factory review rule and preserve unrelated work.
+
 ## 2026-11-04 — Linear project update placement
 
 - **Authorized scope:** Fix the Data connectors — builder experience project and update the existing human-first-linear skill and shared agent instructions. Callum subsequently authorized committing and pushing only this skill/instruction repair, its catalogue and this worklog entry. Advance the existing Skills pin to the published repair so replica setup receives it; preserve all unrelated dirty work and the index.
