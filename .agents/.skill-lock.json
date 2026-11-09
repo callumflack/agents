@@ -831,13 +831,7 @@
       "skillPath": "skills/animate-expo/SKILL.md",
       "skillFolderHash": "6874701c790c7e74926ccd0a8716647a81424c85",
       "installedAt": "2026-08-21T03:18:12.634Z",
-      "updatedAt": "2026-09-23T06:57:22.173Z",
-      "adaptation": {
-        "baseTree": "6874701c790c7e74926ccd0a8716647a81424c85",
-        "tree": "2daf5ab8f4d3db7690e46d3d6d63e7ebae89a090",
-        "patchSha256": "89de937ebf25cfc8ef9347e4906fd121fc20da72883cfb175ae961fe0f4d6429",
-        "reason": "Preserve direct task execution without the introductory wait."
-      }
+      "updatedAt": "2026-09-23T06:57:22.173Z"
     },
     "animation-vocabulary": {
       "source": "emilkowalski/skills",
@@ -846,13 +840,7 @@
       "skillPath": "skills/animation-vocabulary/SKILL.md",
       "skillFolderHash": "d49565744427887a1f719de1ceee04d941d4e681",
       "installedAt": "2026-08-21T03:18:12.636Z",
-      "updatedAt": "2026-09-23T06:57:24.641Z",
-      "adaptation": {
-        "baseTree": "d49565744427887a1f719de1ceee04d941d4e681",
-        "tree": "e6dc24ca1ff1e70c9677df9a1d2d1c80415cbb3c",
-        "patchSha256": "0fc3de662d6e45f43fbff58ff1ebbac09c1fac32c41928f55d07dc5470c2d8ce",
-        "reason": "Preserve direct task execution without the introductory wait."
-      }
+      "updatedAt": "2026-09-23T06:57:24.641Z"
     },
     "apple-design": {
       "source": "emilkowalski/skills",
@@ -861,13 +849,7 @@
       "skillPath": "skills/apple-design/SKILL.md",
       "skillFolderHash": "cd509ae729c86487d352e17a26651217a4c25711",
       "installedAt": "2026-08-21T03:18:12.637Z",
-      "updatedAt": "2026-09-23T06:57:26.914Z",
-      "adaptation": {
-        "baseTree": "cd509ae729c86487d352e17a26651217a4c25711",
-        "tree": "e9f5b472dfb28d8cf29f64001b6c01ef94b8168b",
-        "patchSha256": "31fef95e57850c9f8db2928cbd4a7d94b33e171c16eb390491d0343a5073ced1",
-        "reason": "Preserve direct task execution without the introductory wait."
-      }
+      "updatedAt": "2026-09-23T06:57:26.914Z"
     },
     "ask-sonner": {
       "source": "emilkowalski/skills",
@@ -876,13 +858,7 @@
       "skillPath": "skills/ask-sonner/SKILL.md",
       "skillFolderHash": "aeca3dba0eb0415fa5a310cd6823b824fe60323d",
       "installedAt": "2026-08-21T03:18:12.638Z",
-      "updatedAt": "2026-09-23T06:57:29.396Z",
-      "adaptation": {
-        "baseTree": "aeca3dba0eb0415fa5a310cd6823b824fe60323d",
-        "tree": "591cfb58ec1eb38a7ca04f3b6453a75a4fcf9fc8",
-        "patchSha256": "742bfda6cd15688eb2bdeee24114646daba0f1030d98c0e64c79ca09762e21fd",
-        "reason": "Preserve direct task execution without the introductory wait."
-      }
+      "updatedAt": "2026-09-23T06:57:29.396Z"
     },
     "emil-design-eng": {
       "source": "emilkowalski/skills",
@@ -900,13 +876,7 @@
       "skillPath": "skills/find-animation-opportunities/SKILL.md",
       "skillFolderHash": "e6443880f38e33cf78e5d678471eed35e8566763",
       "installedAt": "2026-08-21T03:18:12.640Z",
-      "updatedAt": "2026-09-23T06:57:33.941Z",
-      "adaptation": {
-        "baseTree": "e6443880f38e33cf78e5d678471eed35e8566763",
-        "tree": "502f891c05c9cade7e7bd815e3f228fdd20b61b6",
-        "patchSha256": "db14f6c642e8d48236eb8356875acd375b31b30960d1b8b017c5f3ca5a8df26b",
-        "reason": "Preserve direct task execution without the introductory wait."
-      }
+      "updatedAt": "2026-09-23T06:57:33.941Z"
     },
     "improve-animations": {
       "source": "emilkowalski/skills",
@@ -924,13 +894,7 @@
       "skillPath": "skills/pick-ui-library/SKILL.md",
       "skillFolderHash": "370e19776f0aa2403a2edeed78266bd6a5d78036",
       "installedAt": "2026-08-21T03:18:12.643Z",
-      "updatedAt": "2026-09-23T06:57:39.312Z",
-      "adaptation": {
-        "baseTree": "370e19776f0aa2403a2edeed78266bd6a5d78036",
-        "tree": "cfc9a519a1b554eef39bba7bd74bd6845524ccd1",
-        "patchSha256": "53bc9420f1b6e2727ce414c8e3ad2382c02915bff037fe044942e2e4a40f7d6e",
-        "reason": "Preserve direct task execution without the introductory wait."
-      }
+      "updatedAt": "2026-09-23T06:57:39.312Z"
     },
     "review-animations": {
       "source": "emilkowalski/skills",
