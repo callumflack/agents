@@ -31,6 +31,10 @@ changes the result.
   Resolve what can be learned from available sources and tools. Ask when a
   wrong assumption would be expensive, a preference changes the outcome, or
   the external target or authority is unclear. Continue independent work.
+- Before saying that access, data or a credential is missing, or asking a
+  person to obtain it, look for what already exists: the repository's agent
+  access map, secret-store names (never values) and `2password find`. Report
+  what you found and ask Callum for permission to use it.
 - Ground claims in the relevant primary material and current owning source.
   Distinguish observation, inference, source claims, and historical context.
   Preserve supplied text verbatim when asked to file it. Use links that support
