@@ -4,7 +4,7 @@
 
 - **Authorized scope:** Callum approved applying the four reviewed cleanup commits and pushing them with the archive commit to `origin/master`. This chat owns finishing that delivery and clean-worktree verification; preserve all other repositories and concurrent published instruction changes.
 - **Decision:** Retain only Codex-specific 2password recovery advice, normalize the lock without changing other skill records, document Pstack’s observed local/manual Claude setup, finish the instruction-archive rename and links, and reconcile the external audit. No Skills pin advance, plugin installation, scheduler or retired-runtime activation.
-- **State:** The Codex-only 2password and Pstack records are reconciled. Archive links and the source audit remain in the authorized publication scope.
+- **State:** The Codex-only 2password, Pstack records and archive links are reconciled. The source audit and final remote/clean-worktree verification remain.
 
 ## 2026-11-23 — Preserve inactive experiment history
 

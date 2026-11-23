@@ -1,7 +1,7 @@
 # Global instructions audit — 29 October 2026
 
 The revised global guidance applies to thinking, research, writing, design,
-software and operations across agents and models. `AGENTSX.md` is now audited
+software and operations across agents and models. `AGENTS-261005.md` is now audited
 in place: all 15 original sections have an inline disposition, rationale and
 active destination. Its useful constraints are retained, with specialist
 procedures disclosed at their actual task triggers.
@@ -87,7 +87,7 @@ Those two failures were reproduced against the old checker before repair.
 ## Audit of the original body
 
 Each row corresponds to an inline annotation in
-[AGENTSX.md](../.agents/AGENTSX.md). The original source wording remains between
+[AGENTS-261005.md](../.agents/AGENTS-261005.md). The original source wording remains between
 those annotations, allowing a direct review of what each decision preserves.
 
 | Original section | Decision and active destination |
@@ -121,7 +121,7 @@ policy. Word count is not the acceptance criterion.
 - [Project work](../.agents/references/project-work.md): repository discovery,
   code/tests/UI, exact delivery vocabulary, checkout ownership, bounded Upkeep,
   skill maintenance and the original specialist reference triggers.
-- [AGENTSX.md](../.agents/AGENTSX.md): the original source plus section-by-section
+- [AGENTS-261005.md](../.agents/AGENTS-261005.md): the original source plus section-by-section
   audit decisions. Runtime adapters do not load it as another instruction body.
 
 This uses the existing canonical `.agents` payload and adapter scripts. No
