@@ -1315,9 +1315,9 @@
       "updatedAt": "2026-10-07T07:11:38.165Z",
       "adaptation": {
         "baseTree": "84a70ae6b98b6052ebce164e7aa7cbb132a44410",
-        "tree": "252dfaa7d20b3a85f88682eae9d179faf735567f",
-        "patchSha256": "dfb1f26ee2bbdae680974dbc38f679d317accccfcbd9ee480b350878e8e79b79",
-        "reason": "Preserve existing agent service-account scope; diagnose Codex macOS sandbox restrictions through the same authorized outside-sandbox command before any explicitly authorized desktop fallback. Keep credential transfer and account selection scoped and secret-safe."
+        "tree": "03eb32d45e6a2ceb23669c7f1ec9ee26afe488af",
+        "patchSha256": "29ce8386e62b3e2c891a6064b1eb13096aa7f0cec84fc9ff61dd8ef1af2dba4e",
+        "reason": "Document Codex macOS sandbox recovery for saved-token access failures: retry the same authorized command outside the sandbox without changing the account or vault scope."
       }
     },
     "good-css": {

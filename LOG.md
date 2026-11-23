@@ -1,9 +1,15 @@
 # Worklog
 
+## 2026-11-23 — Finish remaining Agents publication
+
+- **Authorized scope:** Callum approved applying the four reviewed cleanup commits and pushing them with the archive commit to `origin/master`. This chat owns finishing that delivery and clean-worktree verification; preserve all other repositories and concurrent published instruction changes.
+- **Decision:** Retain only Codex-specific 2password recovery advice, normalize the lock without changing other skill records, document Pstack’s observed local/manual Claude setup, finish the instruction-archive rename and links, and reconcile the external audit. No Skills pin advance, plugin installation, scheduler or retired-runtime activation.
+- **State:** The Codex-only 2password variant is verified. Pstack records, archive links and the source audit remain in the authorized publication scope.
+
 ## 2026-11-23 — Preserve inactive experiment history
 
 - **Scope:** Callum selected preserving the remaining historical experiments in Git as an explicitly inactive archive. Keep source and reports, preserve the manual capture helper path used by the installed skill, exclude generated Python caches, and clarify retired integrations and the closed five-day trial. No installation, automatic capture, scheduler, native launch, credential or live publication operation is authorized by this archive.
-- **Boundaries:** The narrowed 2password revision remains on its explicit pre-commit review hold. Pstack guidance/setup, the external source audit, instruction-archive rename and unrelated lock preferences remain separate.
+- **Boundaries at archive preparation:** The narrowed 2password revision was on a pre-commit review hold; Pstack guidance/setup, the external source audit, instruction-archive rename and lock preferences were separate. Callum subsequently approved their scoped publication.
 - **Resolved locally:** Prepared the source and reports as an explicitly inactive archive, preserving the manual helper path and historical evidence limits. Existing manual-capture/retirement tests and source syntax checks pass. No trial, automatic runtime or publisher was started; Git owns archival commit and remote delivery state.
 
 ## 2026-11-23 — Remove unused ast-grep and ADHD skills
