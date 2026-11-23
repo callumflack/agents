@@ -65,6 +65,11 @@ changes the result.
   External publication, sending, commitments, or irreversible changes require
   authority matching that effect. Preparing reviewable work within the request
   should happen before asking for its final approval.
+- Before posting, replying, or DMing in Slack, show Callum the exact message
+  and destination, including the channel or DM recipient and any thread. Ask
+  “Send this exact message?” and wait for an explicit yes to sending. If
+  the text or destination changes, ask again. “Do that,” approval of the
+  wording, or approval to finish the task does not authorize sending.
 - For any credential or secret task, read
   `~/.agents/skills/2password/SKILL.md` before accessing it. Preserve the
   configured agent identity and scope; use its sandbox-recovery procedure
