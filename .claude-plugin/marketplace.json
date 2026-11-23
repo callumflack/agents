@@ -1,0 +1,17 @@
+{
+  "name": "personal",
+  "owner": { "name": "Callum Flack" },
+  "description": "Claude Code plugins installed from local upstream checkouts.",
+  "plugins": [
+    {
+      "name": "pstack",
+      "description": "pstack from the local ~/Repos/cursor/plugins checkout.",
+      "source": {
+        "source": "git-subdir",
+        "url": "file:///Users/callumflack/Repos/cursor/plugins",
+        "path": "pstack"
+      },
+      "strict": false
+    }
+  ]
+}

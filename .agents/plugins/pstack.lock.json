@@ -34,6 +34,27 @@
         "Confirm a fresh Codex task exposes Pstack skills as pstack:<skill>.",
         "Confirm .agents/.skill-lock.json contains no Pstack skills and keeps the recorded bare-name owners."
       ]
+    },
+    "claude": {
+      "pluginId": "pstack@personal",
+      "scope": "user",
+      "observedVersion": "0.15.46",
+      "marketplace": {
+        "name": "personal",
+        "root": "~/Repos/callumflack/agents",
+        "manifest": ".claude-plugin/marketplace.json",
+        "sourcePath": "~/Repos/cursor/plugins/pstack"
+      },
+      "compatibilitySkill": "pstack-claude",
+      "baselineScope": "Local manual setup. The configured Skills revision does not include pstack-claude; replica setup does not supply that helper.",
+      "preflight": [
+        "claude plugin marketplace list --json",
+        "claude plugin list --json",
+        "claude plugin validate .claude-plugin/marketplace.json --json"
+      ],
+      "verification": [
+        "Confirm a fresh Claude Code or T3 Code session exposes the namespaced Pstack skills; plugin-manager listing alone does not establish picker behavior."
+      ]
     }
   },
   "bareSkillOwners": {

@@ -4,7 +4,7 @@
 
 - **Authorized scope:** Callum approved applying the four reviewed cleanup commits and pushing them with the archive commit to `origin/master`. This chat owns finishing that delivery and clean-worktree verification; preserve all other repositories and concurrent published instruction changes.
 - **Decision:** Retain only Codex-specific 2password recovery advice, normalize the lock without changing other skill records, document Pstack’s observed local/manual Claude setup, finish the instruction-archive rename and links, and reconcile the external audit. No Skills pin advance, plugin installation, scheduler or retired-runtime activation.
-- **State:** The Codex-only 2password variant is verified. Pstack records, archive links and the source audit remain in the authorized publication scope.
+- **State:** The Codex-only 2password and Pstack records are reconciled. Archive links and the source audit remain in the authorized publication scope.
 
 ## 2026-11-23 — Preserve inactive experiment history
 
@@ -15,6 +15,16 @@
 ## 2026-11-23 — Remove unused ast-grep and ADHD skills
 
 - Callum requested global uninstall of ast-grep, ast-grep-outline and i-have-adhd and removal from both Field Guide editions. Preflight: all 193 accepted external trees match, including 10 adaptations; the three selected records have no adaptations. Recovery snapshot: /var/folders/yx/v__zwk8x4rj0s_26ndvw5qmr0000gq/T/unused-guide-skills-_bcoeuhu. Preserve the other 190 records and the index. Completed locally: supported CLI removed exactly these three skills; all other 190 lock records and the existing index were preserved. All 190 accepted external trees still match, 10 adaptations remain, and runtime instruction and registry link checks pass for Codex, Claude, Cursor and Pi. Cursor Team Kit (30 cursor/plugins records) and OpenClaw’s agent skills (8 records) remain installed by explicit instruction; only their public catalogue entries were removed.
+
+## 2026-11-23 — Pstack desktop discovery guidance
+
+- **Scope at entry:** Restore usable P-Stack discovery in the desktop composer and identify the smallest recurrence check. Local repair only; preserve unrelated Agents/Skills changes, upstream plugin ownership, `pstack:` names and the existing bare-name owners. Agents owns this worklog; no plugin update or reinstall is justified by the current evidence.
+- **Observed:** Callum's screenshots show `/pst` returning “No commands.” Both native plugin-list commands pass and report the recorded P-Stack version enabled. Pre-write `skills:check` passes for all 193 external trees, including 10 adaptations. Installed desktop code registers enabled local skills with `triggers: ["@"]`; the command filter excludes those entries for `/`. The skill query retains third-party plugin skills, and selection calls `insertSkillMentionAtSelection`.
+- **Desktop observation confirmed by Callum:** `@pst` shows Pstack results and selecting `pstack:how` inserts the skill chip. This establishes the working desktop picker route; no application or plugin repair was needed. Direct computer control of Codex remains blocked by the tool's app restriction. Follow-up: Callum's `@bro` screenshot shows browser matches without the Pstack skill. The current session catalogue includes `pstack:bro`; check the qualified search and distinguish picker search behavior from missing installation. The change date for slash behavior remains unestablished.
+- **Bro and documentation evidence:** The installed recorded-version cache contains `skills/bro/SKILL.md`, and this chat exposes `pstack:bro`. Recommended qualified query: `@pstack:bro`; its live picker result is not yet observed. OpenAI's current [desktop slash reference](https://learn.chatgpt.com/docs/reference/slash-commands) still says enabled skills appear in the slash list, while [Build skills](https://learn.chatgpt.com/docs/build-skills) directs ChatGPT users to `@`. Documentation and this installed desktop's slash behavior conflict; do not attribute this confusion to Callum or claim a verified migration date.
+- **Local guidance updated; confirmed route and proof limits:** README now records the desktop build (`26.1117.41037`, `29803`), the source-established `@` trigger, and the result-plus-chip check after app/plugin updates. No application, plugin, lock, Skills adapter or runtime setting was changed. `plugin:pstack:check`, `runtime:check`, Skills' link checker and post-write `skills:check` pass; `git diff --check` passes. The paragraph checker passes the added prose; the full README/worklog check reports pre-existing wrapped paragraphs, left untouched. Pre-existing file hashes and both Git indexes match the pre-write snapshot at `/private/tmp/pstack-picker-repair-95vli14v`. Restoring `/pst` itself would require a desktop composer change; no supported local trigger override was found. No commit or publication.
+
+- **Reconciled scope:** Callum confirmed the `@pst` result list and `pstack:how` chip. That route is verified; the qualified `@pstack:bro` picker query remains unobserved. No app repair or slash-trigger migration date is claimed. Claude plugin-manager readback confirms local `pstack@personal` 0.15.46 and the marketplace validates. Its compatibility helper is absent from the pinned Skills baseline, so this is documented as local manual setup; fresh Claude/T3 skill loading is not claimed.
 
 ## 2026-11-23 — Remove unused Warp skills
 
@@ -59,6 +69,10 @@
 - **Review steer:** Callum authorized all three focused findings from the fresh Astra review: restore missing root triggers, restore the explicit repeated-or-costly threshold for adding process, and extend the existing runtime checker to the required companion and both files' skill pointers. Update the audit and verify Codex, Claude, Cursor and Pi. Keep the current structure, browser-policy removal, unrelated edits and local-only delivery.
 - **Resolved scope:** All three approved review repairs are applied locally: complete outer reading triggers, the explicit process threshold, and companion/two-file skill checks. The audit owns the before/after regression evidence and direct four-agent installation verification. User-directed browser-policy removal and unrelated work remain preserved; no active repair or activation handoff remains.
 - **Delivery steer:** Callum subsequently authorized committing and pushing only this instruction/audit/checker change and its task-owned log entry. Exclude the unrelated external-skill lock, experiments and all older pending log entries; Git owns the resulting commit and remote state.
+
+## 2026-10-27 — Adapted skill updates
+
+- **Resolved adaptation decision:** Carry current upstream changes into `test-audit` and `plannotator-visual-explainer` while retaining portability, owner authority, implicit invocation and Mermaid 11. Translate OpenClaw’s new dead-code check into the owning repository’s provided dependency/file/export checks. Limit publication to the two entries and patches; preserve unrelated dirty work. Global instructions changed concurrently and the live Cursor instruction copy is stale; leave that unrelated owner untouched.
 
 ## 2026-10-24 — Safe Skills fast-forward
 

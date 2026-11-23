@@ -186,6 +186,19 @@ The Pstack record pins its upstream revision and records how Cursor and Codex
 use it. Cursor installs the native plugin. Codex keeps its skills under the
 `pstack:` namespace and uses `pstack-codex` for Codex-specific translation.
 
+On this Mac, Claude Code's plugin manager reports `pstack@personal` version
+`0.15.46` installed and enabled from the local `personal` marketplace in
+`.claude-plugin/marketplace.json`. Its source is the local
+`~/Repos/cursor/plugins/pstack` checkout. After a deliberate upstream update,
+use `claude plugin marketplace update personal` and
+`claude plugin update pstack@personal --scope user`.
+
+This is a local manual setup. The `pstack-claude` compatibility helper exists
+locally but is absent from the configured Skills revision, so replica setup
+does not supply it. The plugin manager and marketplace manifest validate;
+a fresh Claude Code or T3 Code skill-loading check remains a separate check.
+The Pstack record preserves this boundary; no Skills pin is advanced here.
+
 The Pstack record currently assigns bare `tdd` and `teach` to
 `mattpocock/skills`; Pstack's variants load as `pstack:tdd` and
 `pstack:teach`. `pstack-codex` is a separate compatibility skill, not a renamed
@@ -219,6 +232,8 @@ remains ignored; the lock, marketplace, materializer, and checks are tracked.
 Then confirm `~/plugins/pstack` resolves to the ignored adapted bundle, a fresh
 Codex task exposes `pstack:<skill>`, `.agents/.skill-lock.json` contains no
 Pstack skills, and bare `tdd` and `teach` still resolve to `mattpocock/skills`.
+
+Desktop composer discovery needs its own check. In desktop build `26.1117.41037` (`29803`), the installed composer code registers local skills under `@` and excludes them from `/` command results. Type `@pst` in a fresh local task, confirm namespaced Pstack skills appear, then select `pstack:how` and confirm a skill chip is inserted without sending. Repeat this small check after desktop or plugin updates. Plugin listing and an app-server `skills/list` response establish backend discovery only; they do not establish a working desktop picker. If the app cannot be controlled by the available tools, obtain this observation from Callum and leave desktop verification pending until then. Do not reinstall or flatten an enabled plugin solely because `/pst` says “No commands.”
 
 Codex discovers the `personal` marketplace from
 `~/.agents/plugins/marketplace.json`; its Pstack entry points at the ignored
