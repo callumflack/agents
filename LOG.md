@@ -1,5 +1,16 @@
 # Worklog
 
+## 2026-11-23 — Remove unused ast-grep and ADHD skills
+
+- Callum requested global uninstall of ast-grep, ast-grep-outline and i-have-adhd and removal from both Field Guide editions. Preflight: all 193 accepted external trees match, including 10 adaptations; the three selected records have no adaptations. Recovery snapshot: /var/folders/yx/v__zwk8x4rj0s_26ndvw5qmr0000gq/T/unused-guide-skills-_bcoeuhu. Preserve the other 190 records and the index. Completed locally: supported CLI removed exactly these three skills; all other 190 lock records and the existing index were preserved. All 190 accepted external trees still match, 10 adaptations remain, and runtime instruction and registry link checks pass for Codex, Claude, Cursor and Pi. Cursor Team Kit (30 cursor/plugins records) and OpenClaw’s agent skills (8 records) remain installed by explicit instruction; only their public catalogue entries were removed.
+
+## 2026-11-23 — Remove unused Warp skills
+
+- Callum explicitly requested uninstalling warpdotdev/common-skills; local-only delivery. Remove the 27 exact-source skills and their managed runtime links; preserve all other skills, adaptations, dirty work and staged changes.
+- Preflight: all 220 external skills matched their accepted trees; Warp’s 27 have no local adaptations. Working/index diffs, lock, Warp bodies and runtime link destinations are backed up at /var/folders/yx/v__zwk8x4rj0s_26ndvw5qmr0000gq/T/warp-skills-uninstall-iion69ih.
+- Completed locally: the supported Skills CLI removed all 27; cleaned their exact managed links in Codex, Claude, Cursor and Pi. The other 193 lock records are byte-equivalent as JSON, all 193 accepted external trees still match (10 adaptations preserved), all four runtime instruction adapters and the authored/registry link checker pass. Existing staged diff is unchanged. Recorded all 27 names as retired and removed the source from both Field Guide editions and the private installed inventory. No commit, push or publication.
+- **Publication authorized:** Commit and push only this chat’s 30 skill removals, their retirement records and removal receipts. Exclude earlier installations, the 2password adaptation, instructions, experiments and the full audit. The committed baseline has 170 records; the local working lock keeps the 20 earlier unpublished additions, for 190 records.
+
 ## 2026-11-09 — Weekly skill update follow-through
 
 - **Decision:** Treat the live external lock as the update inventory, including existing global installs with unpublished records. Publish the verified Stageshow record with its update. Review compatible animation patches in the weekly run and carry them forward when the behavior is preserved. Keep the specific software-factory review rule and preserve unrelated work.

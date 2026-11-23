@@ -35,6 +35,126 @@
     "review": {
       "source": "mattpocock/skills",
       "reason": "Retired from the live baseline by Callum on 22 October 2026; do not automatically reinstall."
+    },
+    "skill-doctor": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "migrate-to-factory": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "brandalf": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "check-impl-against-spec": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "complain": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "create-pr": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "cross-critique": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "diagnose-ci-failures": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "fix-errors": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "implement-specs": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "pr-walkthrough": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "readout": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "reproduce-bug-report": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "resolve-merge-conflicts": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "respond-to-pr-comments-in-blocklist": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "review-pr": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "saga": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "scan-new-specs": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "spec-driven-implementation": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "suggestion-box": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "update-skill": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "validate-changes-match-specs": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "write-feature-docs": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "write-pr-description": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "write-product-spec": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "write-tech-spec": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "merge-risk": {
+      "source": "warpdotdev/common-skills",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "ast-grep": {
+      "source": "ast-grep/agent-skill",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "i-have-adhd": {
+      "source": "ayghri/i-have-adhd",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
+    },
+    "ast-grep-outline": {
+      "source": "ast-grep/agent-skill",
+      "reason": "Uninstalled at Callum’s request on 23 November 2026; not in use. Do not automatically reinstall."
     }
   }
 }

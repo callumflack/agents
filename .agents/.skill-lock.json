@@ -289,15 +289,6 @@
       "installedAt": "2026-06-20T04:16:08.830Z",
       "updatedAt": "2026-06-20T04:16:08.830Z"
     },
-    "ast-grep": {
-      "source": "ast-grep/agent-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/ast-grep/agent-skill.git",
-      "skillPath": "ast-grep/skills/ast-grep/SKILL.md",
-      "skillFolderHash": "6348724abcf567de5944e0ed0dfd7ec280ffced2",
-      "installedAt": "2026-06-23T06:21:09.778Z",
-      "updatedAt": "2026-11-08T22:56:54.682Z"
-    },
     "loop-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -502,15 +493,6 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-07-17T05:32:41.966Z",
       "updatedAt": "2026-09-16T03:24:00.991Z"
-    },
-    "i-have-adhd": {
-      "source": "ayghri/i-have-adhd",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
-      "skillPath": "skills/i-have-adhd/SKILL.md",
-      "skillFolderHash": "759f1e56d0d2fdd3819d2a53b81e72767c08d914",
-      "installedAt": "2026-07-24T08:29:15.774Z",
-      "updatedAt": "2026-10-11T23:03:59.829Z"
     },
     "better-accessibility": {
       "source": "jakubkrehel/skills",
@@ -1115,15 +1097,6 @@
       "installedAt": "2026-09-29T23:15:35.647Z",
       "updatedAt": "2026-11-15T23:04:20.920Z"
     },
-    "ast-grep-outline": {
-      "source": "ast-grep/agent-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/ast-grep/agent-skill.git",
-      "skillPath": "ast-grep/skills/outline/SKILL.md",
-      "skillFolderHash": "674e18dc4236cf9ce407c908c11b8b9bf1c94d79",
-      "installedAt": "2026-09-29T23:42:01.483Z",
-      "updatedAt": "2026-11-08T22:56:54.686Z"
-    },
     "write-swift": {
       "source": "emilkowalski/skills",
       "sourceType": "github",
@@ -1395,24 +1368,6 @@
       "installedAt": "2026-10-11T23:05:48.403Z",
       "updatedAt": "2026-11-15T23:04:20.910Z"
     },
-    "skill-doctor": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/skill-doctor/SKILL.md",
-      "skillFolderHash": "1a47ec1e7760ecdc287839b0a96e8c30d84b6c1e",
-      "installedAt": "2026-10-16T08:49:27.508Z",
-      "updatedAt": "2026-10-16T08:49:27.508Z"
-    },
-    "migrate-to-factory": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/migrate-to-factory/SKILL.md",
-      "skillFolderHash": "0a1f848bf9ffdcc47045c6e5215d8084c12cf279",
-      "installedAt": "2026-10-16T08:51:39.841Z",
-      "updatedAt": "2026-10-16T08:51:39.841Z"
-    },
     "technical-drawing": {
       "source": "jakubkrehel/skills",
       "sourceType": "github",
@@ -1422,33 +1377,6 @@
       "installedAt": "2026-10-18T22:41:17.180Z",
       "updatedAt": "2026-10-18T22:41:17.180Z"
     },
-    "brandalf": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/brandalf/SKILL.md",
-      "skillFolderHash": "747d800f2667eb12946af1431cecbd796f040e8d",
-      "installedAt": "2026-10-18T22:41:21.228Z",
-      "updatedAt": "2026-10-18T22:41:21.228Z"
-    },
-    "check-impl-against-spec": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/check-impl-against-spec/SKILL.md",
-      "skillFolderHash": "860e4811c61d9bbaea7228083acf6fbba3a0310e",
-      "installedAt": "2026-10-18T22:41:21.231Z",
-      "updatedAt": "2026-10-18T22:41:21.231Z"
-    },
-    "complain": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/complain/SKILL.md",
-      "skillFolderHash": "76a68a88b9a3c4ec60fd3dedd44193c39f93b8b3",
-      "installedAt": "2026-10-18T22:41:21.232Z",
-      "updatedAt": "2026-10-18T22:41:21.232Z"
-    },
     "council": {
       "source": "t3dotgg/tstack",
       "sourceType": "github",
@@ -1457,204 +1385,6 @@
       "skillFolderHash": "797e3657df1f2bf919211fce88862dafd3b5eabb",
       "installedAt": "2026-10-18T22:41:21.233Z",
       "updatedAt": "2026-11-15T23:04:39.166Z"
-    },
-    "create-pr": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/create-pr/SKILL.md",
-      "skillFolderHash": "2da7e09e545a77e18237fc5165d9ef48c87e344d",
-      "installedAt": "2026-10-18T22:41:21.233Z",
-      "updatedAt": "2026-10-18T22:41:21.233Z"
-    },
-    "cross-critique": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/cross-critique/SKILL.md",
-      "skillFolderHash": "e6b304505f788cd12b7174938ee2b5ccd4e7afec",
-      "installedAt": "2026-10-18T22:41:21.234Z",
-      "updatedAt": "2026-10-18T22:41:21.234Z"
-    },
-    "diagnose-ci-failures": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/diagnose-ci-failures/SKILL.md",
-      "skillFolderHash": "bcea6d2791a949c4ee98fd126cb22c55a512d77a",
-      "installedAt": "2026-10-18T22:41:21.235Z",
-      "updatedAt": "2026-10-18T22:41:21.235Z"
-    },
-    "fix-errors": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/fix-errors/SKILL.md",
-      "skillFolderHash": "6c8c6f7e07a2d99809c40cb52747d8af30d3cf6d",
-      "installedAt": "2026-10-18T22:41:21.236Z",
-      "updatedAt": "2026-10-18T22:41:21.236Z"
-    },
-    "implement-specs": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/implement-specs/SKILL.md",
-      "skillFolderHash": "20b6815171d349fc4b05ee3a55e960c609faaeef",
-      "installedAt": "2026-10-18T22:41:21.236Z",
-      "updatedAt": "2026-10-18T22:41:21.236Z"
-    },
-    "pr-walkthrough": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/pr-walkthrough/SKILL.md",
-      "skillFolderHash": "6c3e2d7fbfe568f5278ce595dac933c8fff97329",
-      "installedAt": "2026-10-18T22:41:21.237Z",
-      "updatedAt": "2026-10-18T22:41:21.237Z"
-    },
-    "readout": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/readout/SKILL.md",
-      "skillFolderHash": "586f0dc1033199b6ca01e39c52aaf83a62c606dd",
-      "installedAt": "2026-10-18T22:41:21.237Z",
-      "updatedAt": "2026-10-18T22:41:21.237Z"
-    },
-    "reproduce-bug-report": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/reproduce-bug-report/SKILL.md",
-      "skillFolderHash": "3857228de929fa3ed232cefd942eae3dc292c5fd",
-      "installedAt": "2026-10-18T22:41:21.238Z",
-      "updatedAt": "2026-10-18T22:41:21.238Z"
-    },
-    "resolve-merge-conflicts": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/resolve-merge-conflicts/SKILL.md",
-      "skillFolderHash": "f62fff286d3ba22ae59e8c99c3ad0b5c96a5a8e8",
-      "installedAt": "2026-10-18T22:41:21.239Z",
-      "updatedAt": "2026-10-18T22:41:21.239Z"
-    },
-    "respond-to-pr-comments-in-blocklist": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/respond-to-pr-comments-in-blocklist/SKILL.md",
-      "skillFolderHash": "2064d298296ff9a893690124ab6df0e223e988bf",
-      "installedAt": "2026-10-18T22:41:21.239Z",
-      "updatedAt": "2026-10-18T22:41:21.239Z"
-    },
-    "review-pr": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/review-pr/SKILL.md",
-      "skillFolderHash": "ee744db4e23be67660abd81db265632ca67479b5",
-      "installedAt": "2026-10-18T22:41:21.240Z",
-      "updatedAt": "2026-10-18T22:41:21.240Z"
-    },
-    "saga": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/saga/SKILL.md",
-      "skillFolderHash": "9798e16682592cd9d435a37812c262e3bb4719ae",
-      "installedAt": "2026-10-18T22:41:21.241Z",
-      "updatedAt": "2026-10-18T22:41:21.241Z"
-    },
-    "scan-new-specs": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/scan-new-specs/SKILL.md",
-      "skillFolderHash": "c2cffdfccd0cf1c25880ee609033e754cf5567d3",
-      "installedAt": "2026-10-18T22:41:21.241Z",
-      "updatedAt": "2026-10-18T22:41:21.241Z"
-    },
-    "spec-driven-implementation": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/spec-driven-implementation/SKILL.md",
-      "skillFolderHash": "9fbd02664e40ca597519fd54b88c9cb82fd70fd2",
-      "installedAt": "2026-10-18T22:41:21.242Z",
-      "updatedAt": "2026-10-18T22:41:21.242Z"
-    },
-    "suggestion-box": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/suggestion-box/SKILL.md",
-      "skillFolderHash": "b63c39b7ca78c370f7a4405f3dff6f554a4fc375",
-      "installedAt": "2026-10-18T22:41:21.243Z",
-      "updatedAt": "2026-10-18T22:41:21.243Z"
-    },
-    "update-skill": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/update-skill/SKILL.md",
-      "skillFolderHash": "84f703bb1c52d3fb9697f3a570c54b5103a3fbf0",
-      "installedAt": "2026-10-18T22:41:21.243Z",
-      "updatedAt": "2026-10-18T22:41:21.243Z"
-    },
-    "validate-changes-match-specs": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/validate-changes-match-specs/SKILL.md",
-      "skillFolderHash": "56a6c8187c1472a98e312912b7017d20efa974cd",
-      "installedAt": "2026-10-18T22:41:21.244Z",
-      "updatedAt": "2026-10-18T22:41:21.244Z"
-    },
-    "write-feature-docs": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/write-feature-docs/SKILL.md",
-      "skillFolderHash": "adc49d7bb3a4189e143c0cc16c8674c611c27482",
-      "installedAt": "2026-10-18T22:41:21.244Z",
-      "updatedAt": "2026-10-18T22:41:21.244Z"
-    },
-    "write-pr-description": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/write-pr-description/SKILL.md",
-      "skillFolderHash": "a13f8ec1e8f0697fe7836746e6b3b88b998b988a",
-      "installedAt": "2026-10-18T22:41:21.245Z",
-      "updatedAt": "2026-10-18T22:41:21.245Z"
-    },
-    "write-product-spec": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/write-product-spec/SKILL.md",
-      "skillFolderHash": "73e93a06b7ea2a98a0418cfab7592f617f9c5074",
-      "installedAt": "2026-10-18T22:41:21.246Z",
-      "updatedAt": "2026-10-18T22:41:21.246Z"
-    },
-    "write-tech-spec": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/write-tech-spec/SKILL.md",
-      "skillFolderHash": "69530fc10b5441eeb178532084fa7a047e28fd3f",
-      "installedAt": "2026-10-18T22:41:21.246Z",
-      "updatedAt": "2026-10-18T22:41:21.246Z"
-    },
-    "merge-risk": {
-      "source": "warpdotdev/common-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/warpdotdev/common-skills.git",
-      "skillPath": ".agents/skills/merge-risk/SKILL.md",
-      "skillFolderHash": "5c76f952405b020e9a1c9acfa86bcee99645c953",
-      "installedAt": "2026-10-18T22:56:51.979Z",
-      "updatedAt": "2026-10-25T23:19:18.654Z"
     },
     "scrawl": {
       "source": "kitlangton/scrawl",
