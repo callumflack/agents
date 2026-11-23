@@ -42,6 +42,8 @@ app. Report the URL, state, and objectively observed behavior. Tests and
 typechecks do not establish appearance or an authenticated journey. Follow
 applicable project testing rules and name the actual test environment.
 
+For each material limitation, state what the person cannot do and whether it prevents the agreed outcome. Put that consequence before implementation details and test counts. An essential journey left blocked needs explicit acceptance; a technical caveat or general approval does not establish it.
+
 Composed React components carry a `data-slot` so they can be found in the DOM.
 Default one on the root; add inner slots only when a region earns tracing.
 Read `references/component-data-slots.md` in the Playbooks library for the

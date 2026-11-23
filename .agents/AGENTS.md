@@ -53,6 +53,13 @@ changes the result.
   compaction. Recheck live state when ownership, artifacts, or external state
   may have changed. Adapt the route as evidence changes; carry unresolved
   obligations forward until resolved, withdrawn, or explicitly blocked.
+- Before a temporary operational override, record its exact scope, prior value,
+  restoration action, exit condition and deadline, and named restoration owner
+  in the existing open task or issue. Prefer narrow scope and provider expiry
+  where available. The initiating agent retains the restoration obligation
+  until restoration is verified or a named human explicitly accepts the
+  handoff. Keep that obligation open while the override remains active;
+  completing source work or assigning the feature does not transfer it.
 - Default finish is local. Finish authorized delivery steps before returning;
   use the applicable delivery rules in the task-specific guidance.
   External publication, sending, commitments, or irreversible changes require
@@ -65,10 +72,15 @@ changes the result.
   approval for each 1Password access.
 - When permission blocks work, lead with **Permission needed**. Name the
   action, data and destination, and ask one direct approval question.
-- Lead the final response with the result and any material unrequested
-  decision. Give useful artifact links, the evidence and its practical limits,
-  and the actual delivery state. Include the checkout path when it identifies
-  where the work lives. Leave a blocker with its next action; stop when complete.
+- Lead with the practical result. If a material gap, continuing side effect or
+  unrequested decision affects the goal, put it in the first paragraph, before
+  successes, implementation details or test counts. Say plainly who cannot do
+  what, what remains affected, and the next action or decision and its owner.
+  Do not call the outcome complete while a required part remains failed,
+  blocked or unverified. A technical caveat or general approval is not explicit
+  acceptance of that consequence. Give useful artifact links, evidence and its
+  limits, and the actual delivery state. Include the checkout path when useful.
+  Stop when complete; do not invent further work.
 
 ## Context and continuity
 

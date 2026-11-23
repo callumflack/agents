@@ -25,9 +25,20 @@
 
 - **Resolved decision:** Install Matt Pocock’s in-progress software-factory glossary and surveys. Quote only the invalid YAML description, preserving its text, explicit-invocation setting and all body files. Track the upstream tree and reproducible local patch; publish only this installation and this task-owned log hunk. Preserve unrelated work.
 
+## 2026-11-03 — Operational override ownership and consequence-first reporting
+
+- **Scope:** Callum explicitly requested installing the restoration-ownership rule where future agents read it, auditing remaining deployment/publishing holds, and addressing repeated buried consequences using the #1598 origin chat. Update the canonical global instructions locally and regenerate/check all four adapters. Preserve the concurrent project-work reporting amendment, skill lock, experiments and index; no publication or additional live hold removal is authorized.
+- **Decision:** Put the ownership obligation and consequence-first completion report in the existing global carry-through rules. The initiating agent retains restoration until verified or explicitly accepted by a named human; source completion is insufficient. Material inability, continuing side effect, next action and owner precede success details. This changes loaded instructions, not the platform's semantic enforcement or release gates.
+- **Resolved instruction repair and audit:** bootstrap and runtime:check pass for Codex, Claude, Cursor and Pi. Read all 170 Vercel projects and workflow lists in Unity, Personal Server and Gateway. Four publishers remain manually disabled; nine Unity projects skip the merged #1681 branch and open #2067 branch, with the old dev-wide hold absent. The current chat owns this completed audit; restoring publishers requires accumulated-release assessment and authorization, and no human handoff was inferred. Exact inventory and proof limits: `/Users/callumflack/.codex/visualizations/2026/11/02/01a19e2c-7850-79c0-beb6-fc455c538cc7/gateway-git-restoration/remaining-holds.md`. Instructions are locally installed and uncommitted; no publication, additional hold removal or semantic enforcement is claimed.
+
 ## 2026-11-03 — Plannotator compound adaptation update
 
 - **Resolved decision:** Accept upstream data-directory discovery and report/hook path corrections while retaining implicit invocation through the unchanged adaptation patch. Publish only this skill record and this task-owned log hunk; preserve unrelated work.
+
+## 2026-11-03 — Apply the approved feedback review
+
+- **Scope:** Callum approved the three targeted changes from the [October conversation review](obsidian://open?vault=kb-2026&file=wiki%2FHuman-agent%20learning%20across%20Homebase%20%E2%80%94%20Research%20E7%2F2026-11-02-conversation-feedback-review), using existing owners and local delivery only. The reporting amendment belongs in `.agents/references/project-work.md`; preserve the external-skill lock, experiments, existing index and unrelated work.
+- **Decision:** Apply the reporting amendment at the named reference, leaving global AGENTS.md unchanged. No publication or new learning machinery is authorized. Later ordinary work supplies the evidence of application.
 
 ## 2026-10-29 — Restore audited global instructions
 
