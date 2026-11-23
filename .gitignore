@@ -9,3 +9,6 @@
 # Local secrets
 .env
 .env.*
+
+# Generated experiment bytecode; source archives remain tracked.
+experiments/**/__pycache__/

@@ -1,0 +1,77 @@
+{
+  "passed": false,
+  "cases": [
+    {
+      "case": "optional absent",
+      "expected_exit": 0,
+      "actual_exit": 2,
+      "expected_status": "MISSING",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "required absent",
+      "expected_exit": 1,
+      "actual_exit": 2,
+      "expected_status": "MISSING",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "optional dangling",
+      "expected_exit": 0,
+      "actual_exit": 2,
+      "expected_status": "MISSING",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "required dangling",
+      "expected_exit": 1,
+      "actual_exit": 2,
+      "expected_status": "MISSING",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "correct link",
+      "expected_exit": 0,
+      "actual_exit": 2,
+      "expected_status": "OK",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "wrong link",
+      "expected_exit": 1,
+      "actual_exit": 2,
+      "expected_status": "WRONG",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "directory conflict",
+      "expected_exit": 1,
+      "actual_exit": 2,
+      "expected_status": "CONFLICT",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    },
+    {
+      "case": "connection missing to existing target",
+      "expected_exit": 1,
+      "actual_exit": 2,
+      "expected_status": "MISSING",
+      "stdout": "",
+      "stderr": "ERROR    [agents] must define only repository\n",
+      "passed": false
+    }
+  ]
+}

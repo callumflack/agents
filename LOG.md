@@ -1,5 +1,11 @@
 # Worklog
 
+## 2026-11-23 — Preserve inactive experiment history
+
+- **Scope:** Callum selected preserving the remaining historical experiments in Git as an explicitly inactive archive. Keep source and reports, preserve the manual capture helper path used by the installed skill, exclude generated Python caches, and clarify retired integrations and the closed five-day trial. No installation, automatic capture, scheduler, native launch, credential or live publication operation is authorized by this archive.
+- **Boundaries:** The narrowed 2password revision remains on its explicit pre-commit review hold. Pstack guidance/setup, the external source audit, instruction-archive rename and unrelated lock preferences remain separate.
+- **Resolved locally:** Prepared the source and reports as an explicitly inactive archive, preserving the manual helper path and historical evidence limits. Existing manual-capture/retirement tests and source syntax checks pass. No trial, automatic runtime or publisher was started; Git owns archival commit and remote delivery state.
+
 ## 2026-11-23 — Remove unused ast-grep and ADHD skills
 
 - Callum requested global uninstall of ast-grep, ast-grep-outline and i-have-adhd and removal from both Field Guide editions. Preflight: all 193 accepted external trees match, including 10 adaptations; the three selected records have no adaptations. Recovery snapshot: /var/folders/yx/v__zwk8x4rj0s_26ndvw5qmr0000gq/T/unused-guide-skills-_bcoeuhu. Preserve the other 190 records and the index. Completed locally: supported CLI removed exactly these three skills; all other 190 lock records and the existing index were preserved. All 190 accepted external trees still match, 10 adaptations remain, and runtime instruction and registry link checks pass for Codex, Claude, Cursor and Pi. Cursor Team Kit (30 cursor/plugins records) and OpenClaw’s agent skills (8 records) remain installed by explicit instruction; only their public catalogue entries were removed.
@@ -60,6 +66,12 @@
 - **Decision:** Setup must reject dirty Agents/Skills checkouts, a different authored Skills commit, an agent home owned elsewhere, and differing installed external skills before changing repositories or runtime links. Git updates remain explicit; setup does not merge local skill variants.
 - **Resolved decision:** Preservation checks belong to setup and its offline content preflight, including unrecorded registry entries that the authored linker fans out. Conflicting local variants remain in place for deliberate reconciliation; Git updates remain explicit. No new updater, override workflow or active handoff.
 
+## 2026-10-22 — Daily review source coverage
+
+- **Scope:** Improve the existing five-day pass's Codex/Pi reading, coverage accounting and stable cutoff. Preserve the schedule, retired integrations, strict evidence capture and unrelated edits; local only.
+- **Decision:** Add an on-demand review command to the existing Learning helper. Native files and the existing Codex index remain the source; no ledger, daemon, hooks or additional scheduler. Every discovered source gets a disposition; partial reads remain explicitly incomplete.
+- **Resolved:** The existing heartbeat reads the owned review command; source coverage is explicit and incomplete intervals stay open for retry. The strict capture path and trial schedule remain unchanged. No new runtime integration, retained history store or separate handoff remains.
+
 ## 2026-10-22 — Reconcile the live skill baseline
 
 - **Scope:** Preserve the 13 accepted local variants, reconcile Plannotator with the installed Mermaid version, restore metadata, retire four stale records and verify clean replica setup. Preserve inherited work and indexes; local only.
@@ -72,9 +84,114 @@
 - **Decision:** All recorded trees were retrieved before implementation. Reuse their existing Git tree hashes for exact restoration; preserve the linkers and Pstack ownership. Pin the committed Skills baseline for replica setup, reject dirty authoring checkouts rather than switching them, and retain the lightweight authoring bootstrap.
 - **Resolved implementation scope:** Replica setup and exact-tree restoration are implemented locally, with the existing Pi adapter covering the pinned linker. Preserve the 24 live registry differences and dirty authored checkout; do not reconcile them as part of this task. The repository documentation owns the setup boundary and proof. Callum explicitly approved the scoped Codex review; it is complete, with its scope and limitations recorded in the existing verification document. No review handoff remains. Callum subsequently authorized committing and pushing this portability change and its reconciliation only; provider registration remains outside scope.
 
+## 2026-10-21 — Replace continuous learning with a five-day improvement trial
+
+- **Authorized scope:** Keep the existing knowledge, retire automatic per-turn capture/injection and the checker, and schedule five weekday improvement passes in the current chat. Preserve unrelated hooks, active chats and dirty work; local only, with no publication. The trial ends after 27 October and cannot extend itself.
+- **Decision:** Retain native history, the Learning archive and manual corpus tools. Replace runtime integrations with inert compatibility responses for already-open hosts, remove their registrations, and restore native CLI launch. Archive the former implementation before removing obsolete active paths. Ordinary corrections remain agent-owned; the daily review selects at most one useful local change and checks later comparable work.
+- **Resolved:** Runtime registrations are retired and cached callers are inert without forcing apps to restart. The preserved source archive owns historical implementation. The existing chat and the app heartbeat `five-day-development-improvement-trial` own five reviews at 17:00 Brisbane on 21, 22, 23, 26 and 27 October, with a final assessment and stop. There is no active migration handoff or permission to continue beyond the trial.
+
+## 2026-10-21 — Retire the historical Pi warning
+
+- **Scope:** Callum explicitly asks to clear the remaining old Pi reuse warning without remembered commands or recurring alerts. Preserve the historical missed delivery as acknowledged, never as recovered; bind retirement to that native task and keep new capture, reuse and configuration failures observable.
+- **Resolved decision:** Explicit retirement belongs to the existing checker and retains an acknowledged historical miss bound to native request/answer evidence; it does not assert recovery or require Callum to revisit that session. Only `pi:01a1520f-5b26-754d-8479-8af3ace3e0d6/ab7f6d95` is authorized for this closure. New tasks, changed evidence and other fault types stay monitored. No Pi restart, fabricated delivery or new schedule; no active handoff remains.
+
+## 2026-10-20 — Quiet checker recovery
+
+- **Scope:** Add bounded recovery to the existing five-minute checker. Resume unfinished capture jobs within their existing three-attempt budget; restore only missing recorded local links or launch settings after file verification. Keep successful recovery silent, require actual later case delivery for reuse confirmation, and alert once when recovery is unsupported or exhausted. No new scheduler, app restart, provider, Claude change, commit or publication.
+- **Resolved:** The existing checker now resumes only named overdue capture jobs within the original attempt budget and a ten-minute repair deadline, or restores missing recorded connections after checking file fingerprints. Actual later native case delivery owns reuse confirmation. A disposable Pi link recovered silently; an exhausted copied job produced one independently recorded macOS banner and no duplicate. All 49 owner checks pass under installed Python 3.14, and the production job remains healthy and silent. `Homebase/Learning/evaluations/2026-10-20-checker-recovery/` owns proof and the corrected replay limitation. Automatic approval review blocked the optional independent model review before source transmission; no bypass or review verdict is claimed. No active implementation handoff remains; task staging is removed after proof preservation, and changes remain local/uncommitted.
+
+## 2026-10-20 — Two Codex reuse warnings
+
+- **Scope:** Callum explicitly authorizes ordinary proof requests in both affected existing chats, this chat and `01a155e0-f5a3-7ff2-97ef-34a4d13d58c0`. Keep setup local and quiet, preserve Claude's hold, and add no recurring commands, restart requirement or scheduler.
+- **Diagnosis:** Both warned turns contain an actual developer packet before their answers, with a complete relevant case and its exceptions. Native truncation prepends a warning; the checker recognises only a bare packet prefix. Repair recognition at the checker, reparse cached observations through a parser version, and bound the shared renderer so future selected cases arrive whole. Do not clear warnings administratively or treat a delivery receipt as proof.
+- **Resolved:** Original native histories establish matching complete case delivery before model output; warning-wrapper recognition and within-task compaction observation were the gaps. Ordinary requests in both affected chats received whole bounded packets and were answered before further tools; the self-request is explicitly reentrant commentary, not a separate completed zero-tool task. The existing macOS checker re-read versioned source observations and now reports no failures. The required review found the equivalent Pi compaction case; it is repaired with a failing-before/passing-after native-format regression. `Homebase/Learning/evaluations/2026-10-20-codex-reuse-repair/` owns proof and limits. No restart, scheduler, account, service, issue or Claude change; local/uncommitted. Task staging is removed after preservation; no active handoff remains.
+
+## 2026-10-20 — Shared learning in Pi and Claude
+
+- **Scope:** Extend the existing shared Learning corpus, quiet capture/reuse and existing local checker to Pi 1.3.0 and ordinary Claude Desktop Chat. Callum clarified Chat, not Claude Code. Removed the temporary Code hook registrations and unused Code parser; the pre-existing tldraw hook is preserved. Native Chat has no lifecycle hooks; Callum declined the lower-guarantee local MCP tool option. No public connector, second corpus, app patch or new scheduler.
+- **Decision:** Keep native source identities, Codex record hashes and candidate/proof boundaries. The separate capture reviewer continues to use the existing Codex account. Pi's saved gpt-5.5 default was rejected by that account; restored gpt-6.1-sol, already used in the previous real Pi session. No credential or provider change.
+- **Resolved host scope:** Pi automatically saved `kb-offline-backup-requires-content-and-isolated-restore-proof`; the frozen retry in fresh session `93c53528-1b0e-42d0-a1c0-8730f851b68f` received its exact revision before a zero-tool answer. The existing checker observes Pi and detects missing assessments, source evidence and actual delivered context in isolated real-record faults. Claude is unchanged by Callum's explicit choice; no fallback connector or native proof is claimed. `Homebase/Learning/evaluations/2026-10-20-pi-and-claude/` owns failures, model repair, proof and boundaries. Task-created staging is removed; local/uncommitted, with no host setup action required from Callum.
+- **Reported block recovered:** The October 13 absolute-source error exhausted the named X-capture job before the portable-witness repair. One recorded agent-owned recovery attempt saved `x-bookmark-minimal-capture-durable-page-replay` with readable/source/audit proof. Original record hashes and the failed job history are preserved. No message was sent to the other chat.
+- **Later resolution:** The two Codex warnings described in this slice were subsequently traced to observation bugs; the original native histories contain complete matching cases. The repair and ordinary two-chat proof above supersede that earlier diagnosis. Claude remains explicitly held unchanged.
+
+## 2026-10-20 — Quiet learning failure detection
+
+- **Scope:** Install one independent local macOS checker beside the existing learning-corpus integration. Watch completed native tasks against assessment, persistence and actual context delivery; accept legitimate skips, allow queue time, and notify once per incident. Keep current hooks, launch wrapper, account and corpus unchanged. Prove capture and reuse faults separately against isolated copies of real records and verify the OS alert. Pi and Claude adapters remain outside this installation.
+- **Resolved scope:** The independent local checker is installed beside the existing integration. Real-record fault tests through its macOS job cover capture, actual context delivery, quiet repeats and recovery; the KB Learning entrance and `evaluations/2026-10-20-quiet-checker/` own the readable explanation and bounded evidence. The temporary proof job and records are removed. No active handoff remains; changes stay local and uncommitted. Pi and Claude still need their own native adapters and proof.
+
+## 2026-10-19 — Daily LOGFILE runner
+- **Decision:** Keep Pi task identity/retry budgets in the local Agents runner and external-effect recovery, live acceptance and the shared OS lock at the existing website publisher. Use the pinned 1.3.0 API rather than current upstream examples. Stop on unexpected state and explicit budget exhaustion; no new scheduler is part of this work.
+- **Handoff:** Local implementation and operator documentation are complete; the —LOG chat owns website review/delivery and primary-main sync. Agents artifacts remain local and uncommitted. The existing heartbeat stays unchanged. Independent model review is blocked on source-export approval, without a workaround or claim of independent review.
+
+## 2026-10-19 — LOGFILE through Pi Durable
+
+- **Resolved scope:** Ran the existing real LOGFILE publisher inside a local Pi Durable task after the separate LOG chat released its clean worktree. Killed the observed task tree after the one real Git push but before command return/Pi completion, recovered the same SQLite/task identity, reconciled the remote effect and completed the unchanged publisher’s live checks without another commit or push. Preserved the original final-check failure caused by assuming one unpublished node when the authored source contained two; the independent source-derived audit passes. `experiments/pi-durable-trial/log-publisher/EVIDENCE.md` owns the exact boundary and evidence. The heartbeat and publisher source are unchanged. Wrapper code stays local/uncommitted; only the authorised public snapshot was published. No active handoff remains.
+
+## 2026-10-19 — Real Homebase task through the durable runner
+
+- **Resolved scope:** Ran the naturally existing Homebase config-directory traceback through the local Pi/Codex adapter in the live checkout, without source seeding or scripted bad patches. The code fix passed independent behavior checks on first submission; saved feedback caused one log-only completion correction in the same session. Scope, inherited files and index preservation, original-source regression control and terminal reopening are preserved at `experiments/pi-durable-trial/REAL-TASK-EVIDENCE.md`. Homebase owns the two-line fix, new regression file and resolved current LOG entry. No active handoff remains; all work stays local and uncommitted.
+
+## 2026-10-19 — Supervisor returns after its deadline
+
+- **Resolved scope:** Extended the existing local supervisor crash driver to leave supervisor and runner dead from the midpoint until five seconds after the original 60-second deadline. The unchanged recovery path recognised the expired saved deadline, cleaned up the original orphans and settled terminal timeout failure without coding replay or retry. The outcome and proof boundaries are preserved at `experiments/pi-durable-trial/LATE-RESTART-EVIDENCE.md`; no active handoff remains. Deadline observation after recovery is explicitly distinguished from enforcement while supervision is absent. Local only; live Homebase and integration remain outside scope.
+
+## 2026-10-19 — Supervisor death with orphaned repair processes
+
+- **Resolved scope:** Extended the local timeout experiment to SIGKILL supervisor and runner at the 30-second midpoint, leaving real stalled repair descendants alive. The replacement supervisor recovers persisted process identities and the original admission/deadline, watches that same orphaned work until expiry, stops it and only then reopens Pi to settle failure. The external fault driver only injects the crash and restarts; it does not enforce the job deadline. The complete evidence and both rejected runs are preserved at `experiments/pi-durable-trial/SUPERVISOR-CRASH-EVIDENCE.md`. No active handoff or live fix remains. Local only; no Homebase/integration/publication changes.
+- **Cleanup decision:** Two initial runs exposed an exit-transition race. Zombie-only handling was insufficient; the successful fresh run recorded a waiting parent in state `?s` with shortened executable metadata after its child died. Never signal a changed identity. Record that refusal, continue the other owned processes and require every recorded PID to stop before accepting cleanup. This constraint lives in `processes.mjs`; the real crash trial, stale-identity refusal and waiting-parent/child controls exercise it. Both earlier failures and fallback cleanup remain preserved.
+
+## 2026-10-19 — Deadline across an active repair restart
+
+- **Resolved scope:** Extended the local timeout trial with a forced stop at 30 seconds while the real repair command is stalled. Stop the runner and its observed descendants, reopen the same SQLite task and Codex session within the original 60-second budget, and require expiry at the original absolute deadline. Both process trees, per-generation recovery records, terminal failure and the rejected first run are preserved at `experiments/pi-durable-trial/DEADLINE-RESTART-EVIDENCE.md`. The valid-repair control also passed. No active handoff or live fix remains. Local only, no live Homebase or integration changes.
+- **Observed adjustment:** The first run reopened the same session but Codex returned after noticing its old tool session was unavailable, without starting a fresh stall. The unchanged acceptance gate rejected the seeded source and the trial failed. Preserved that run, made the resume prompt explicitly start a fresh foreground helper within the same attempt and original deadline, and completed a new unattended run from admission.
+
+## 2026-10-19 — Time limit failure trial
+
+- **Resolved scope:** Added a local 60-second deadline test to the existing experiment, leaving the normal budget at ten minutes. Stall a real Codex repair with a real child process, enforce the absolute persisted deadline, kill and observe the process tree, then reopen the same task only to commit timeout failure. Reopen terminal failure again and require no further coding attempt, preserved evidence and exit 1. The observed timeout, five-process cleanup, unchanged terminal failure on reopen and passing valid-repair control are preserved at `experiments/pi-durable-trial/TIMEOUT-EVIDENCE.md`. Prior trials remain preserved; no active handoff or live fix remains. Local-only; no live Homebase, runtime integration or publication changes.
+
+## 2026-10-19 — Retry limit failure trial
+
+- **Resolved scope:** Extended the existing local combined trial with a deliberately still-failing second candidate. Require exactly two coding attempts, terminal Pi failure and worker/controller exit 1, preserved candidates/reports/feedback, and a reopened failed task that launches no third attempt. The observed failed job, terminal reopen and passing positive control are preserved in `experiments/pi-durable-trial/LIMIT-EVIDENCE.md`; the repair job remains failed, while the stop guard is verified for this controlled case. No live fix or active handoff remains. The verifier and earlier trials are preserved. Local-only; no live Homebase, runtime integration or publication changes.
+
+## 2026-10-19 — Persisted feedback plus crash trial
+
+- **Resolved scope:** Added a combined mode to the existing local Pi Durable/Codex experiment. Reject a deliberately incomplete first patch, commit actual feedback and a repair-ready phase to SQLite, then have the external controller SIGKILL the runner before the repair session starts. Reopen that task, require its recovered checkpoint feedback to equal the original failure and the resumed Codex prompt, and independently verify the changed second candidate. The combined run and independent audit are preserved at `experiments/pi-durable-trial/COMBINED-EVIDENCE.md`; no active handoff remains. Existing trials are preserved; two candidates and ten minutes remain the limits. Local-only; no live Homebase, runtime integration or publication changes.
+
+## 2026-10-19 — Verification feedback trial
+
+- **Resolved scope:** Extended the existing Pi Durable/Codex local experiment with at most two coding attempts. Require a deliberately incomplete first candidate, run the unchanged external oracle, durably return its real failures to the same Codex session, and require a different repaired artifact to pass that oracle and portable health without human rescue. Both candidates and actual feedback are preserved at `experiments/pi-durable-trial/FEEDBACK-EVIDENCE.md`; the independent completion gate owns acceptance and the retry budget remains two candidates. The earlier crash path also passes with the extended runner. No active handoff remains. Local-only; no live Homebase edits, installation changes or publication.
+
+## 2026-10-19 — Pi Durable local recovery trial
+
+- **Resolved scope:** Built one bounded local experiment under `experiments/pi-durable-trial/`. Use a deliberately broken disposable Homebase copy, a protected external acceptance check, a real Codex coding session, Pi Durable SQLite checkpoints, and an automatic forced-stop/restart controller. No live Homebase changes, global installation, schedule, commit, push, or publication. The experiment owns observed recovery evidence and exact proof limits in `experiments/pi-durable-trial/EVIDENCE.md`; no active trial handoff remains.
+
 ## 2026-10-19
 
 - **Pstack scope resolved:** Callum authorized Pstack updates in the existing weekly skills heartbeat, superseding its plugin-update exclusion for Pstack only. Preserve all other plugin boundaries, bare-name owners, and unrelated dirty work. Restored the missing monitored upstream checkout. Removed the obsolete bundled-validator path from the check task; artifact checks plus native plugin installation/loading own this update boundary.
+
+## 2026-10-16 — Automatic learning capture repair
+
+- **Resolved no-tool delivery repair:** After the 17 October restart, Codex runs the signed Node transport and native CLI with working chat-control tools and no old persistent Python wrapper. The unchanged frozen request in the approved existing chat received fresh candidate context before a zero-tool answer, with zero generated learning user continuations. Its exact saved case revision is the automatic 16 October capture; today's completion assessor skipped a duplicate. `Homebase/Learning/evaluations/2026-10-16-quiet-learning/no-tool-entry/README.md` owns actual native lines, receipt, source audit, startup health and bounded claims. Earlier failed trials stay preserved. No implementation or setup additions were made in verification, and all delivery remains local and uncommitted. No active setup handoff remains.
+
+- **Resolved local activation scope:** Callum completed the agreed setup restart. The quiet path automatically saved a source-backed correction from an ordinary existing-chat task. With specific authorization, another existing chat received that saved case before answering an ordinary source-check request. Preserve the failed original retrieval stage: host-delivered requests that use no tools fire no entry callback, so every-turn retrieval remains unproved. A per-chat lock repairs duplicate context from parallel callbacks without changing trusted definitions. `Homebase/Learning/evaluations/2026-10-16-quiet-learning/README.md` owns the evidence and remaining boundary. Keep the visible blocking handler retired, preserve existing chats, and keep all changes local.
+
+- **Rejected implementation retired:** Callum rejected the visible `HOMEBASE_LEARNING_FINISH` prompts after seeing them in an ordinary desktop conversation. The learning Stop registration is removed, its executable returns empty JSON for cached callers without reading or writing task state, and installation is rejected. Existing other hooks and all captured evidence remain intact. Updated current procedure and skill text so the retired hook is not advertised as installed. The original automatic desktop-capture outcome remains unresolved; no replacement automation is in this slice. This supersedes the earlier activation plan. The requested failure capture and visible-hook rejection are saved in the existing case with portable screenshots. Keep the wider automatic-capture outcome unresolved; do not resume the rejected activation plan or install a replacement without a new authorized scope.
+
+- **Historical trial:** The prior bounded fresh CLI trial saved a case without a capture request, while the exact named existing desktop chat failed its finish check. The evaluation preserves both, the supported reload investigation, and the subsequent rejection of visible per-turn enforcement. Those observations do not establish an accepted automatic desktop system.
+
+## 2026-10-15 — KB-owned Playbooks
+
+- **Resolved migration scope:** The global Playbooks route now resolves the KB-owned library at `Homebase/Learning/Playbooks` using configured Homebase discovery. Invoked Upkeep retains routine publication for Homebase, Skills and Agents; accepted Playbooks candidates can be applied locally under KB Sync and backup rules without granting publication of the KB. The current migration is local only. Existing dirty work is preserved.
+
+## 2026-10-15
+
+- **Resolved scope:** Callum’s request removes the requirement to remember a capture command. Shared instructions now route substantive Homebase/project work through the existing Learning entrance at task entry and completion. That owner defines fitting-case reuse and consequential capture through the existing skill, with candidate scope, explicit no-write boundaries and source-supported outcomes. Capture uses the native Codex adapter; other hosts can reuse cases and report unsupported capture. This is an active-agent default, not an unattended collector. Background hooks, classifier calls and publication remain separate work. Pre-existing Homebase, Agents and Skills edits are preserved.
+
+## 2026-10-14
+
+- **Capture ownership resolved:** Callum approved a global `capture-learning` skill and a fresh Unity Surfaces trial. The installed skill and existing CLI form the explicit capture path; the reviewed trial case entered the shared corpus with its historical acceptance and runtime exception. The CLI inspects native chat messages and preserves selected evidence before importing validated cases. Skills owns interpretation and readable-page completion; this experiment owns deterministic provenance, schema validation, append history and capture serialization. Unity is read-only; hooks, classifier calls and publication remain outside this slice.
+
+- **Resolved pilot scope:** Callum’s steering excludes fine-tuning. Existing native chats own the source history; the KB-owned corpus at `Homebase/Learning/` retains interpretations and selected source messages with relative evidence paths. Callum rejected the hidden runtime address; Homebase provides the visible entrance and the KB provides Obsidian access and its existing Git archive. Agents owns the bounded tooling experiment. The chosen first boundary is a mined sample, source grounding, local retrieval and a prepared passive Stop receipt, rather than a new memory platform. Automatic extraction, native hook activation/trust and Jev inference remain separate future work, not installed behavior. Preserve the pre-existing global instruction edit.
 
 ## 2026-10-07
 
@@ -385,6 +502,10 @@
 - Confirmed the Skills CLI keys both installed directories and lock entries by the unqualified skill name, so the later source replaces the earlier one.
 - Proposed direction: assign semantic ownership per capability, retain one canonical public name, and give only genuinely distinct behavior a deliberate alias. Add a preflight check so future installs cannot silently change the owner.
 - Completed: globally re-pinned `tdd` and `teach` to `mattpocock/skills`; the targeted update path and manifest check passed. Fresh agent tasks now load Matt's versions. Coexistence with pstack remains a separate problem.
+
+## 2026-10-19 — Pi runtime maintenance
+
+- **Resolved scope:** Pi participates in the existing Agents instruction bootstrap/checks and repair tasks, and Skills registry linker/checker. Keep per-skill links because the registry’s ignore rules hide shared skills from Pi’s direct scan. Pi-only entries retain their owner; same-name real entries block linking. This is local maintenance integration, not skill-execution or automatic-learning-capture support. No active handoff remains; unrelated experiment work is preserved.
 
 ## 2026-11-04 — Community credential access and 2password sandbox recovery
 

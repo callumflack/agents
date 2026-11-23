@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:callum-learning:case:1",
+  "title": "Grounded learning case v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "harness": {
+          "enum": [
+            "codex",
+            "pi"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "transcript_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cwd": {
+          "type": "string",
+          "minLength": 1
+        },
+        "thread_url": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "harness",
+        "session_id",
+        "transcript_path",
+        "cwd",
+        "thread_url"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "message_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "turn_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "role": {
+            "enum": [
+              "user",
+              "assistant",
+              "delegate"
+            ]
+          },
+          "timestamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "line",
+          "message_id",
+          "turn_id",
+          "role",
+          "timestamp",
+          "text_sha256",
+          "quote"
+        ]
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "goal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "situation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "needed_next_step": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "goal",
+        "situation",
+        "needed_next_step",
+        "cues"
+      ]
+    },
+    "learning": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "const": "candidate"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applies_when": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_apply_when": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "owners": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "signal": {
+          "enum": [
+            "correction",
+            "decision",
+            "success",
+            "open_question"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "summary",
+        "applies_when",
+        "does_not_apply_when",
+        "owners",
+        "signal"
+      ]
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "partial",
+            "reported_resolved",
+            "user_accepted",
+            "unresolved"
+          ]
+        },
+        "basis": {
+          "enum": [
+            "assistant_report",
+            "assistant_acknowledgment",
+            "user_confirmation",
+            "direct_observation"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "basis",
+        "summary",
+        "evidence_keys"
+      ]
+    },
+    "extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "method",
+        "version"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "case_key",
+    "revision",
+    "created_at",
+    "source",
+    "evidence",
+    "story",
+    "learning",
+    "outcome",
+    "extraction"
+  ]
+}
