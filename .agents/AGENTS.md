@@ -58,10 +58,13 @@ changes the result.
   External publication, sending, commitments, or irreversible changes require
   authority matching that effect. Preparing reviewable work within the request
   should happen before asking for its final approval.
+- For any credential or secret task, read
+  `~/.agents/skills/2password/SKILL.md` before accessing it. Preserve the
+  configured agent identity and scope; use its sandbox-recovery procedure
+  before considering desktop or human-account access. Obtain separate explicit
+  approval for each 1Password access.
 - When permission blocks work, lead with **Permission needed**. Name the
-  action, data and destination, and ask one direct approval question. Use
-  `~/.agents/skills/2password/SKILL.md` for credentials and obtain separate
-  explicit approval for each 1Password access.
+  action, data and destination, and ask one direct approval question.
 - Lead the final response with the result and any material unrequested
   decision. Give useful artifact links, the evidence and its practical limits,
   and the actual delivery state. Include the checkout path when it identifies
