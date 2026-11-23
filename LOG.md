@@ -4,7 +4,7 @@
 
 - **Authorized scope:** Callum approved applying the four reviewed cleanup commits and pushing them with the archive commit to `origin/master`. This chat owns finishing that delivery and clean-worktree verification; preserve all other repositories and concurrent published instruction changes.
 - **Decision:** Retain only Codex-specific 2password recovery advice, normalize the lock without changing other skill records, document Pstack’s observed local/manual Claude setup, finish the instruction-archive rename and links, and reconcile the external audit. No Skills pin advance, plugin installation, scheduler or retired-runtime activation.
-- **State:** The Codex-only 2password, Pstack records and archive links are reconciled. The source audit and final remote/clean-worktree verification remain.
+- **Resolved source scope:** All four reviewed scopes are reconciled. Claude’s local/manual limitation and the unobserved qualified desktop query remain explicit; no Skills pin, provider registration or retired runtime was changed. Git owns final commit and remote delivery evidence.
 
 ## 2026-11-23 — Preserve inactive experiment history
 
@@ -32,6 +32,11 @@
 - Preflight: all 220 external skills matched their accepted trees; Warp’s 27 have no local adaptations. Working/index diffs, lock, Warp bodies and runtime link destinations are backed up at /var/folders/yx/v__zwk8x4rj0s_26ndvw5qmr0000gq/T/warp-skills-uninstall-iion69ih.
 - Completed locally: the supported Skills CLI removed all 27; cleaned their exact managed links in Codex, Claude, Cursor and Pi. The other 193 lock records are byte-equivalent as JSON, all 193 accepted external trees still match (10 adaptations preserved), all four runtime instruction adapters and the authored/registry link checker pass. Existing staged diff is unchanged. Recorded all 27 names as retired and removed the source from both Field Guide editions and the private installed inventory. No commit, push or publication.
 - **Publication authorized:** Commit and push only this chat’s 30 skill removals, their retirement records and removal receipts. Exclude earlier installations, the 2password adaptation, instructions, experiments and the full audit. The committed baseline has 170 records; the local working lock keeps the 20 earlier unpublished additions, for 190 records.
+
+## 2026-11-11 — External skills source audit
+
+- Agents owns the source-ordered audit and refresh procedure. The Field Guide owns the published prose and its Obsidian edition. Both editions link to the Agents document.
+- Callum requested a local diff before publication. Publish the Agents document before the site link goes live once publication is authorized.
 
 ## 2026-11-09 — Weekly skill update follow-through
 

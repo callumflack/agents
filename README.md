@@ -89,6 +89,8 @@ Leave the changes in place. A preservation error is a request to reconcile, not 
 
 ## External skills
 
+See the [external skills source audit and Field Guide refresh procedure](docs/external-skills.md).
+
 Do not install the Skills CLI globally. Invoke it through `npx` from `$HOME`:
 
 ```sh
