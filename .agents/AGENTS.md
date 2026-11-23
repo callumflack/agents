@@ -95,12 +95,19 @@ pointers instead of copying them into every prompt. Translate an analogy or
 external recommendation into local checks before adopting it.
 
 For significant writable work with state that may be lost across compaction,
-read the owner's existing worklog before the first material write. Use one
+read the owner’s existing worklog before the first material write. Use one
 concise `LOG.md` unless the owner names another log. Record chat-fragile
-objectives, steers, decisions, tradeoffs, questions, and handoffs when they
-change. Keep routine checks and delivery evidence at their existing owners.
-Resolve active task state before final verification or authorized delivery;
-avoid later LOG-only commits and per-chat logging machinery. Local log
+goals, current instructions, owners, decisions and their consequences,
+tradeoffs, unresolved questions, unfinished work and handoffs when they
+change. Reconcile new guidance with work already underway and update the
+relevant entries. When a change affects another active agent’s work, notify
+that agent directly through authorized task coordination.
+
+After compaction or handoff, read the worklog and check current state before
+continuing. Keep routine checks and delivery evidence at their existing
+owners. Resolve active task state before final verification or authorized
+delivery, leaving unfinished obligations and their owners explicit; avoid
+later LOG-only delivery commits and per-chat logging machinery. Local log
 conventions and read-only limits govern.
 
 Resolve Homebase through `CALLUM_HOMEBASE` or `~/Repos/callumflack/homebase`.
