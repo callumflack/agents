@@ -103,6 +103,13 @@ change. Reconcile new guidance with work already underway and update the
 relevant entries. When a change affects another active agent’s work, notify
 that agent directly through authorized task coordination.
 
+If your tool list includes `t3_thread_send` (in Claude,
+`mcp__t3-code__t3_thread_send`, possibly listed as deferred), you are in T3
+Code. There, get another agent’s result by starting it with `delegate_task`;
+its completion wakes you. When told to tell a thread when done (an `mcp:…` ID,
+a UUID or a `t3-thread://` link), send the result with `t3_thread_send`, not
+`SendMessage`. Without that tool, skip this paragraph.
+
 After compaction or handoff, read the worklog and check current state before
 continuing. Keep routine checks and delivery evidence at their existing
 owners. Resolve active task state before final verification or authorized
